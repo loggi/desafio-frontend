@@ -1,6 +1,6 @@
 ## Loggi no Talent Fest Brasil 9ª Geração Laboratória
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de contruir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
 
 Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
 
@@ -13,14 +13,14 @@ Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai de
 
 ## Instruções técnicas
 
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no github. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
+Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
 
 Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
 
 Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [NextJs](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
+* [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
 * [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* Github - para versionamento de código
+* GitHub - para versionamento de código
 
 Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-next) que usa as ferramentas acima.
 
@@ -29,7 +29,7 @@ Sugerimos que para a parte de backend (retorno de dados) você use (ou implement
 
 ## O mínimo que esperamos
 - Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção
+- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
  
 Separamos alguns níveis de avaliação.
 
@@ -46,7 +46,7 @@ Separamos alguns níveis de avaliação.
 - BEM (css)
 - Aplicação de animações (sem degradar a performance)
 - Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório à partir do fork
+- Pull request criado neste repositório a partir do fork
 
 ### Nível Avançado:
 - Docker - projeto rodando em um container para desenvolvimento local
