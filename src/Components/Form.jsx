@@ -29,13 +29,14 @@ export default function Form() {
       }
     }
   }
+  
   return (
     <Box
       sx={{
         background: "#ffffff",
         width: "90%",
         maxWidth: "600px",
-        padding: "15px",
+        padding: "35px",
         borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
@@ -61,7 +62,7 @@ export default function Form() {
         required
         fullWidth
         sx={{
-          marginTop: "20px",
+          marginTop: "40px",
         }}
       />
       <Typography
@@ -81,7 +82,7 @@ export default function Form() {
           background:
             "linear-gradient(90deg, rgba(0,186,255,1) 0%, rgba(0,106,255,1) 75%)",
           color: "#ffffff",
-          marginTop: "20px",
+          marginTop: "50px",
         }}
       >
         Acompanhar pacote
@@ -91,7 +92,7 @@ export default function Form() {
         sx={{
           color: "#000000",
           textDecorationColor: "#000000",
-          marginTop: "20px",
+          marginTop: "40px",
         }}
       >
         Como encontro o código de rastreio?

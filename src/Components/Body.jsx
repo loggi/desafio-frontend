@@ -19,7 +19,7 @@ export default function Head() {
         component="h3"
         sx={{
           textAlign: "center",
-          color: "#ffffff"
+          color: "#ffffff",
         }}
       >
         Acompanhe o seu pacote do momento que ele chega em nossas mãos, até

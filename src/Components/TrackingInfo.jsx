@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import {
     Box,
     Container,
@@ -8,6 +9,7 @@ import {
     ListItemText,
     ListItemIcon,
     Link,
+    Button,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { format } from "date-fns";
@@ -18,6 +20,7 @@ export default function TrackingInfo({ trackingId }) {
     const [trackingCode, setTrackingCode] = useState("");
     const [trackingStatus, setTrackingStatus] = useState("")
     const [history, setHistory] = useState([])
+    const router = useRouter();
 
     useEffect(() => {
         const fetchTrackingCode = async () => {
@@ -64,6 +67,10 @@ export default function TrackingInfo({ trackingId }) {
         }
     };
 
+    const handleNewTracking = async () => {
+
+        router.push("/");
+    }
 
     return (
         <Container
@@ -93,7 +100,7 @@ export default function TrackingInfo({ trackingId }) {
                     sx={{
                         width: "90vw",
                         maxWidth: "600px",
-                        
+
                     }}
                 >
                     {history.map((status, index) => (
@@ -117,6 +124,18 @@ export default function TrackingInfo({ trackingId }) {
                         </ListItem>
                     ))}
                 </List>
+                <Button
+                    onClick={(e) => handleNewTracking(e)}
+                    variant="contained"
+                    sx={{
+                        background:
+                            "linear-gradient(90deg, rgba(0,186,255,1) 0%, rgba(255, 255, 255, 1) 75%)",
+                        color: "#000000",
+                        marginTop: "50px",
+                    }}
+                >
+                    Ver outro pacote
+                </Button>
                 <Link
                     href="#/"
                     sx={{
