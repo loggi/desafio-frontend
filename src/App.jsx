@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeScreen/>} />
-        <Route path="/TrackingInformation/:numeroRastreio" element={<TrackingInformation/>} />
+        <Route path="/TrackingInformation/:TrackingNumber" element={<TrackingInformation/>} />
       </Routes>
     </BrowserRouter>
   )

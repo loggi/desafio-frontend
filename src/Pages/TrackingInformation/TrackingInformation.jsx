@@ -1,3 +1,4 @@
+import Back from "../../Components/Back/Back";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Timeline from "../../Components/Timeline/Timeline";
@@ -10,6 +11,7 @@ function TrackingInformation() {
         <Header/>
         <TitleTracking/>
         <Timeline/>
+        <Back/>
         <Footer />
       </>
     )
