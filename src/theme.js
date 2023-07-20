@@ -29,6 +29,13 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
+  overrides: {
+    MuiAppBar: {
+      colorPrimary: {
+        backgroundColor: '#f0f0f0', // Define a cor de fundo da AppBar aqui
+      },
+    },
+  },
 });
 
 export default theme;
