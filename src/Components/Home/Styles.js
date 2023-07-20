@@ -34,7 +34,8 @@ export const Title = styled.p`
   text-align: center;
   font-size: 20px;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const IntroText = styled.p`
@@ -42,6 +43,7 @@ export const IntroText = styled.p`
   text-align: center;
   font-size: 12px;
   font-weight: 700;
+  padding: 30px;
 `;
 
 
@@ -51,7 +53,7 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
- 
+  margin-top: 50px;
   text-align: center;
   border: 1px solid black;
   font-size: 16px;
@@ -67,7 +69,7 @@ export const SubmitButton = styled.button`
   padding: 10px;
   width: 140px;
   height: 60px;
-  background-color: #007bff;
+  background-color: #00B9FF;
   color: black;
   font-weight: 700;
   border: none;
@@ -79,6 +81,9 @@ export const SubmitButton = styled.button`
   right: 0px;
   border-radius: 20px 0 20px 0;
   cursor: pointer;
+  &:hover{
+    opacity: 0.7;
+  }
  
 `;
 

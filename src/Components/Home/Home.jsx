@@ -32,10 +32,9 @@ const Home= () => {
             </ContainerLeft>
             <ContainerRight>
                 <FormContainer>
-                    <Title>ACOMPANHE SEU PEDIDO</Title>
+                    <Title>OLÁ!</Title>
                     
-                    <IntroText>PRIMEIRO, DIGITE SEU </IntroText>
-                    <IntroText>SEU CÓDIGO DE RASTREAMENTO</IntroText>
+                    <IntroText>QUER ACOMPANHAR SEU PEDIDO? DIGITE ABAIXO O CÓDIGO DE RASTREIO</IntroText>
                     
                     <Form>
                         <Input
