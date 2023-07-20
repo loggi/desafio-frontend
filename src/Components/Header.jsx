@@ -11,10 +11,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import CloseIcon from "@mui/icons-material/Close";
 import Divider from "@mui/material/Divider";
-import { Container } from "@mui/material";
+import { Container, useMediaQuery } from "@mui/material";
 
 export default function ButtonAppBar() {
   const [open, setOpen] = useState(false);
+  const isDesktop = useMediaQuery('(min-width: 960px)');
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -40,7 +41,7 @@ export default function ButtonAppBar() {
           <CloseIcon />
         </IconButton>
       </Toolbar>
-    
+
       <List>
         <ListItem button>
           <ListItemText primary="Para Você" />
@@ -71,7 +72,13 @@ export default function ButtonAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ background: "#ffffff" }}>
+      <AppBar
+        position="static"
+        sx={{
+          background: "#ffffff",
+          width: "100vw",
+        }}
+      >
         <Toolbar>
           <Link
             component="button"
@@ -86,16 +93,33 @@ export default function ButtonAppBar() {
               style={{ width: "130px", height: "40px", margin: "10px" }}
             />
           </Link>
+          {isDesktop ? (
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2, marginLeft: "auto", color: "#00baff" }}
+            sx={{ 
+              mr: 2, 
+              marginLeft: "auto", 
+              color: "#00baff" 
+            }}
             onClick={toggleDrawer}
           >
             <MenuIcon sx={{ fontSize: "3rem" }} />
           </IconButton>
+          ) : (
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ marginLeft: "auto", color: "#00baff" }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
         </Toolbar>
       </AppBar>
 
