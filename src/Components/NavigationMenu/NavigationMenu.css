@@ -1,0 +1,25 @@
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fafdfe;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    color: #53B6F9;
+  }
+  
+  .menu-options {
+    list-style-type: none;
+    padding: 0;
+    background-color: #fafdfe;
+    color: black;
+  }
+  
+  .menu-option {
+    padding: 0.5rem 1rem;
+    
+  }
+  
