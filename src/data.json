@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "mensageiro": "João",
+    "cliente": "Zara",
+    "dataPedido": "30-06-2023 08:40:10",
+    "localEntrega": {
+      "logradouro": "Rua Teste",
+      "numero": "470",
+      "bairro": "Centro",
+      "complemento": "apto 101",
+      "cep": "78455000",
+      "cidade": "São Lourenço",
+      "estado": "Minas Gerais"
+    },
+    "localOrigem": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "loja física",
+      "cep": "78455000",
+      "cidade": "São Paulo",
+      "estado": "São Paulo"
+    },
+    "dataEntrega": "30-06-2023 12:40:10",
+    "status": "Saiu para Entrega",
+    "historicoStatus": [
+      {
+        "status": "Remessa Criada",
+        "dataStatus": "30-06-2023 08:40:10"
+      },
+      {
+        "status": "Despachado",
+        "dataStatus": "30-06-2023 09:15:00",
+        "dataPrevistaEntrega": "30-06-2023 12:30:00"
+      },
+      {
+        "status": "Em trânsito",
+        "dataStatus": "30-06-2023 10:12:00",
+        "dataPrevistaEntrega": "30-06-2023 12:30:00"
+      },
+      {
+        "status": "Saiu para Entrega",
+        "dataStatus": "30-06-2023 12:40:10"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "mensageiro": "Pedro",
+    "cliente": "Lojista ABC",
+    "dataPedido": "30-06-2023 14:20:00",
+    "localEntrega": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "prédio cinza",
+      "cep": "78455000",
+      "cidade": "Rio de Janeiro",
+      "estado": "Rio de Janeiro"
+    },
+    "localOrigem": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "prédio cinza",
+      "cep": "78455000",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina"
+    },
+    "status": "Despachado",
+    "historicoStatus": [
+      {
+        "status": "Remessa Criada",
+        "dataStatus": "30-06-2023 14:20:00"
+      },
+      {
+        "status": "Despachado",
+        "dataStatus": "30-06-2023 15:10:00",
+        "dataPrevistaEntrega": "30-06-2023 16:30:00"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "mensageiro": "Ana",
+    "cliente": "Atacado e Varejo ABC",
+    "dataPedido": "30-06-2023 10:00:00",
+    "localEntrega": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "apto 503 bloco 1",
+      "cep": "37540000",
+      "cidade": "Santa Rita Do Sapucai",
+      "estado": "Minas Gerais"
+    },
+    "localOrigem": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "prédio cinza",
+      "cep": "78455000",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina"
+    },
+    "status": "Em trânsito",
+    "historicoStatus": [
+      {
+        "status": "Remessa Criada",
+        "dataStatus": "30-06-2023 10:00:00"
+      },
+      {
+        "status": "Despachado",
+        "dataStatus": "30-06-2023 10:30:00",
+        "dataPrevistaEntrega": "30-06-2023 11:00:00"
+      },
+      {
+        "status": "Em trânsito",
+        "dataStatus": "30-06-2023 10:30:00",
+        "dataPrevistaEntrega": "30-06-2023 11:00:00"
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 import { ContainerFooter, Button, ImgIcon, DivDownload, DivApple, DivGoogle } from "./Style";
 import IconApple from "../../Img/Apple.png";
 import IconGoogle from "../../Img/PlayStore.png";
+import Phases from "../Phases/Phases";
 
 const Footer = () => {
 
@@ -16,6 +17,7 @@ const Footer = () => {
                     <Button>DISPONÍVEL NA PLAY STORE</Button>
                 </DivGoogle>
             </DivDownload>
+            <Phases></Phases>
         </ContainerFooter>
     );
 

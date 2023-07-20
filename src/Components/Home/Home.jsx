@@ -32,14 +32,14 @@ const Home= () => {
             </ContainerLeft>
             <ContainerRight>
                 <FormContainer>
-                    <Title>OLÁ!</Title>
+                    <Title>ACOMPANHAR PEDIDO</Title>
                     
-                    <IntroText>QUER ACOMPANHAR SEU PEDIDO? DIGITE ABAIXO O CÓDIGO DE RASTREIO</IntroText>
+                    <IntroText>OLÁ! ACOMPANHE COM A LOGGI O SEU PEDIDO! INSIRA O CÓDIGO DE RASTREIO ABAIXO.</IntroText>
                     
                     <Form>
                         <Input
                         type="text"
-                        placeholder="Digite o código de rastreio"
+                        placeholder="digite o código de rastreio"
                         />
                         <SubmitButton type="submit">RASTREAR</SubmitButton>
                     </Form>
