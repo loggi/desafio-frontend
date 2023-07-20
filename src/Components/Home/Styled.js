@@ -63,16 +63,10 @@ export const DivInformations = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* @media (min-width: 1000px) {
-      flex-direction: row; 
-  } */
 `;
 
 export const ImgInformation = styled.img`
     width: 140px;
-    /* display: flex; 
-    flex-direction: column; */
 `;
 
 export const TitleInformation = styled.p`
