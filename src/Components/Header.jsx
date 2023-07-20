@@ -81,9 +81,9 @@ export default function ButtonAppBar() {
             }}
           >
             <img
-              src="/img/loggi-logo-reduced.png"
+              src="/img/loggi-logo-full.png"
               alt="Página principal"
-              style={{ width: "65px", height: "58px", margin: "10px" }}
+              style={{ width: "130px", height: "40px", margin: "10px" }}
             />
           </Link>
           <IconButton
