@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-  }
+    flex-direction: column;
+    align-items: center;
+}
   
   /* Estilos para a versão mobile */
   .tracking-box {
@@ -14,6 +16,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #53B6F9;
+    
   }
   
   .tracking-box p {
@@ -47,7 +50,7 @@
   @media (min-width: 768px) {
     .desktop-container {
       position: absolute;
-      height: 30rem;
+      height: 40rem;
       top: 0px; 
       left: 0;
       right: 0;
@@ -62,6 +65,11 @@
       margin-bottom: 30px; /* Espaço em branco abaixo do container */
       display: flex;
       justify-content: flex-start;
+      align-items: flex-start;
+      background-image: url('../../Assets/imgDesktop.png');
+      background-repeat: no-repeat;
+      background-size: 40% auto;
+      background-position: right 50px center;
     }
 
     .tracking-box {
