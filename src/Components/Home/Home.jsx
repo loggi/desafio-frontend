@@ -14,15 +14,30 @@ import {
     Text,
     DivImg } from "./Styles";
 import IconRabbit from "../../Img/LogoLoggi2.png";
+import React, { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import data from '../../data.json';
+import { setItens } from "../../LocalStorage";
 
 const Home= () => {
 
+    const searchValue = useRef();
     const navigate = useNavigate();
-    const sendToFollowUp = () => {
-        navigate("/FollowUp");
+    
+    const sendToFollowUp = (e) => {
+        e.preventDefault();
+        const codeValue = searchValue.current.value;
+        const findValue = data.pedidos.find((item) => item.id === codeValue)
+        console.log(findValue)
+        if(findValue){
+            setItens(findValue.id);
+            navigate("/FollowUp");
+        } else {
+            alert('Código de rastreio incorreto!')
+        }
+        
     };
+
     return(
         <ContainerHome>
             <ContainerLeft>
@@ -46,7 +61,7 @@ const Home= () => {
                         <Input
                         type="text"
                         placeholder="digite o código de rastreio"
-                        />
+                        ref={searchValue}/>
                         <SubmitButton type="submit" onClick={sendToFollowUp}>RASTREAR</SubmitButton>
                     </Form>
                 </FormContainer>
