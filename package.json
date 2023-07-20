@@ -18,6 +18,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "^5.14.1",
     "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
