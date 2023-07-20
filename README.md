@@ -47,8 +47,15 @@ As tecnologias e ferramentas utilizadas no projeto foram:
   
   
 ## 3. Acesso ao Projeto 📽️
+Para acessar o projeto, disponibilizamos três tipos distintos de códigos para testes na aplicação. Ao inseri-los no campo designado como "Digite o código de rastreamento" e acionar o botão "Rastrear", será possível vivenciar a simulação do histórico e status do pedido.
 
-Utilizei o Vite como bundler e realizei o deploy do projeto pelo Vercel, você pode conferir o projeto aqui: [Link](https://desafio-loggi-analeticia.vercel.app/)
+<div align="center">
+  <img width="500" src="https://github.com/analeticiabacha/desafio-loggi-analeticia/assets/30864314/a907336d-0ffa-4204-a217-8f894fe8ac38"/>
+</div>
+
+
+Vale ressaltar que o Vite foi empregado como bundler, garantindo uma construção otimizada e ágil do projeto. Adicionalmente, procedeu-se ao deployment da aplicação por meio da plataforma Vercel, conferindo-lhe disponibilidade e acessibilidade. Para visualizar o projeto, gentilmente clique no seguinte link: [Link.](https://desafio-loggi-analeticia.vercel.app/)
+
 ## 4. Versão Mobile 📱
 
 
