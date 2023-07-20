@@ -1,10 +1,27 @@
 import { Box, TextField, Button, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import image from './image.png';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { mainStyle, formStyle, textStyle, boxStyle, inputStyle, pTextStyle, searchIconStyle, buttonStyle, imageStyle} from './styles';
+import getOrdersTrack from '../../API/orders';
 
 
 function FormBox() {
+  const [trackingCode, setTrackingCode] = useState('');
+  const navigate = useNavigate();
+
+  const handleTrackClick = async () => {
+    const orders = await getOrdersTrack();
+    const order = orders.find((item) => item.id === Number(trackingCode));
+
+    if (order) {
+      navigate(`/rastreador/${trackingCode}`);
+    } else {
+      console.log('Order not found');
+    }
+  };
+
   return (
     <main style={mainStyle}>
       <Box sx={boxStyle}> 
@@ -27,9 +44,12 @@ function FormBox() {
                 </InputAdornment>
               ),
             }}
+            value={trackingCode}
+            onChange={(e) => setTrackingCode(e.target.value)}
           />
           <Button variant="contained"
-            sx={buttonStyle}>
+            sx={buttonStyle}
+            onClick={handleTrackClick}>
             Acompanhar o pedido
           </Button>
         </section>

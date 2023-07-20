@@ -1,9 +1,9 @@
-import Track from "../../components/Track/Track"
+import Orders from "../../components/Orders";
 
-function TrackOrder(){
+function TrackOrderPage(){
     return (
-        <Track />
+        <Orders />
     )
 }
 
-export default TrackOrder;
+export default TrackOrderPage;
