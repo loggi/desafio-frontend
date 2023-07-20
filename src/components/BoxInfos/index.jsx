@@ -56,4 +56,25 @@ function BoxDelivery({ messenger, client, orderDate, deliveryDate }) {
     )
 }
 
-export default BoxDelivery;
+function BoxStatus({orderNumber, status}) {
+    return (
+        <CenteredBox>
+            <Box >
+                <Typography sx={{
+                    display: 'flex',
+                    gap: '5rem',
+                    width: '500px',
+                    padding: '1rem',
+                    
+                    borderRadius: '10px',
+                    border: '1px solid var(--light-blue)'
+                }}>
+                    <span>Número do pedido: {orderNumber}</span>
+                    <span>Status: {status} </span>
+                </Typography>
+            </Box>
+        </CenteredBox>
+    )
+}
+
+export { BoxDelivery, BoxStatus }

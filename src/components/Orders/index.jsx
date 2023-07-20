@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import getOrdersTrack from '../../API/orders';
 import Header from '../Header';
-import BoxDelivery from '../BoxDelivery';
+import {BoxDelivery, BoxStatus} from '../BoxInfos';
 import { pStyles } from './styles';
 
 function Orders() {
@@ -25,6 +25,16 @@ function Orders() {
     return <div>Loading...</div>;
   }
 
+  const getStatusImage = (status) => {
+    const statusToImageMap = {
+      PEDIDO_RECEBIDO: "entregue.png",
+      EM_ROTA_PARA_COLETA: "enviado.png",
+      PACOTE_COLETADO: "pedido.png",
+    };
+    const imageName = statusToImageMap[status];
+    return `./assets/${imageName}`;
+  };
+
   return (
     <>
       <Header img src="./src/assets/logo.png" alt="logo loggi" style={{ height: '80px', marginRight: '10px' }} />
@@ -39,10 +49,9 @@ function Orders() {
           orderDate={order.dataPedido}
           deliveryDate={order.dataPrevistaEntrega}
         />
-        <h2>Status do Pedido</h2>
-        <p>ID do Pedido: {order.id}</p>
-        <p>Status: {order.status}</p>
-        <p>Descrição: {order.descricao}</p>
+        <BoxStatus 
+        orderNumber={order.id}
+        status={order.descricao}/>
         <h2>Histórico de Status</h2>
         <ul>
           {order.historicoStatus.map((statusItem) => (
@@ -50,6 +59,7 @@ function Orders() {
               <p>Status: {statusItem.status}</p>
               <p>Descrição: {statusItem.descricao}</p>
               <p>Data do status: {statusItem.dataStatus}</p>
+              <img src={getStatusImage(statusItem.status)} alt={statusItem.status} />
             </li>
           ))}
         </ul>
