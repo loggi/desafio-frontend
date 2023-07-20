@@ -1,10 +1,12 @@
 import { Box, Card, TextField, Typography, Container } from "@mui/material";
 import { useState } from "react";
 import ButtonSubmit from "../ButtonSubmit";
+import { useRouter } from "next/router";
 
 
 export default function Forms() {
     const [pedidoId, setPedidoId] = useState('');
+    const router = useRouter();
 
     const handleInputChange = (event) => {
         const { value } = event.target;
@@ -14,6 +16,7 @@ export default function Forms() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        router.push(`/track/${pedidoId}`)
         console.log('ID do pedido:', pedidoId);
     };
 
