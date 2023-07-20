@@ -20,13 +20,13 @@ function NavigationMenu() {
 				<a href="/#">Para empresas</a>
 				<a href="/#">Para entregar</a>
 				<a href="/#">Vendas e suporte</a>
-        <a href="/#">Acompanhe seu pedido</a>
-        <a href="/#">Entrar</a>
-        <a href="/#">Criar conta</a>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes />
+                <a href="/#">Acompanhe seu pedido</a>
+                <a href="/#">Entrar</a>
+                <a href="/#">Criar conta</a>
+				<button 
+                   className="nav-btn nav-close-btn" 
+                   onClick={showNavbar}>
+                    <FaTimes />
 				</button>
 			</nav>
 			<button
