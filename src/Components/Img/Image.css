@@ -1,0 +1,10 @@
+.mobile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.img-mobile {
+    width: 17rem;
+    height: 20rem;
+    margin-top: -1rem
+}
