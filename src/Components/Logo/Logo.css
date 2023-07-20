@@ -1,0 +1,30 @@
+/* 
+.logo-container {
+    max-width: 1rem; 
+  }
+  
+  .logo-img {
+    max-width: 1rem;
+  }
+  
+  .logo {
+    max-width: 7rem;
+    height: auto;
+  } */
+
+  /* Logo.css */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    margin-right: 1rem; /* Espaçamento entre o ícone do menu e a logo */
+  }
+  
+  .logo {
+    max-width: 7rem;
+    height: auto;
+  }
+  
