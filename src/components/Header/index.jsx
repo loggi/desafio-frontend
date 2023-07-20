@@ -3,6 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import ButtonConfirm from '../Buttom';
 import { listItemStyles, listAndLogoStyles } from './styles';
+import logo from './logo.png'
 
 
 function Header() {
@@ -11,7 +12,7 @@ function Header() {
             <Toolbar>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexGrow: 1 }}>
                     <div style={listAndLogoStyles}>
-                        <img src="./src/assets/logo.png" alt="logo loggi" style={{ height: '80px', marginRight: '10px' }} />
+                        <img src={logo} alt="logo loggi" style={{ height: '80px', marginRight: '10px' }} />
                         <nav>
                             <ul style={{ display: 'flex', gap: '1rem', listStyleType: 'none', padding: 0, margin: 0 }}>
                                 <li style={listItemStyles}>Para você</li>
