@@ -8,3 +8,20 @@ export const pStyles = {
     gap: '15px',
     borderBottom: '1px solid var(--light-blue)',
 }
+
+export const orderHistory = {
+    display: 'flex',
+    gap: "30px",
+    justifyContent: 'center',
+    paddingRight: '5rem'
+}
+
+export const styleStatus = {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: "0.5rem",
+    gap: '10px',
+    width: '200px',
+    fontFamily:'Arial, sans-serif',
+
+}
