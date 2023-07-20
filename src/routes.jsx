@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
-import TrackOrder from "./pages/TrackOrder/TrackOrder";
-
+import TrackOrderPage from "./pages/TrackOrder/TrackOrder";
 
 function AppRoutes() {
 
@@ -9,7 +8,7 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />}> </Route>
-        <Route path="/rastreador" element={<TrackOrder />}> </Route>
+        <Route path="/rastreador/:trackingCode" element={<TrackOrderPage />}> </Route>
       </Routes>
     </BrowserRouter>
   )
