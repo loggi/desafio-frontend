@@ -1,64 +1,45 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+# Material UI - Next.js example
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de contruir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+## How to use
 
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+Download the example [or clone the repo](https://github.com/mui/material-ui):
 
-## O desafio
+<!-- #default-branch-switch -->
 
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
+```bash
+curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-next
+cd material-next
+```
 
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
+Install it and run:
 
+```bash
+npm install
+npm run dev
+```
 
-## Instruções técnicas
+or:
 
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no github. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
+<!-- #default-branch-switch -->
 
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
+[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-next)
 
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [NextJs](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
-* [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* Github - para versionamento de código
+[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/material-next)
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-next) que usa as ferramentas acima.
+## The idea behind the example
 
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
+It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI v5.
+If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
 
+## The Link component
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção
- 
-Separamos alguns níveis de avaliação.
+The [example folder](https://github.com/mui/material-ui/tree/HEAD/examples/material-next-ts) provides an adapter for the use of [Next.js's Link component](https://nextjs.org/docs/api-reference/next/link) with MUI.
+More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
 
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
+## What's next?
 
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório à partir do fork
+<!-- #default-branch-switch -->
 
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
-
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
+You now have a working example project.
+You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
