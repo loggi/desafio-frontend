@@ -1,16 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header'
-import Home from './Components/Home/Home';
+import HomeScreen from './Pages/HomeScreen/HomeScreen';
+import TrackingInformation from './Pages/TrackingInformation/TrackingInformation';
 
 function App() {
 
   return (
-    <>
-      <Header/>
-      <Home />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeScreen/>} />
+        <Route path="/TrackingInformation" element={<TrackingInformation/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
