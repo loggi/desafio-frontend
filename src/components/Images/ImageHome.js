@@ -10,7 +10,7 @@ const ImageHome = () => {
             height="100%"
         >
             <img
-                src={'https://github.com/paola-oliveira/desafio-frontend/blob/main/src/Imagens/iconHome.png?raw=true'}
+                src={'https://github.com/ThainaraTabile/desafio-frontend/blob/main/assets/images/figureHome.png?raw=true'}
                 alt="Logo Loggi"
                 style={{
                     maxWidth: '100%',
