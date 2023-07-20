@@ -1,32 +1,35 @@
-import { TrackingSection, TrackingImg, TrackingInput, TrackingCard, TrackingButton, ImgInformation, InformationSection, DivInformations, TitleInformation, TextInformation } from "./Styled";
+import { TrackingSection, TrackingImg, TrackingInput, TrackingCard, TrackingButton, ImgInformation, ImgInformationTwo, InformationSection, DivInformations, TitleInformation, TextInformation, TextCard, TitleCard, ImgPackage } from "./Styled";
 import InformationOneImg from "../../Imagens/InformationOne.png";
 import InformationTwoImg from "../../Imagens/InformationTwo.png";
 import InformationThreeImg from "../../Imagens/InformationThree.png";
+import IconHomeInformation from "../../Imagens/iconHome.png"; 
+import Package from "../../Imagens/Package.png"; 
 
 function Home() {
   return (
     <>
       <TrackingSection>
-        <TrackingImg src="https://w7.pngwing.com/pngs/824/276/png-transparent-computer-icons-job-job-hire-hand-sticker-cartoon.png" />
         <TrackingCard>
-          <p>Olá!</p>
+          <TitleCard>Olá!</TitleCard>
           <br />
-          <p>Acompanhe com a Loggi o status da entrega do seu pedido.</p>
+          <TitleCard>Acompanhe com a Loggi o status da entrega do seu pedido.</TitleCard>
           <br />
-          <p>Primeiro, digite o código de rastreamento.</p>
+          <ImgPackage src={Package}/>
+          <TextCard>Primeiro, digite o código de rastreamento.</TextCard>
           <TrackingInput />
-          <TrackingButton>Acompanhar Pedido</TrackingButton>
+          <TrackingButton>ACOMPANHAR PEDIDO</TrackingButton>
         </TrackingCard>
+        <TrackingImg src={IconHomeInformation}/>
       </TrackingSection>
         <InformationSection>
           <DivInformations>
             <ImgInformation src={InformationOneImg} alt="image search"></ImgInformation>
             <TitleInformation>Rastreie suas encomendas com a Loggi</TitleInformation>
-            <TextInformation>Utilize a plataforma de rastreamento da Loggi para encontrar e acompanhar suas encomendas.
-             Basta inserir o código de rastreamento no campo de busca e desfrutar da melhor experiência.</TextInformation>
+            <TextInformation>Utilize a plataforma de rastreamento da Loggi para encontrar e acompanhar suas encomendas. 
+            Basta inserir o código de rastreamento no campo de busca e desfrutar da melhor experiência.</TextInformation>
           </DivInformations>
           <DivInformations>
-            <ImgInformation src={InformationTwoImg} alt="track delivery"></ImgInformation>
+            <ImgInformationTwo src={InformationTwoImg} alt="track delivery"></ImgInformationTwo>
             <TitleInformation>Acompanhe a entrega</TitleInformation>
             <TextInformation>Acompanhe suas encomendas com a Loggi, de qualquer lugar. De porta a porta, nós entregamos,
             e você acompanha todo o processo pela plataforma ou via SMS.</TextInformation>
