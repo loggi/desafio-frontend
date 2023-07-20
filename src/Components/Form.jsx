@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Box, Typography, TextField, Button, Link } from "@mui/material";
 import { getOrder } from "../api/api";
+import { setItem } from "../storage";
 
-export default function Head() {
+export default function Form() {
   const [trackingCode, setTrackingCode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const router = useRouter();
@@ -11,16 +12,17 @@ export default function Head() {
   const handleTrackingCode = async (e, code) => {
     e.preventDefault();
 
-    if (!trackingCode) {
+    if (!code) {
       setErrorMessage("Por favor, insira o código de rastreio.");
       return;
     } else {
       try {
-        const codeValidate = await getOrder(trackingCode);
+        const codeValidate = await getOrder(code);
         console.log('getOrder response', codeValidate)
         if (codeValidate.status === 200) {
           setErrorMessage("");
           setTrackingCode("");
+          setItem("id", code)
           router.push("/Tracking");
         }
       } catch (error) {
