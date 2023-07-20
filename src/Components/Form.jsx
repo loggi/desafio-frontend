@@ -18,7 +18,6 @@ export default function Form() {
     } else {
       try {
         const codeValidate = await getOrder(code);
-        console.log('getOrder response', codeValidate)
         if (codeValidate.status === 200) {
           setErrorMessage("");
           setTrackingCode("");
