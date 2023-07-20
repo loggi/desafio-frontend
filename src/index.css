@@ -14,9 +14,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  display: flex;
+* {
+  box-sizing: border-box;
+}
+
+#page-wrap {
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
 @media (prefers-color-scheme: light) {

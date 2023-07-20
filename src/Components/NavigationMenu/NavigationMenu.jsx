@@ -1,34 +1,41 @@
-import { useState } from 'react';
-import { FiMenu } from 'react-icons/fi';
-import './NavigationMenu.css';
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../Logo/Logo";
+import './NavigationMenu.css'
 
-const NavigationMenu = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-  
-    return (
-      <nav className="nav-container">
-        <div className="menu-container">
-          <div className="menu-icon" onClick={toggleMenu}>
-            <FiMenu size={30} />
-          </div>
-          {isMenuOpen && (
-            <ul className="menu-options">
-              <li className="menu-option">Para você</li>
-              <li className="menu-option">Para empresas</li>
-              <li className="menu-option">Para entregar</li>
-              <li className="menu-option">Vendas e suporte</li>
-              <li className="menu-option">Acompanhe seu pedido</li>
-              <li className="menu-option">Entrar</li>
-              <li className="menu-option">Criar conta</li>
-            </ul>
-          )}
-        </div>
-      </nav>
-    );
-  };
-  
-  export default NavigationMenu;
+function NavigationMenu() {
+	const navRef = useRef();
+
+	const showNavbar = () => {
+		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+	};
+
+	return (
+		<header>
+			<Logo/>
+			<nav ref={navRef}>
+				<a href="/#">Para você</a>
+				<a href="/#">Para empresas</a>
+				<a href="/#">Para entregar</a>
+				<a href="/#">Vendas e suporte</a>
+        <a href="/#">Acompanhe seu pedido</a>
+        <a href="/#">Entrar</a>
+        <a href="/#">Criar conta</a>
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes />
+				</button>
+			</nav>
+			<button
+				className="nav-btn" id="nav-icon"
+				onClick={showNavbar}>
+				<FaBars />
+			</button>
+		</header>
+	);
+}
+
+export default NavigationMenu;
