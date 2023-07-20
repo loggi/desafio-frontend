@@ -1,21 +1,6 @@
-import { Box, Button, Card, TextField } from "@mui/material";
+import { Box, Card, TextField } from "@mui/material";
 import { useState } from "react";
-
-const buttonStyle = {
-    backgroundColor: '#00BAFF',
-    color: 'black',
-    margin: '1rem'
-};
-
-const cardStyle = {
-    backgroundColor: '#006AF0',
-    padding: '20px',
-    borderRadius: '10px',
-    color: '#fff',
-    display: 'block',
-    margin: '0 auto',
-};
-
+import ButtonSubmit from "../ButtonSubmit";
 
 
 export default function Forms() {
@@ -34,7 +19,14 @@ export default function Forms() {
 
     return (
         <>
-            <Card style={cardStyle}>
+            <Card sx={{
+                backgroundColor: '#006AF0',
+                padding: '20px',
+                borderRadius: '10px',
+                color: '#fffff',
+                display: 'block',
+                margin: '0 auto',
+            }}>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         variant="standard"
@@ -50,9 +42,7 @@ export default function Forms() {
                         required
                     />
                     <Box textAlign="center">
-                        <Button type="submit" style={buttonStyle}>
-                            rastrear
-                        </Button>
+                        <ButtonSubmit text="rastrear" />
                     </Box>
                 </form>
             </Card>
