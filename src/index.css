@@ -1,6 +1,14 @@
+html, body  .root{
+  height: 100%;
+  width: 100%;
+}
+
 :root {
   --black: #000000;
   --white: #FFFFFF;
-  --ligth-blue: #00BAFF;
+  --light-blue: #00BAFF;
 }
 
+body {
+  margin: 0;
+}
