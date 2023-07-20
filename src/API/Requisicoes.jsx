@@ -1,29 +1,30 @@
 import { toast } from "react-toastify";
+const api ='https://api-loggi.vercel.app/';
+// const api ='http://localhost:8080/';
 
-console.log(toast);
-
-export const requisicoesHTTP(method = 'GET', id){
-  const req = fetch(`https://api-loggi.vercel.app/${id}`, {
+const requisicoesHTTP = async (method = 'GET', id)=>{
+  const req = await fetch(`${api}/pedidos/${id}`, {
     method: method,
     headers: {
       "Content-Type":"application/json",
     }
   })
-    const resp = req.json()
-    if(req.status >= 400 || req.status < 500){
-      return 
-    }
+    // const resp = req.json()
+    
+    // if(req.status >= 400 || req.status < 500){
+    //   return toast.error('Dado não encontrado, por favor, verifique a digitação.')
+
+    // }
+    // if(req.status >= 500 || req.status <= 599){
+    //   return toast.error('Algo deu errado, tente novamente em instantes')
+    // }
+    
+    // console.log(method)
+    // console.log(req)
+    // console.log(req.status)
+
+    return req
 }
-// const response = await fetch(`${API}/${caminho}`, {
-//   method: metodo,
-//   headers: {
-//     "Content-Type": "application/json",
-//     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-//   },
-// });
-// // colocar parametro para metodo e colocar
-// const data = await response.json();
-// if(response.status === 401){
-//   return toast.error("Por favor, faça login novamente!")  
-// }
-// return data
+
+export default requisicoesHTTP
+
