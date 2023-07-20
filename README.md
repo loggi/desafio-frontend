@@ -48,8 +48,7 @@ As tecnologias e ferramentas utilizadas no projeto foram:
   
 ## 3. Acesso ao Projeto 📽️
 
-Utilizei o Vite como bundler e realizei o deploy do projeto pelo Vercel, você pode conferir o projeto aqui: 
-
+Utilizei o Vite como bundler e realizei o deploy do projeto pelo Vercel, você pode conferir o projeto aqui: [Link](https://desafio-loggi-analeticia.vercel.app/)
 ## 4. Versão Mobile 📱
 
 
