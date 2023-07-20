@@ -1,9 +1,10 @@
-import { ContainerFooter, Button, ImgIcon, DivDownload, DivApple, DivGoogle } from "./Style";
+import { ContainerFooter, Button, ImgIcon, DivDownload, DivApple, DivGoogle, IconsSocial, ImgIconSocial } from "./Style";
 import IconApple from "../../Img/Apple.png";
 import IconGoogle from "../../Img/PlayStore.png";
-import { useNavigate } from 'react-router-dom';
-
-
+import AppleIconSocial from "../../Img/appleicon.png";
+import Linkedin from "../../Img/linkedin.png";
+import YoutubeIcon from "../../Img/youtube.png";
+import TwitterIcon from "../../Img/twitter.png";
 
 
 const Footer = () => {
@@ -24,13 +25,19 @@ const Footer = () => {
             <DivDownload>
                 <DivApple>
                     <ImgIcon src={IconApple}></ImgIcon>
-                    <Button onClick={openGooglePlay}>DISPONÍVEL NA APPLE STORE</Button>
+                    <Button onClick={openAppleStore}>DISPONÍVEL NA APPLE STORE</Button>
                 </DivApple>
                 <DivGoogle>
                     <ImgIcon src={IconGoogle}></ImgIcon>
-                    <Button>DISPONÍVEL NA PLAY STORE</Button>
+                    <Button onClick={openGooglePlay}>DISPONÍVEL NA PLAY STORE</Button>
                 </DivGoogle>
             </DivDownload>
+            <IconsSocial>
+                <ImgIconSocial src={AppleIconSocial}></ImgIconSocial>
+                <ImgIconSocial src={Linkedin}></ImgIconSocial>
+                <ImgIconSocial src={YoutubeIcon}></ImgIconSocial>
+                <ImgIconSocial src={TwitterIcon}></ImgIconSocial>
+            </IconsSocial>
             
         </ContainerFooter>
     );

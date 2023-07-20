@@ -33,7 +33,6 @@ export const ContainerPhases = styled.div`
             img{
                 @media(max-width: 550px) {
                 width: 15px;
-                
             }
             }
     
@@ -60,10 +59,25 @@ export const ContainerPhases = styled.div`
 export const SectionTable = styled.section`
     table{
         width: 60vw;
+        color: black;
+        border-color: black;
+        border-radius: 10px;
+        border-collapse: collapse;
+        margin: auto;
     }
     td{
         height: 35px;
         text-align: center;
+        @media(max-width: 550px) {
+            font-size: 11px;
+        }
     }
+    th{
+        height: 35px;
+        text-align: center;
+    }
+
+   
+
 `;
 

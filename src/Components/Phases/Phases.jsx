@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { ContainerPhases, SectionTable, Container } from "./Styles";
 import IconCheck from "../../Img/Vector.png";
 import IconAirplane from "../../Img/Airplane.png";
 import IconTime from "../../Img/Time.png";
 import IconHouse from "../../Img/House.png";
 import data from "../../data.json";
+import { getItens } from '../../LocalStorage';
 
 const Phases = () => {
 
-    console.log(data);
-    console.log(data.pedidos[0]);
+    
+
+    const idTrack = getItens();
+    const findValue = data.pedidos.find((item) => item.id === idTrack);
+    // const [colorCircle, setColorCircle] = useState(findValue.status);
+    console.log(findValue.id);
+
+
     return(
         <Container>
             <ContainerPhases>
@@ -28,7 +35,7 @@ const Phases = () => {
                 <div className="circle">
                     <img src={IconHouse}/>
                 </div>
-                </ContainerPhases>
+            </ContainerPhases>
                 <SectionTable>
                     <table border="1">
                         <tr>
@@ -39,12 +46,12 @@ const Phases = () => {
                         </tr>
                         
 
-                        {data.pedidos[0].historicoStatus.map((item) => (
+                        {findValue.historicoStatus.map((item) => (
                             <tr>
                                 <td>{item.dataStatus}</td>
                                 <td>{item.status}</td>
-                                <td>{data.pedidos[0].localOrigem.cidade}</td>
-                                <td>{data.pedidos[0].localEntrega.cidade}</td>
+                                <td>{findValue.localOrigem.cidade}</td>
+                                <td>{findValue.localEntrega.cidade}</td>
                             </tr>
                         ))}
                         

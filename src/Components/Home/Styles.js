@@ -6,6 +6,7 @@ export const ContainerHome = styled.header`
     background: black;
     height: calc(100vh - 100px);
     width: 100vw;
+    
 `;
 
 export const FormContainer = styled.div`
