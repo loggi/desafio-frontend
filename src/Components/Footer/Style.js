@@ -9,6 +9,7 @@ export const ContainerFooter = styled.header`
 `;
 
 export const DivDownload= styled.div`
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -36,10 +37,17 @@ export const ImgIcon = styled.img`
 `;
 
 export const Button = styled.button`
+  font-weight: 700;
   width: 310px;
   height: 60px;
   border: none;
   background-color: black;
   color: white;
+  cursor: pointer;
+  &:hover{
+    background-color: white;
+    color: black;
+    
+  }
 `;
 

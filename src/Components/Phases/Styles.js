@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+`;
+
 export const ContainerPhases = styled.div`
     display: flex;
     align-items: center;
@@ -14,19 +21,49 @@ export const ContainerPhases = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            /* &::after{
-                content: "Remessa Criada";
-                color: white;
-                position: absolute;
-                bottom: -20px;
-            } */
+            @media(max-width: 850px) {
+                width: 70px;
+                height: 70px;
+            }
+            @media(max-width: 550px) {
+                width: 40px;
+                height: 40px;
+                
+            }
+            img{
+                @media(max-width: 550px) {
+                width: 15px;
+                
+            }
+            }
+    
         }
         &.line{
             height: 5px;
             width: 100px;
             background-color: black;
+            @media(max-width: 850px) {
+                width: 70px;
+                height: 3px;
+            }
+            @media(max-width: 550px) {
+                width: 20px;
+                height: 3px;
+            }
+        
         }
     }
     
+`;
+
+
+export const SectionTable = styled.section`
+    table{
+        width: 60vw;
+    }
+    td{
+        height: 35px;
+        text-align: center;
+    }
 `;
 
