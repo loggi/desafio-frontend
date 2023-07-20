@@ -4,7 +4,7 @@ export const ContainerHome = styled.header`
     display: flex;
     align-items: center;
     background: black;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100vw;
 `;
 
@@ -44,6 +44,7 @@ export const IntroText = styled.p`
   font-size: 12px;
   font-weight: 700;
   padding: 30px;
+  max-width: 350px;
 `;
 
 
@@ -63,6 +64,9 @@ export const Input = styled.input`
   width: 30vh;
   color: black;
   outline: none;
+  &::placeholder{
+    color: black;
+  }
 `;
 
 export const SubmitButton = styled.button`
@@ -92,21 +96,26 @@ export const ContainerRight = styled.div`
     display: flex;
     align-items: center;
     height: 100%;
-   
-
-   
+    width: 50%;
+    @media(max-width: 850px) {
+        width: 100vw;
+        justify-content: center;
+    }
 `;
+   
 
 export const ContainerLeft = styled.div`
-     width: 50%;
-     background-color: black;
-     @media(max-width: 850px) {
-        display: none;
-    }
+    width: 50%;
+    background-color: black;
+    position: relative;
+    @media(max-width: 850px) {
+      display: none;
+  }
 `;
 
 export const ImgLogo = styled.img`
-    width: 200px;
+    width: 220px;
+
 `;
 
 export const Text = styled.p`
@@ -123,9 +132,11 @@ export const DivImg = styled.div`
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-
+    position: absolute;
+    bottom: -150px;
+    left: 20px;
     @media(max-width: 850px) {
-        display: none;
+      display: none;
     }
 `;
 
