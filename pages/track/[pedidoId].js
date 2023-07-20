@@ -55,7 +55,7 @@ export default function Track() {
                     <Divider />
                     <pre>Data de registro: {pedidoData.dataPedido}</pre>
                     <Divider />
-                    <pre>Status atual: {pedidoData.status}</pre>
+                    <pre>Status atual: {pedidoData.descricao}</pre>
                 </Typography>
                 <Accordion>
                     <AccordionSummary expandIcon={<ExpandCircleDown />}
