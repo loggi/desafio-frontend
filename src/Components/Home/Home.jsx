@@ -36,7 +36,7 @@ const Home= () => {
                     
                     <IntroText>OLÁ! ACOMPANHE COM A LOGGI O SEU PEDIDO! INSIRA O CÓDIGO DE RASTREIO ABAIXO.</IntroText>
                     
-                    <Form>
+                    <Form >
                         <Input
                         type="text"
                         placeholder="digite o código de rastreio"

@@ -1,11 +1,14 @@
 import Header from "../../Components/Header/Header";
+import { ContainerFollowUp } from "./Styles"
 
 const FollowUp= () => {
     
     return(
-        <>
-        <Header></Header>
-        </>
+        <ContainerFollowUp>
+            <Header></Header>
+        </ContainerFollowUp>
+        
+        
     ) 
 }
 

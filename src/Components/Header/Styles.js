@@ -55,6 +55,10 @@ export const Button = styled.button`
     border-radius: 5px;
     display: block;
 
+    &.hidden{
+        display: none;
+    }
+
     @media(max-width: 850px) {
         display: none;
     }
