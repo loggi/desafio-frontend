@@ -13,6 +13,9 @@ Ao abraçar esse desafio, busquei prezar pela experiência do usuário. Por meio
 
 * [1. Histórias de Usuários](#1-historias-de-usuarios) 📝
 * [2. Tecnologias e Decisões Tomadas](#2-Tecnologias-e-Decisões-Tomadas) 📌
+* [3. Acesso ao Projeto](#3-Acesso-ao-Projeto) 📽️
+* [4. Versão Mobile](#4-Versão-Mobile) 📱
+* [5. Versão Desktop](#5-Versão-Desktop) 🖥️
 
 ## 1. Histórias de Usuários 📝
 
@@ -28,5 +31,27 @@ Ao considerar o prazo  de 4 dias para a execução do projeto, a ponderação to
 
 Acredito veementemente que a escolha das tecnologias adequadas não apenas facilita o processo, mas também contribui substancialmente para a obtenção de um produto final de alta qualidade. A fluidez proporcionada pelo React, aliada à simplicidade e poder de personalização do Styled Components, oferece um ambiente de trabalho propício para alcançar resultados superiores.
 
+As tecnologias e ferramentas utilizadas no projeto foram:
+<br>
+  <br>
+  <img align="center" alt="git" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+  <img align="center" alt="Rafa-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Rafa-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="vscode" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+  <img align="center" alt="Figma" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+  <img  align="center" alt="Node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Canva" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg"><br>
+  <br>
+  
+  
+## 3. Acesso ao Projeto 📽️
 
+Utilizei o Vite como bundler e realizei o deploy do projeto pelo Vercel, você pode conferir o projeto aqui: 
+
+## 4. Versão Mobile 📱
+
+
+## 4. Versão Desktop 🖥️
 
