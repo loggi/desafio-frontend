@@ -8,17 +8,17 @@ import IconHomeInformation from "../../Imagens/iconHome.png";
 import Package from "../../Imagens/Package.png"; 
 
 function Home() {
-  const [numeroRastreio, setNumeroRastreio] = useState('');
+  const [TrackingNumber, setTrackingNumber] = useState('');
 
   // Função para lidar com a mudança no input de rastreio
   const handleInputChange = (event) => {
-    setNumeroRastreio(event.target.value);
+    setTrackingNumber(event.target.value);
   };
 
   const handleTrackOrders = () => {
   
-    if (numeroRastreio.trim() !== '') {
-      history.push(`/TrackingInformation/${numeroRastreio}`);
+    if (TrackingNumber.trim() !== '') {
+      history.push(`/TrackingInformation/${TrackingNumber}`);
     } else {
       console.log('Digite o número de rastreio.');
     }
@@ -34,8 +34,8 @@ function Home() {
           <br />
           <ImgPackage src={Package}/>
           <TextCard>Primeiro, digite o código de rastreamento.</TextCard>
-          <TrackingInput value={numeroRastreio} onChange={handleInputChange}/>
-          <Link to={`/TrackingInformation/${numeroRastreio}`}>
+          <TrackingInput value={TrackingNumber} onChange={handleInputChange}/>
+          <Link to={`/TrackingInformation/${TrackingNumber}`}>
             <TrackingButton onClick={handleTrackOrders}>ACOMPANHAR PEDIDO</TrackingButton>
           </Link>
         </TrackingCard>
