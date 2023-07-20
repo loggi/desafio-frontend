@@ -7,8 +7,17 @@ import ImageHome from '../src/components/Images/ImageHome';
 export default function Index() {
   return (<>
     <Header />
-    <Container maxWidth="lg">
-      <Grid container spacing={3}>
+    <Container maxWidth="lg" sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: '3rem',
+    }}>
+      <Grid container spacing={2}>
+
+        <Grid item xs={12} sm={6}>
+          <ImageHome />
+        </Grid>
 
         <Grid item xs={12} sm={6} sx={{
           display: 'flex',
@@ -16,10 +25,6 @@ export default function Index() {
           alignItems: 'center'
         }}>
           <FormBox />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-          <ImageHome />
         </Grid>
       </Grid>
     </Container>

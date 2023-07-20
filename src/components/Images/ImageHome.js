@@ -8,6 +8,7 @@ const ImageHome = () => {
             alignItems="center"
             justifyContent="center"
             height="100%"
+            overflow='none'
         >
             <img
                 src={'https://github.com/ThainaraTabile/desafio-frontend/blob/main/assets/images/figureHome.png?raw=true'}
