@@ -122,6 +122,56 @@
           "dataPrevistaEntrega": "30-06-2023 11:00:00"
         }
       ]
-    }
-  ]
+    },
+  {
+    "id": 4,
+    "mensageiro": "Ana",
+    "cliente": "Atacado e Varejo ABC",
+    "dataPedido": "30-06-2023 10:00:00",
+    "localEntrega": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "apto 503 bloco 1",
+      "cep": "37540000",
+      "cidade": "Santa Rita Do Sapucai",
+      "estado": "Minas Gerais"
+    },
+    "localOrigem": {
+      "logradouro": "Rua Teste",
+      "numero": "23",
+      "bairro": "Centro",
+      "complemento": "prédio cinza",
+      "cep": "78455000",
+      "cidade": "Florianópolis",
+      "estado": "Santa Catarina"
+    },
+    "status": "Entregue",
+    "historicoStatus": [
+      {
+        "status": "Remessa Criada",
+        "dataStatus": "30-06-2023 10:00:00"
+      },
+      {
+        "status": "Despachado",
+        "dataStatus": "30-06-2023 10:30:00",
+        "dataPrevistaEntrega": "30-06-2023 11:00:00"
+      },
+      {
+        "status": "Em trânsito",
+        "dataStatus": "30-06-2023 10:30:00",
+        "dataPrevistaEntrega": "30-06-2023 11:00:00"
+      }, 
+      {
+        "status": "Em trânsito",
+        "dataStatus": "30-06-2023 10:30:00",
+        "dataPrevistaEntrega": "30-06-2023 11:00:00"
+      }, 
+      {
+        "status": "Entregue",
+        "dataStatus": "30-06-2023 15:20:00"
+      }
+    ]
   }
+]
+}

@@ -17,7 +17,7 @@ export const TimelineStep = styled.div`
     width: 70px;
     height: 70px;
     border: 2px solid #006AF0;
-    background-color: ${(props) => (props.active ? "#006AF0" : "#fff")};
+    background-color: #006AF0;
     border-radius: 50%;
     margin-left: 8px;
     margin-right: 8px;

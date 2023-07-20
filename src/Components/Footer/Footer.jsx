@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+// import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaYoutube  } from "react-icons/fa";
 
 function Footer() {
   return <FooterComponent>Footer</FooterComponent>;

@@ -2,7 +2,7 @@ import {TitleTrackingDiv} from "./Styled";
 
 function TitleTracking() {
     return (
-     <TitleTrackingDiv>TESTE</TitleTrackingDiv>
+     <TitleTrackingDiv>Acompanhar Pedido</TitleTrackingDiv>
     );
   }
   
