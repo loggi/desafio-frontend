@@ -61,7 +61,7 @@ export const Input = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 2px solid black;
-  width: 30vh;
+  width: 40vh;
   color: black;
   outline: none;
   &::placeholder{

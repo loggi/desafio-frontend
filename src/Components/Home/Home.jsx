@@ -13,10 +13,16 @@ import {
     DivText, 
     Text,
     DivImg } from "./Styles";
-import IconRabbit from "../../Img/LogoLoggi2.png"
+import IconRabbit from "../../Img/LogoLoggi2.png";
+import { useNavigate } from 'react-router-dom';
+
 
 const Home= () => {
 
+    const navigate = useNavigate();
+    const sendToFollowUp = () => {
+        navigate("/FollowUp");
+    };
     return(
         <ContainerHome>
             <ContainerLeft>
@@ -41,7 +47,7 @@ const Home= () => {
                         type="text"
                         placeholder="digite o código de rastreio"
                         />
-                        <SubmitButton type="submit">RASTREAR</SubmitButton>
+                        <SubmitButton type="submit" onClick={sendToFollowUp}>RASTREAR</SubmitButton>
                     </Form>
                 </FormContainer>
             </ContainerRight>

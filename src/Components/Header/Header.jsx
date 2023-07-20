@@ -2,7 +2,7 @@ import { ContainerHeader, Logo, Paragrafo, Button, BlueText, HamburgerIcon } fro
 import LogoIcon from "../../Img/LogoLoggi.png";
 import ImgHamburger from "../../Img/Hamburger.png";
 
-const Header = () => {
+const Header = ({showButton = true, showBackButton = false, onBackButtonClick }) => {
 
     return(
         <ContainerHeader>
@@ -11,8 +11,12 @@ const Header = () => {
             <Paragrafo>Para Empresas</Paragrafo>
             <Paragrafo>Vendas e suporte</Paragrafo>
             <BlueText>Acompanhe seu pedido</BlueText>
-            <Button>Entrar</Button>
-            <Button>Criar Conta</Button>
+            
+            {showButton && <Button>Entrar</Button>}
+            {showButton && <Button>Criar Conta</Button>}
+
+            {showBackButton && <Button onClick={onBackButtonClick}>Voltar</Button>}
+
             <HamburgerIcon src={ImgHamburger}></HamburgerIcon>
         </ContainerHeader>
     );

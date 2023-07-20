@@ -6,7 +6,7 @@ const HomeScreen= () => {
 
     return(
         <>
-            <Header className="hidden"></Header>
+            <Header ></Header>
             <Home/>
             <Footer/>
         </>
