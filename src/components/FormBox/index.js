@@ -1,4 +1,4 @@
-import { Box, Card, TextField } from "@mui/material";
+import { Box, Card, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import ButtonSubmit from "../ButtonSubmit";
 
@@ -23,10 +23,19 @@ export default function Forms() {
                 backgroundColor: '#006AF0',
                 padding: '20px',
                 borderRadius: '10px',
-                color: '#fffff',
+                color: 'white',
                 display: 'block',
                 margin: '0 auto',
             }}>
+                <Typography variant="h5" gutterBottom color="white">
+                    Olá!
+                </Typography>
+                <Typography variant="body1" gutterBottom color="white">
+                    Acompanhe o status da sua entrega.  📦
+                </Typography>
+                <Typography variant="body1" gutterBottom color="white">
+                    Para começar, insira o código de rastreamento do seu pedido.
+                </Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         variant="standard"
