@@ -48,6 +48,20 @@
   }
   
   @media (min-width: 768px) {
+
+    .desktopPhrase {
+        color: #ffffff;
+        font-size: larger;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-left: 8rem;
+    }
+
+    #desktop-text {
+        margin-left: 15rem;
+        margin-bottom: -5rem;
+    }
+
     .desktop-container {
       position: absolute;
       height: 40rem;

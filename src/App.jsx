@@ -1,11 +1,11 @@
-import TrackingPage from './Page/TrackingPage'
+import TrackerRoute from './Route'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <TrackingPage/>
+      <TrackerRoute/>
     </>
   )
 }
