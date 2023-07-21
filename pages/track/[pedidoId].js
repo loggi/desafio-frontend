@@ -17,7 +17,6 @@ const StyledContainer = styled('div')({
 
 });
 
-
 export default function Track() {
     const router = useRouter();
     const { pedidoId } = router.query;
