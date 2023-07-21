@@ -3,7 +3,6 @@ import { FooterStyle, FooterUl } from '../styles/Footer.styled.js';
 import github from '../assets/github1.png'
 import linkedin from '../assets/image_13.png'
 import youtube from '../assets/image_15.png'
-import instagram from '../assets/instagram.jpg'
 
 const Footer = () => {
   return (
