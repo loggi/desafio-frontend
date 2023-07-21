@@ -13,6 +13,7 @@
 ```
 1) npm install || npm i
 2) npm run dev
+3) abra o link no seu navegador preferido
 ```
 
 ## Informações para testar o funcionamento e funcinalidades do rastreador:
