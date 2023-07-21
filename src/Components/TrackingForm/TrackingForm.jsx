@@ -18,7 +18,7 @@ const TrackingForm = () => {
       navigate(`/TrackOrder/${trackingCode}`);
     } else {
       console.log('Order not found');
-    }
+    } 
   };
 
     const isDesktop = useMediaQuery({ minWidth: 768 });

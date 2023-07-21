@@ -8,6 +8,6 @@ const TrackingPage = () => {
       <TrackingForm />
     </div>
   );
-};
+}; 
 
 export default TrackingPage;

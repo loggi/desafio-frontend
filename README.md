@@ -1,64 +1,127 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+## Talent Fest Brasil 2023 - Desafio Loggi
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
-
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+O Talent Fest é um evento de programação proporcionado pela [Laboratória](https://www.laboratoria.la/br), onde as formandas do bootcamp recebem um desafio de alguma das empresas participantes e precisam concluí-lo em 3 dias. 
 
 ## O desafio
 
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
+O desafio proposto pela empresa [Loggi](https://www.loggi.com/) era recriar sua página de rastreio de produtos, com liberdade criativa par definir como seria a interface e a experiÊncia do usuário.
 
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
+## Considerações Técnicas
 
+* React para a construção do site
+* Mock de API para a conexão com o backend, permitindo consumir os dados dos pedidos
+* Figma para os protótipos
+* Git para o versionamento de código e conexão com GitHub
+* Trello para planejamento e organização
 
-## Instruções técnicas
+## Instruções de uso
 
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
+1. Acesse o projeto aqui pedidos [aqui](https://desafio-loggi-bruna.vercel.app/).
 
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
+2. Insira o código do pedido no campo de rastreamento para ver o status de cada um.
 
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
-* [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* GitHub - para versionamento de código
+    | Pedido       | Código |
+    |--------------|:----:|
+    | Pedido 1 | 1 |
+    | Pedido 2 | 2 |
+    | Pedido 3 | 3 |
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-next) que usa as ferramentas acima.
+3. Clique no botão `Acompanhar pedido` para visualizar o status do pedido.
 
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+4. Você será redirecionado para uma página com os status e o histórico do pedido.
 
+Você também pode fazer o fork do projeto para o seu GitHub, clonar o repositório e rodar os seguintes comandos do seu terminal: `npm install` e `npm run dev` para acessar a aplicação.
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
- 
-Separamos alguns níveis de avaliação.
+## Histórias de Usuários
 
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
+**História do usuário 1:** “Como usuário, quero poder rastreat o meu pedido”.
 
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório a partir do fork
+* Criar uma página inicial para a aplicação de rastreamento de produtos.
 
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
+* Adicionar um campo de entrada de texto onde o usuário pode inserir o código de rastreamento do produto.
 
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
+* Implementar um botão rastreamento, que inicia a busca pelo produto com base no código inserido.
+
+* Conectar a página ao backend para buscar as informações do produto com base no código fornecido.
+
+* Exibir as informações do produto na página, como status de entrega, localização atual e data estimada de entrega.
+
+**História do usuário 2:** “Como usuário, quero acessar o site pelo meu celular”.
+
+* Criar o protótipo mobile.
+
+* Começar a criação do site pelo método mobile first.
+
+**História do usuário 3:** “Como usuário, quero acessar o site pelo meu computador”
+
+* Criar o protótipo para desktop;
+
+* Ajustar a resposividade para telas maiores utilizando 'media query'.
+
+**História do usuário 4:** “Como daltônica quero poder navegar pelo site sem dificuldades”.
+
+* Utilizar a extensão 'Colorblindly'.
+
+## Protótipos
+
+<details>
+  <summary>Página de rastreio (mobile)</summary>
+
+ ![Mobile](./src/Assets/mobile1.png)
+  
+</details>
+
+<details>
+  <summary>Página de status do pedido (mobile)</summary>
+
+ ![Mobile](./src/Assets/mobile2.png)
+  
+</details>
+
+<details>
+  <summary>Página de rastreio (desktop)</summary>
+
+ ![Desktop](./src/Assets/desktop1.png)
+  
+</details>
+
+<details>
+  <summary>Página de status do pedido (desktop)</summary>
+
+ ![Desktop](./src/Assets/desktop2.png)
+  
+</details>
+
+## Resultado
+
+<details>
+  <summary>Página de rastreio (mobile)</summary>
+
+ ![Mobile](./src/Assets/resultado1.jpg)
+  
+</details>
+
+<details>
+  <summary>Página de status dos pedidos (mobile)</summary>
+
+ ![Mobile](./src/Assets/resultado2.jpg)
+  
+</details>
+
+<details>
+  <summary>Página de rastreio (desktop)</summary>
+
+ ![Mobile](./src/Assets/resultado3.jpg)
+  
+</details>
+
+<details>
+  <summary>Página de status dos pedidos (desktop)</summary>
+
+ ![Mobile](./src/Assets/resultado4.jpg)
+  
+</details>
+
+## Desenvolvedora
+
+Bruna Abreu - [![Linkedin](https://i.stack.imgur.com/gVE0j.png) Linkedin](https://www.linkedin.com/in/bru-abreu/)
