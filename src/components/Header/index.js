@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Box, Button, IconButton, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button, IconButton, Menu, MenuItem, Link } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from './Logo';
 import { useState } from 'react';
@@ -52,8 +52,13 @@ const Header = () => {
                     </Box>
                 </Box>
 
-                <Box display="flex" alignItems="center" flexGrow={2} justifyContent="flex-end">
-                    <Button sx={{ color: 'blue', border: '2px solid #006AF0' }}>Entrar</Button>
+                <Box display="flex" alignItems="center" flexGrow={2} justifyContent="flex-end" gap='10px'>
+                    <Link href="https://sso.loggi.com/" underline="none">
+                        <Button sx={{ color: 'blue', border: '2px solid #006AF0' }}>Entrar</Button>
+                    </Link>
+                    <Link href="https://www.loggi.com/contas/criar/?utm_term=loggi&utm_campaign=Marca&utm_source=google&utm_medium=cpc" underline="none">
+                        <Button sx={{ color: 'white', background: '#006AF0', border: '2px solid #006AF0' }}>Criar conta</Button>
+                    </Link>
                 </Box>
                 <Menu
                     anchorEl={anchorEl}
