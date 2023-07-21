@@ -23,16 +23,12 @@
 ## Para [visualizar a aplicação online](https://loggi-desafio-frontend.vercel.app/) ⬅️🖱️
 
 ## Protótipos de alta fidelidade
-![Protótipo desktop](./src/assets/Desktop%20-%202%20(2).png)
-
-![Protótipo mobile](./src/assets/Mobile-%202.png)
+<img width='350px' alt='Protótipo desktop' src="./src/assets/Desktop%20-%202%20(2).png">
+<img width='250px' alt='Protótipo mobile' src="./src/assets/Mobile-%202.png">
 
 ## Imagens da página deployada
-
-![Print da página pronta desktop](./src/assets/localhost_5173__%20(1).png)
-
-![Print da página pronta desktop (2)](./src/assets/localhost_5173__.png)
-
-![Print do modal](./src/assets/localhost_5173_modal_.png)
+<img width='350px' alt='Print da página pronta desktop' src="./src/assets/localhost_5173__%20(1).png">
+<img width='250px' alt='Print da página pronta desktop (2)' src="./src/assets/localhost_5173__.png">
+<img width='250px' alt='Print do modal' src="./src/assets/localhost_5173_modal_.png">
 
 ##### Obrigada! 
