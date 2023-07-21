@@ -1,4 +1,4 @@
-## Interface de rastreio Loggi
+## Desafio Frontend Loggi
 
  ## ⭐️ Resumo do projeto
  Este projeto foi desenvolvido no Talent Fest da Laboratoria em parceria com a Loggi. O objetivo principal era criar uma interface amigável e intuitiva para que os usuários pudessem inserir o número do seu pedido e, assim, acessar as informações de rastreamento e o status atualizado do seu pedido.
