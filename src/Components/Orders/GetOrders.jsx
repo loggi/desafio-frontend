@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Orders from '../../API/Orders'
+import Logo from '../Logo/Logo';
+import './GetOrders.css'
 
 function GetOrders() {
   const { trackingCode } = useParams();
@@ -10,9 +12,7 @@ function GetOrders() {
     const fetchOrder = async () => {
       try {
         const orders = await Orders();
-        console.log("Orders:", orders);
         const selectedOrder = orders.find((item) => item.id === Number(trackingCode));
-        console.log("Selected Order:", selectedOrder);
         setOrder(selectedOrder);
       } catch (error) {
         console.error("Erro na busca dos dados:", error);
@@ -24,26 +24,40 @@ function GetOrders() {
   console.log("Order:", order);
 
   if (!order) {
-    return <div>Please wait a moment</div>; 
+    return <div className="loading">Por favor espere um momento</div>; 
   }
 
   return (
-    <div>
-      <h2>Status do Pedido</h2>
-      <p>ID do Pedido: {order.id}</p>
-      <p>Status: {order.status}</p>
-      <p>Descrição: {order.descricao}</p>
-      <h2>Histórico de Status</h2>
-      <ul>
-        {order.historicoStatus.map((statusItem) => (
-          <li key={statusItem.status}>
-            <p>Status: {statusItem.status}</p>
-            <p>Descrição: {statusItem.descricao}</p>
-            <p>Data do status: {statusItem.dataStatus}</p>
-          </li>
-        ))}
-      </ul>
+    <>
+      <Logo
+		containerClassName="logo-loggi"
+		imageClassName="logo-track"
+		/>  
+      <div className="tracking-container">
+      <div>
+        <h2 className="order-header">Status do Pedido</h2>
+        <div className="order-details">
+            <p><strong className="track-paragraph">ID do Pedido:</strong> {order.id}</p>
+            <p><strong className="track-paragraph">Descrição:</strong> {order.descricao}</p>
+            <p><strong className="track-paragraph">Mensageiro:</strong> {order.mensageiro}</p>
+            <p><strong className="track-paragraph">Cliente:</strong> {order.cliente}</p>
+            <p><strong className="track-paragraph">Data do Pedido:</strong> {order.dataPedido}</p>
+            <p><strong className="track-paragraph">Data Prevista de Entrega:</strong> {order.dataPrevistaEntrega}</p>
+        </div>
+      </div>
+        <div>
+            <h2 className="order-header">Histórico</h2>
+            <div className="status-history">
+                {order.historicoStatus.map((statusItem) => (
+                <div key={statusItem.status} className="status-item">
+                    <p><strong>Descrição:</strong> {statusItem.descricao}</p>
+                    <p><strong>Data do status:</strong> {statusItem.dataStatus}</p>
+                </div>
+                ))}
+            </div>
+        </div>
     </div>
+    </>
   );
 }
 

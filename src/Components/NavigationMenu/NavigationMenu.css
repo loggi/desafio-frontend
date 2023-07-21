@@ -9,8 +9,6 @@
    
    :root {
      --mainColor: #effaff;
-     /* --mainColorLight: #000000;
-     --secondaryColor: #db2b39; */
      --textColor: #0C2460;
    }
    
@@ -54,6 +52,19 @@
    nav {
      display: flex;
      align-items: center;
+   }
+
+   #menu-item {
+     color: #2c90d3;
+   }
+
+   #enter, #register {
+     border: 1px solid #2c90d3;
+     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     width: 7rem;
+     padding: 0.2rem;
+     text-align: center;
+     border-radius: 8px;
    }
    
    @media only screen and (max-width: 1024px) {

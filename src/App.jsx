@@ -1,5 +1,4 @@
 import TrackerRoute from './Route'
-import './App.css'
 
 function App() {
 
