@@ -10,7 +10,7 @@
    :root {
      --mainColor: #effaff;
      --textColor: #0C2460;
-   }
+   } 
    
    header {
      display: flex;

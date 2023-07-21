@@ -10,7 +10,7 @@ function NavigationMenu() {
 		navRef.current.classList.toggle(
 			"responsive_nav"
 		);
-	};
+	}; 
 
 	return (
 		<header>

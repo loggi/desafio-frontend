@@ -6,7 +6,7 @@ import './GetOrders.css'
 
 function GetOrders() {
   const { trackingCode } = useParams();
-  const [order, setOrder] = useState(null);
+  const [order, setOrder] = useState(null); 
 
   useEffect(() => {
     const fetchOrder = async () => {

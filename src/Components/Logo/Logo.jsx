@@ -7,7 +7,7 @@ const Logo = (props) => {
      <figure className={props.containerClassName}>
        <img src={logo} className={props.imageClassName} alt="Logo da Loggi"/>
      </figure>
-   );
+   ); 
  };
  
  

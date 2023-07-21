@@ -9,4 +9,4 @@ const ImageMobile = () => {
     )
 }
 
-export default ImageMobile;
+export default ImageMobile; 
