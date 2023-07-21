@@ -1,5 +1,12 @@
 import { styled } from "styled-components";
-import {FaGooglePlay, FaApple, FaFacebookSquare, FaInstagram, FaTwitterSquare, FaYoutube } from "react-icons/fa";
+import {
+  FaGooglePlay,
+  FaApple,
+  FaFacebookSquare,
+  FaInstagram,
+  FaTwitterSquare,
+  FaYoutube
+} from "react-icons/fa";
 
 export const FooterComponent = styled.footer`
   height: 120px;
@@ -52,40 +59,40 @@ export const TextFooter = styled.p`
 `; 
 
 export const IconFacebook = styled(FaFacebookSquare)`
-font-size: 20px;
-cursor: pointer;
-color: #fff;
-&:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  &:hover {
       color: #000;
       cursor: pointer;
     }
 `;
 
 export const IconInstagram = styled(FaInstagram)`
-font-size: 20px;
-cursor: pointer;
-color: #fff;
-&:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  &:hover {
       color: #000;
       cursor: pointer;
     }
 `;
 
 export const IconTwitter = styled(FaTwitterSquare)`
-font-size: 20px;
-cursor: pointer;
-color: #fff;
-&:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  &:hover {
       color: #000;
       cursor: pointer;
     }
 `;
 
 export const IconYoutube = styled(FaYoutube)`
-font-size: 20px;
-cursor: pointer;
-color: #fff;
-&:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  &:hover {
       color: #000;
       cursor: pointer;
     }

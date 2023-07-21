@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css'
 import HomeScreen from './Pages/HomeScreen/HomeScreen';
 import TrackingInformation from './Pages/TrackingInformation/TrackingInformation';
 import Error from './Pages/Error/Error';

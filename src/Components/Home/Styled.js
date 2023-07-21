@@ -1,13 +1,19 @@
 import { styled } from "styled-components";
 
 export const TrackingSection = styled.section`
+  display: flex;
   background-color: #006AF0;
+  justify-content: center;
+  align-items: center;
+  background-color: #006AF0;
+  min-height: calc(100vh - 800px);
   padding: 8px;
 
   @media (min-width: 1000px) {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    min-height: calc(100vh - 518px);
   }
   @media (min-width: 1400px) {
     height: 602px;
@@ -66,20 +72,21 @@ export const TrackingButton = styled.button`
   color: #fff;
   font-weight: 700;
   background-color: #006AF0;
+
   @media (min-width: 1400px) {
   margin-top: 10px;
 }
 `;
 
 export const DivInformations = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ImgInformation = styled.img`
-    width: 140px;
+  width: 140px;
 `;
 
 export const TitleInformation = styled.p`
@@ -106,6 +113,7 @@ export const InformationSection = styled.section`
   
   @media (min-width: 1000px) {
       flex-direction: row; 
+      min-height: calc(100vh - 770px);
   }
 `;
 
@@ -126,8 +134,8 @@ export const ImgPackage = styled.img`
   @media (min-width: 1400px) {
   width: 90px;
 }
-`
+`;
 
 export const ImgInformationTwo = styled.img`
-    width: 180px;
+  width: 180px;
 `;
