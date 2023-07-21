@@ -137,7 +137,7 @@ export default function TrackingInfo({ trackingId }) {
                     Ver outro pacote
                 </Button>
                 <Link
-                    href="#/"
+                    href="/TrackingHelp"
                     sx={{
                         color: "#ffffff",
                         textDecorationColor: "#ffffff",
