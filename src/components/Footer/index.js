@@ -3,8 +3,7 @@ import { styled } from '@mui/material/styles';
 
 const StyledContainer = styled('div')({
     backgroundImage: 'linear-gradient(45deg, #0487fc, #04a4fc, #049cfc, #0494fc, #047cfc)',
-    height: '10rem',
-    marginTop: '6rem',
+    height: '8rem',
     alignItems: 'center',
     textAlign: 'center',
     display: 'flex',
