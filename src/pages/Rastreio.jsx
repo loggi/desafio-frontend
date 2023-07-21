@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { toast } from "react-toastify";
+import React, { useRef, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'
 import requisicoesHTTP from '../API/Requisicoes';
 import { Button } from '../styles/Button.styled';
@@ -40,10 +39,6 @@ const Rastreio = () => {
     setOpenModal(true);
   };
 
-  console.log(info.id)
-
-
-
   return (
   <>
     <Title>É uma satisfação te ver por aqui! 
@@ -76,7 +71,6 @@ const Rastreio = () => {
               onChange={(e)=> setRastreio(e.target.value)} 
               required
               ref={inputEl}
-
             />
           </label>
 
