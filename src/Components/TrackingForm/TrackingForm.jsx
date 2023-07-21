@@ -30,7 +30,7 @@ const TrackingForm = () => {
             <>
               <div className="phrase">
                 <p className="desktopPhrase">Nossa equipe está em ação! Acompanhe cada passo do seu pedido!</p>
-                <p className="desktopPhrase" id="desktop-text">Acompanhe cada passo do seu pedido!</p>
+                <p className="desktopPhrase" id="desktop-text">Com a Loggi tudo fica mais fácil!</p>
               </div>
               <div className="tracking-box">
               <p>Insira o código de rastreamento:</p>

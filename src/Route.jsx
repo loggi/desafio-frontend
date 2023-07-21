@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import TrackingPage from './Page/TrackingPage'
 import TrackOrder from './Page/TrackOrder'
 
-
  function TrackerRoute() {
   return (
         <BrowserRouter>        

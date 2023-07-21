@@ -1,0 +1,86 @@
+
+  .loading {
+    margin: 3rem;
+    font-weight: bolder;
+  }
+  
+  .logo-loggi {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-track {
+    margin: 1rem;
+    max-width: 12rem;
+  }
+
+  .tracking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .order-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #0C2460
+  }
+  
+  .order-details {
+    background-color: #2a87d029;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-details p {
+    margin: 5px 0;
+  }
+  
+  .order-details strong {
+    font-weight: bold;
+  }
+  
+  .status-history {
+    background-color: #2a87d029;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .status-item:last-child {
+    border-bottom: none;
+  }
+  
+  .status-item p {
+    margin: 5px 0;
+  }
+  
+  .status-item strong {
+    font-weight: bold;
+  }
+
+  .track-paragraph {
+    color: #0C2460;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  
