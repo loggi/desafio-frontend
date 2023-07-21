@@ -5,16 +5,14 @@
 }
 
 body {
-  /* box-sizing: border-box; */
   margin: 0;
-
   padding: 0;
-  background-image: linear-gradient(to right, #00BAFF 35%, #01BAFF 15%, #006AFF 64%, #003B99 100%);
-
   background-image: linear-gradient(to right, #00BAFF 47%, #006AFF 72%, #003B99 120%);
-  /* display: flex; */
-  /* gap: 1rem; */
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
+
 }
 
+span{
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: small;
+}

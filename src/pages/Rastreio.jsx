@@ -1,52 +1,55 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 import requisicoesHTTP from '../API/Requisicoes';
 import { Button } from '../styles/Button.styled';
 import { ContainerForm, FormStyle, Title, MainStyle } from '../styles/Main.styled';
-import entrega from '../assets/TakeAway.svg'
-import localizacao from '../assets/localizacao(1).png'
+import entrega from '../assets/TakeAway.svg';
+import Modal from '../components/Modal';
 
 const Rastreio = () => {
   const [user, setUser] = useState('');
   const [rastreio, setRastreio] = useState('');
-
-  const handleRastreio = (e)=> console.log(setRastreio(e.target.value));
-  const handleUser = (e)=> setUser(e.target.value);
-
-  const handleEncontraPedido = (e)=>{
+  const [info, setInfo] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+  const inputEl = useRef(null);
+  
+  const handleEncontraPedido = async (e)=>{
     e.preventDefault();
 
-    requisicoesHTTP('GET', rastreio || user)
-    .then((response)=>{
-      if(response.ok){
-        console.log('deu certo')
-        return response.json()
-      }
+    if(rastreio === '' || user === ''){
+      // toast.error("Preencha pelo menos um dos campos.")
+      inputEl.current.focus();
+    }
 
-      if(response.status >= 400 || response.status < 500){
-        console.log('status code > 400')
-
-        return toast.error("Dado não encontrado, por favor, verifique a digitação.", { delay: 2000})
-      }
-
-      if(response.status >= 500 || response.status <= 599){
-        return toast.error("Algo deu errado, tente novamente em instantes")
-      }
-
+    await requisicoesHTTP('GET', rastreio || user)
+    .then((response) => {
+      console.log(response)
+      console.log(response)
+      return setInfo(response)
+    
     })
     .catch((error)=> {
       console.log(error);
-      return toast.error("Tente novamente em instantes")
-    })
+      // toast.error("Algo deu errado, tente novamente em instantes")
+      return
+    });
 
-    console.log('clique no btn submit')
-  }
-    
+    setRastreio('');
+    setUser('');
+    setOpenModal(true);
+  };
+
+  console.log(info.id)
+
+
+
   return (
   <>
     <Title>É uma satisfação te ver por aqui! 
       Acompanhe a entrega de seu pedido através do código de rastreio. 
     </Title>
+
 
     <MainStyle>
       <img src={entrega} alt="" />
@@ -57,18 +60,23 @@ const Rastreio = () => {
             <input 
               type="text" 
               value={user} 
-              onChange={handleUser} 
+              onChange={(e)=> setUser(e.target.value)} 
+              required
+              ref={inputEl}
             />
           </label>
           
-          <span>OU *css*</span>
+          <span>Ou</span>
 
           <label>
             <p>Código de Rastreio</p>
             <input 
               type="text" 
               value={rastreio} 
-              onChange={handleRastreio} 
+              onChange={(e)=> setRastreio(e.target.value)} 
+              required
+              ref={inputEl}
+
             />
           </label>
 
@@ -81,9 +89,28 @@ const Rastreio = () => {
         </FormStyle>
       </ContainerForm>
     </MainStyle>
+  
+    <Modal isOpen={openModal} setCloseModal={()=> setOpenModal(!openModal)}>
+      <>
+      <div >
+        <h3>Olá, {info.mensageiro}!</h3>
+        <p>Seu pedido da {info.cliente}, realizado no dia {info.dataPedido}, tem entrega prevista para {info.dataPrevistaEntrega}. <br/>
+        Neste momento o pedido está {info.status}
+        </p>
+        <p><span>Situação: {info.descricao}</span></p>
+        <p><span>Data do pedido: {info.dataPedido}</span></p>
+        <p><span>Previsão de entrega: {info.dataPrevistaEntrega}</span> </p>
+        <p><span>Remetente: {info.cliente}</span></p>
+      </div>
+      </>
+    </Modal>
 
-    
-
+    {info.id === undefined && 
+      <Modal isOpen={openModal} setCloseModal={()=> setOpenModal(!openModal)}>
+        <h2>Pedido não encontrado, por favor, verifique a digitação.</h2>
+      </Modal>
+    }
+      
   </>
   )
 }

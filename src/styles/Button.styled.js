@@ -10,9 +10,8 @@ export const Button = styled.button`
   font-family: inherit;
   color: #0095FF;
   transition: border-color 0.25s;
-
+  cursor: pointer;
   :hover {
-    cursor: pointer;
     border-color: #002E77;
   }
 `
