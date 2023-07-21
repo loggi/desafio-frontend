@@ -56,7 +56,7 @@ Você também pode fazer o fork do projeto para o seu GitHub, clonar o repositó
 
 * Criar o protótipo para desktop;
 
-* Ajustar a resposividade para telas maiores utilizando 'media query'.
+* Ajustar a responsividade para telas maiores utilizando 'media query'.
 
 **História do usuário 4:** “Como daltônica quero poder navegar pelo site sem dificuldades”.
 
