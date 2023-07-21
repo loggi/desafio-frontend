@@ -1,0 +1,30 @@
+/* Footer.css */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+  
+  .iconsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  @media (min-width: 768px) {
+    .footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-bottom: -90px; /* Adiciona margem inferior para ajustar o posicionamento */
+      }
+  }
