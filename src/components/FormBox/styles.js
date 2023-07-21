@@ -1,12 +1,13 @@
 export const mainStyle = {
     display: 'flex',
+    flexDirection: 'row',
     flexWrap: 'wrap',
 }
 
 export const boxStyle = {
-    margin: '6%',
-    width: 450,
-    height: 500,
+    margin:'10%',
+    width: 'auto',
+    height: '400px',
     backgroundColor: 'var(--black)',
     borderRadius: '15px'
 }
@@ -32,11 +33,11 @@ export const textStyle = {
 }
 
 export const pTextStyle = {
-    width: '250px'
+    width: 'auto',
 }
 
 export const inputStyle = {
-    width: '80%',
+    width: 'auto',
     marginTop: '20px',
     marginBottom: '20px',
     backgroundColor: 'var(--white)',
@@ -58,5 +59,12 @@ export const buttonStyle = {
 }
 
 export const imageStyle = {
-   width: '700px'
+   width: '100%'
 }
+
+export const imageStyleSmall = {
+    width: '100%'
+}
+
+
+  
