@@ -51,10 +51,11 @@ No Talent Fest 2023 da Laboratoria, foi desenvolvido um projeto para a empresa L
  <img src="./src/Imagens/mobile.png">
 
   #### Versão Desktop 💻 - Tela inicial de rastreio
- <img src="./src/Imagens/desktop2.png">
+ <img src="./src/Imagens/DesktopOne.png">
 
    #### Versão Desktop 💻 - Tela de informações de rastreio
- <img src="./src/Imagens/desktop1.png">
+<img src="./src/Imagens/DesktopTwo.png">
+
 
  ### 5. Decisões Estratégicas ⚙️📈
  Ao receber o projeto, a primeira decisão foi estudar `NextJS` e o `Material UI`, ferramentas recomendadas pelos colaboradores da Loggi. Porém, devido ao prazo apertado e às dificuldades que encontrei ao tentar utilizá-las, percebi que seria mais sensato recomeçar o projeto, desta vez optando por utilizar `React`, uma escolha mais familiar que me permitiria avançar com maior agilidade.
