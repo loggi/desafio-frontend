@@ -33,15 +33,17 @@ export default function Home() {
           sx={{
             width: "100vw", 
             maxWidth: "100vw",
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <Head home />
-          <Body />
+          <Body desktop />
         </DesktopContainer>
       ) : (
         <>
           <Head home />
-          <Body />
+          <Body mobile/>
         </>
       )}
       <Footer />
