@@ -4,16 +4,16 @@ import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem
 import { useRouter } from "next/router";
 import { trackOrder } from "../../src/api/orderApi";
 import { ExpandCircleDown } from "@mui/icons-material";
-import Header from "../../src/components/Header";
 import { styled } from '@mui/material/styles';
 
 
 const StyledContainer = styled('div')({
     backgroundColor: '#D9D9D9',
-    borderTopRightRadius: '10%',
+    borderTopRightRadius: '0 10%',
     borderBottomRightRadius: '70%',
     borderBottomLeftRadius: '18%',
-    borderBottom: '30px solid #002766'
+    borderBottom: '30px solid #002766',
+    borderTop: '100px solid #D9D9D9'
 
 });
 
@@ -137,8 +137,6 @@ export default function Track() {
     return (
         <>
             <StyledContainer>
-                <Header />
-
                 <Container
                     sx={{
                         display: 'flex',

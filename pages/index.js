@@ -1,14 +1,11 @@
 import * as React from 'react';
 import FormBox from '../src/components/FormBox';
-import Header from '../src/components/Header';
 import { Container, Grid, Box } from '@mui/material';
 import ImageHome from '../src/components/Images/ImageHome';
-import Footer from '../src/components/Footer';
 import Copyright from '../src/Copyright';
 
 export default function Index() {
   return (<>
-    <Header />
     <Container maxWidth="lg" sx={{
       display: 'flex',
       justifyContent: 'center',
@@ -30,8 +27,6 @@ export default function Index() {
         </Grid>
       </Grid>
     </Container>
-    <Footer />
-    <Copyright />
   </>
 
   );
