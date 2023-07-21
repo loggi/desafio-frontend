@@ -1,11 +1,29 @@
-import {Content, Container, IconWrapper, TimelineContainer, IconCreated, IconSent, IconTruck, IconStore, IconDelivered, TitleStatus, TitleOrder } from "./Styled";
+import {
+  Content,
+  Container,
+  IconWrapper,
+  TimelineContainer,
+  IconCreated,
+  IconSent,
+  IconTruck,
+  Line,
+  IconStore,
+  IconDelivered,
+  TitleStatus,
+  TitleOrder,
+  TextStatus,
+} from "./Styled";
 import data from "../../data.json";
-import { useParams } from "react-router";
+import { Navigate, useParams } from "react-router";
 
 const Timeline = () => {
-  const {TrackingNumber} = useParams(); 
+  const { TrackingNumber } = useParams(); 
   
   const order = data.pedidos.find(pedido => String(pedido.id) === String(TrackingNumber));
+
+  if (!order) {
+    return <Navigate to="/Error" />
+  }
 
   const phases = [
     {
@@ -40,6 +58,7 @@ const Timeline = () => {
     <>
     <TitleOrder>Número de Rastreio: {TrackingNumber}</TitleOrder>
     <TimelineContainer>
+      <Line />
       {phases.map(({Icon, title, date}, index) => (
         <>
           <Container>
@@ -48,7 +67,7 @@ const Timeline = () => {
             </IconWrapper>
             <Content>
               <TitleStatus>{title}</TitleStatus>
-              <p>Data: {date}</p>
+              <TextStatus>Data: {date}</TextStatus>
             </Content>
           </Container>
         </>
@@ -57,5 +76,7 @@ const Timeline = () => {
     </>
   );
 };
+
+
 
 export default Timeline;

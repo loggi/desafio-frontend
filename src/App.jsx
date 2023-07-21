@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import HomeScreen from './Pages/HomeScreen/HomeScreen';
 import TrackingInformation from './Pages/TrackingInformation/TrackingInformation';
+import Error from './Pages/Error/Error';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen/>} />
         <Route path="/TrackingInformation/:TrackingNumber" element={<TrackingInformation/>} />
+        <Route path="/Error" element={<Error/>} />
       </Routes>
     </BrowserRouter>
   )

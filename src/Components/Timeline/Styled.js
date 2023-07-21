@@ -3,13 +3,13 @@ import { FaRegHeart, FaRegFolder, FaVoteYea, FaTruck, FaStore } from "react-icon
 
 export const TimelineContainer = styled.div`
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 30px);
     @media (min-width: 1000px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    height: calc(100vh - 100px); /* Altura da tela menos o espaço do header (50px) e footer (120px) */
+    height: calc(100vh - 354px); /* Altura da tela menos o espaço do header (50px) e footer (120px) */
     }
   `;
   
@@ -91,22 +91,29 @@ export const IconWrapper = styled.div`
   margin-right: 8px;
   position: relativo;
 
-  &::after { 
-    content: '';
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 70px;
-    border-bottom: 2px solid #006AF0;
+  @media (max-width: 999px) {
+    &::after { 
+      content: '';
+      width: 136%;
+      height: 1px;
+      position: absolute;
+      left: 70px;
+      border-bottom: 2px solid #006AF0;
+    }
+    &::before { 
+      content: '';
+      width: 136%;
+      height: 1px;
+      position: absolute;
+      right: 70px;
+      border-bottom: 2px solid #006AF0;
+    }
   }
-
-  &::before { 
-    content: '';
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    right: 70px;
-    border-bottom: 2px solid #006AF0;
+  @media (min-width: 2000px) {
+    &::after,
+    &::before {
+      width: 250%;
+    }
   }
 `;
 
@@ -126,3 +133,23 @@ export const TitleOrder = styled.p`
   display: flex;
   justify-content: flex-end;
 `;
+
+export const TextStatus = styled.p`
+  margin-bottom: 8px;
+  @media (min-width: 1000px) {
+    margin-bottom: 0;
+  }
+`;
+
+export const Line = styled.div`
+  display: none;
+
+  @media (min-width: 1000px) {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #006AF0;
+    position: absolute;
+    top: calc(50% - 26px);
+  }
+`

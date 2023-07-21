@@ -9,6 +9,9 @@ export const TrackingSection = styled.section`
     justify-content: space-around;
     align-items: center;
   }
+  @media (min-width: 1400px) {
+    height: 602px;
+  }
 `;
 
 export const TrackingImg = styled.img`
@@ -17,6 +20,9 @@ export const TrackingImg = styled.img`
 
   @media (min-width: 1000px) {
     display: block;
+  }
+  @media (min-width: 1400px) {
+    width: 500px;
   }
 `;
 
@@ -32,6 +38,10 @@ export const TrackingCard = styled.div`
     width: 400px;
     height: 300px;
   }
+  @media (min-width: 1400px) {
+    width: 415px;
+    height: 350px;
+}
 `;
 
 export const TrackingInput = styled.input`
@@ -56,6 +66,9 @@ export const TrackingButton = styled.button`
   color: #fff;
   font-weight: 700;
   background-color: #006AF0;
+  @media (min-width: 1400px) {
+  margin-top: 10px;
+}
 `;
 
 export const DivInformations = styled.div`
@@ -99,6 +112,9 @@ export const InformationSection = styled.section`
 export const TitleCard = styled.p`
   font-size: 20px;
   font-weight: 500;
+  @media (min-width: 1400px) {
+    font-size: 24px;
+}
 `;
 
 export const TextCard = styled.p`
@@ -107,6 +123,9 @@ export const TextCard = styled.p`
 
 export const ImgPackage = styled.img`
   width: 80px;
+  @media (min-width: 1400px) {
+  width: 90px;
+}
 `
 
 export const ImgInformationTwo = styled.img`

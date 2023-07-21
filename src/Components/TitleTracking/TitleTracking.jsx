@@ -2,9 +2,10 @@ import {TitleTrackingDiv} from "./Styled";
 
 function TitleTracking() {
     return (
-     <TitleTrackingDiv>Acompanhar Pedido</TitleTrackingDiv>
+      <div>
+        <TitleTrackingDiv>ACOMPANHAR PEDIDO</TitleTrackingDiv>
+     </div>
     );
   }
   
   export default TitleTracking;
-  
