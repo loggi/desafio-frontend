@@ -3,13 +3,13 @@ import { FaRegHeart, FaRegFolder, FaVoteYea, FaTruck, FaStore } from "react-icon
 
 export const TimelineContainer = styled.div`
     position: relative;
-    height: calc(100vh - 30px);
+
     @media (min-width: 1000px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: calc(100vh - 354px); /* Altura da tela menos o espaço do header (50px) e footer (120px) */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      min-height: calc(100vh - 355px); // Altura da tela menos o espaço do header (50px) e footer (120px)
     }
   `;
   
