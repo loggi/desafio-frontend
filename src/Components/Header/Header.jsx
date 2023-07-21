@@ -6,7 +6,7 @@ const Header = ({showButton = true, showBackButton = false, onBackButtonClick })
 
     return(
         <ContainerHeader>
-            <Logo src={LogoIcon}></Logo>
+            <Logo src={LogoIcon} alt="LogoLoggi"></Logo>
             <Paragrafo>Para você</Paragrafo>
             <Paragrafo>Para Empresas</Paragrafo>
             <Paragrafo>Vendas e suporte</Paragrafo>

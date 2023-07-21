@@ -55,14 +55,14 @@ const Home= () => {
                 <FormContainer>
                     <Title>ACOMPANHAR PEDIDO</Title>
                     
-                    <IntroText>OLÁ! ACOMPANHE COM A LOGGI O SEU PEDIDO! INSIRA O CÓDIGO DE RASTREIO ABAIXO.</IntroText>
+                    <IntroText>OLÁ! 😃 ACOMPANHE COM A LOGGI O SEU PEDIDO! INSIRA O CÓDIGO DE RASTREIO ABAIXO.</IntroText>
                     
                     <Form >
                         <Input
                         type="text"
                         placeholder="digite o código de rastreio"
                         ref={searchValue}/>
-                        <SubmitButton type="submit" onClick={sendToFollowUp}>RASTREAR</SubmitButton>
+                        <SubmitButton type="submit" onClick={sendToFollowUp} aria-label="Botão para rastrear pedido">RASTREAR</SubmitButton>
                     </Form>
                 </FormContainer>
             </ContainerRight>

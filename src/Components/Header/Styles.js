@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background: #FFFFFF;
     height: 100px;
     width: 100vw;
@@ -53,7 +53,6 @@ export const Button = styled.button`
     background-color: white;
     border: 2px solid #00B9FF;
     border-radius: 5px;
-    display: block;
     cursor: pointer;
     &.hidden{
         display: none;

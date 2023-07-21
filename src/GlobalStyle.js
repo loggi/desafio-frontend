@@ -7,5 +7,12 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
+   
 }
+
+body{
+    overflow-x: hidden;
+    
+}
+
 `
