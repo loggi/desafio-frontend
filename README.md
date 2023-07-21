@@ -34,7 +34,7 @@ Você também pode fazer o fork do projeto para o seu GitHub, clonar o repositó
 
 ## Histórias de Usuários
 
-**História do usuário 1:** “Como usuário, quero poder rastreat o meu pedido”.
+**História do usuário 1:** “Como usuário, quero poder rastrear o meu pedido”.
 
 * Criar uma página inicial para a aplicação de rastreamento de produtos.
 
