@@ -27,7 +27,6 @@ export const MainStyle = styled.main`
   margin: 1rem;
   display: flex;
   justify-content: space-evenly;
-  gap: -4rem;
     img{
       width:70%;
     }

@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Rastreio from './pages/Rastreio';
 import './App.css';
+import Diferenciais from './components/Diferenciais';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <>
       <Header />
       <Rastreio />
+      <Diferenciais />
       <Footer />
 
     </>

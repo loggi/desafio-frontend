@@ -7,6 +7,7 @@ export const HeaderStyle = styled.header`
   padding: .8rem;
   background-color: #ffff;
   /* width: 90%; */
+  height: 3rem;
 `
 export const LogoImg = styled.img` 
   width: 10rem;

@@ -23,10 +23,7 @@ const Rastreio = () => {
 
     await requisicoesHTTP('GET', rastreio || user)
     .then((response) => {
-      console.log(response)
-      console.log(response)
       return setInfo(response)
-    
     })
     .catch((error)=> {
       console.log(error);
@@ -44,7 +41,6 @@ const Rastreio = () => {
     <Title>É uma satisfação te ver por aqui! 
       Acompanhe a entrega de seu pedido através do código de rastreio. 
     </Title>
-
 
     <MainStyle>
       <img src={entrega} alt="" />
@@ -84,7 +80,7 @@ const Rastreio = () => {
       </ContainerForm>
     </MainStyle>
   
-    <Modal isOpen={openModal} setCloseModal={()=> setOpenModal(!openModal)}>
+    {info.id && <Modal isOpen={openModal} setCloseModal={()=> setOpenModal(!openModal)}>
       <>
       <div >
         <h3>Olá, {info.mensageiro}!</h3>
@@ -97,12 +93,13 @@ const Rastreio = () => {
         <p><span>Remetente: {info.cliente}</span></p>
       </div>
       </>
-    </Modal>
+    </Modal> 
+    }
 
-    {info.id === undefined && 
+    {info.id === undefined &&
       <Modal isOpen={openModal} setCloseModal={()=> setOpenModal(!openModal)}>
         <h2>Pedido não encontrado, por favor, verifique a digitação.</h2>
-      </Modal>
+      </Modal> 
     }
       
   </>
