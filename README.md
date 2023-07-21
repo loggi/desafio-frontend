@@ -72,6 +72,15 @@ Para simular pedidos e o fluxo de informações, usou-se um arquivo JSON que con
 
 Vale ressaltar que o Vite foi empregado como bundler, garantindo uma construção otimizada e ágil do projeto. Adicionalmente, procedeu-se ao deployment da aplicação por meio da plataforma Vercel, conferindo-lhe disponibilidade e acessibilidade. Para visualizar o projeto, clique no seguinte [Link.](https://desafio-loggi-analeticia.vercel.app/)
 
+Para rodar a aplicação em sua máquina, siga os passos abaixo:
+
+1. Clone este repositório para o seu computador.
+2. No terminal, navegue até o diretório do projeto.
+3. Execute o comando `npm install` para instalar as dependências.
+4. Em seguida, utilize o comando `npm run dev` para iniciar a aplicação.
+
+Agora a aplicação estará em execução localmente em seu ambiente de desenvolvimento. Aproveite!
+
 ## 5. Versão Mobile 📱
 
 A aplicação foi desenvolvida com uma abordagem Mobile First, priorizando a experiência dos usuários em dispositivos móveis como ponto central de sua concepção. O Mobile First é uma metodologia que coloca a versão móvel de um site ou aplicativo em primeiro lugar, garantindo que a experiência do usuário seja otimizada para dispositivos de menor tamanho de tela, como smartphones e tablets. Para demonstrar a aplicação em ação, apresento registros visuais que capturam a experiência do usuário em telas de dispositivos móveis. 
