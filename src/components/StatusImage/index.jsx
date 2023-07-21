@@ -19,13 +19,12 @@ function StatusImage({ status, isLast }) {
 
   const imageStyles = {
     width: "80px",
-  // Para manter a proporção original da imagem
   };
 
   const lineStyles = {
     width: "0px",
     height: "90px", 
-    border: "1px solid black",// Defina a altura da linha conforme necessário
+    border: "1px solid black",
     borderStyle: "dashed",
   };
 
@@ -34,7 +33,6 @@ function StatusImage({ status, isLast }) {
     height: "0",
     border: "none",
   };
-
 
   return (
     <div style={containerStyles}>

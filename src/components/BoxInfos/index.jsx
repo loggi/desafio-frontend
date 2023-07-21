@@ -20,19 +20,21 @@ function BoxDelivery({ messenger, client, orderDate, deliveryDate }) {
     return (
         <CenteredBox>
             <Box sx={{
-                width: '506px',
+                width: 'auto',
+                padding: '1rem',
                 height: '120px',
                 display: 'flex',
                 backgroundColor: 'var(--light-blue)',
                 alignItems: 'center',
                 borderRadius: '10px',
-                justifyContent: 'space-evenly'
+                justifyContent: 'space-between'
             }}
             >
                 <img src={iconDelivery}
                     alt="icone moto"
                     style={{
                         width: '100px',
+                        padding:'1rem'
                     }}
                 />
                 <Typography
@@ -56,16 +58,15 @@ function BoxDelivery({ messenger, client, orderDate, deliveryDate }) {
     )
 }
 
-function BoxStatus({orderNumber, status}) {
+function BoxStatus({ orderNumber, status }) {
     return (
         <CenteredBox>
             <Box >
                 <Typography sx={{
                     display: 'flex',
                     gap: '5rem',
-                    width: '500px',
+                    width: 'auto',
                     padding: '1rem',
-                    
                     borderRadius: '10px',
                     border: '1px solid var(--light-blue)'
                 }}>
