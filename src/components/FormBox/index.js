@@ -48,6 +48,7 @@ export default function Forms() {
                                 name="pedidoId"
                                 value={pedidoId}
                                 type="text"
+                                placeholder="Insira o número do pedido sem caracteres especiais."
                                 inputProps={{
                                     pattern: "[0-9]*",
                                     onInput: inputChange,
