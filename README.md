@@ -81,7 +81,7 @@ Para rodar a aplicação em sua máquina, siga os passos abaixo:
 3. Execute o comando `npm install` para instalar as dependências.
 4. Em seguida, utilize o comando `npm run dev` para iniciar a aplicação.
 
-Agora a aplicação estará em execução localmente em seu ambiente de desenvolvimento. Aproveite!
+Agora a aplicação estará em execução localmente em seu ambiente de desenvolvimento.
 
 ## 5. Versão Mobile 📱
 
