@@ -57,8 +57,7 @@ Verifique se o código de rastreamento está correto e tente novamente.
 
 
 1 - Instalar e executar:
-```
-bash
+```bash
 npm install
 npm run dev
 ```
