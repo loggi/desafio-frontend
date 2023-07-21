@@ -1,4 +1,3 @@
-// import './App.css'
 import { ContainerHeader, LogoImagem, IconMenu } from "./Styled";
 import logo from "../../Imagens/iconLoggi.png";
 import { TextHeader, ButtonHeader } from "./Styled";

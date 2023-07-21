@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 
 export const ContainerHeader = styled.header`
-    background-color: #fff;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
 `;
 
 export const LogoImagem = styled.img`
@@ -15,18 +15,19 @@ export const LogoImagem = styled.img`
 `;
 
 export const IconMenu = styled(FaBars)`
-    font-size: 30px;
-    cursor: pointer;
-    color: #000;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
 
     @media (min-width: 1000px) {
-    display: none;
+      display: none;
   }
 `;
 
 export const TextHeader = styled.p`
-    display: none;
-    @media (min-width: 1000px) {
+  display: none;
+
+  @media (min-width: 1000px) {
     display: flex;
     &:hover {
       color: #00BAF0;
@@ -36,8 +37,9 @@ export const TextHeader = styled.p`
   }
 `
 export const ButtonHeader = styled.button`
-    display:none; 
-    @media (min-width: 1000px) {
+  display:none; 
+  
+  @media (min-width: 1000px) {
     display: flex;
     justify-content: center;
     border-radius: 10px;
