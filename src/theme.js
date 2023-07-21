@@ -24,6 +24,29 @@ const theme = createTheme({
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiInputBase-input': {
+            color: 'white',
+          },
+          '&.Mui-focused .MuiInputBase-input': {
+            color: 'white',
+          },
+          '& .MuiInput-underline:before': {
+            borderBottomColor: 'white',
+          },
+          '&:hover .MuiInput-underline:before': {
+            borderBottomColor: 'white',
+          },
+          '& .MuiInputLabel-root': {
+            color: 'white',
+          },
+        },
+      },
+    },
+  },
 });
 
 export default theme;

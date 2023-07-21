@@ -3,18 +3,17 @@ import { useState } from "react";
 import ButtonSubmit from "../ButtonSubmit";
 import { useRouter } from "next/router";
 
-
 export default function Forms() {
     const [pedidoId, setPedidoId] = useState('');
     const router = useRouter();
 
-    const handleInputChange = (event) => {
+    const inputChange = (event) => {
         const { value } = event.target;
         event.target.value = value.replace(/\D/, '');
         setPedidoId(value);
     };
 
-    const handleSubmit = (event) => {
+    const onSubmit = (event) => {
         event.preventDefault();
         router.push(`/track/${pedidoId}`)
         console.log('ID do pedido:', pedidoId);
@@ -22,6 +21,7 @@ export default function Forms() {
 
     return (
         <>
+
             <Container maxWidth="sm">
                 <Box sx={{ my: 4 }}>
                     <Card sx={{
@@ -41,7 +41,7 @@ export default function Forms() {
                         <Typography variant="body1" gutterBottom color="white">
                             Para começar, insira o código de rastreamento do seu pedido.
                         </Typography>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={onSubmit}>
                             <TextField
                                 variant="standard"
                                 label="Número do pedido"
@@ -50,7 +50,7 @@ export default function Forms() {
                                 type="text"
                                 inputProps={{
                                     pattern: "[0-9]*",
-                                    onInput: handleInputChange,
+                                    onInput: inputChange,
                                 }}
                                 fullWidth
                                 required
@@ -62,9 +62,7 @@ export default function Forms() {
                     </Card>
                 </Box >
             </Container>
+
         </>
     )
 }
-
-
-
