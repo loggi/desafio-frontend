@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-export const ContainerHome = styled.header`
+export const ContainerHome = styled.div`
     display: flex;
     align-items: center;
     background: black;
     height: calc(100vh - 100px);
     width: 100vw;
-    
+   
+  
 `;
+    
 
 export const FormContainer = styled.div`
   display: flex;
@@ -16,7 +18,7 @@ export const FormContainer = styled.div`
   position: relative;
   gap: 20px;
   width: 380px;
-  height: 400px;
+  height: 450px;
   background-color: #d5e0f6;
   border-radius: 20px;
   padding-bottom: 10px;
@@ -34,7 +36,7 @@ export const Title = styled.p`
   color: black;
   text-align: center;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   margin-top: 30px;
   margin-bottom: 30px;
 `;
@@ -42,8 +44,8 @@ export const Title = styled.p`
 export const IntroText = styled.p`
   color: black;
   text-align: center;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   padding: 30px;
   max-width: 350px;
 `;
@@ -58,15 +60,21 @@ export const Input = styled.input`
   margin-top: 50px;
   text-align: center;
   border: 1px solid black;
-  font-size: 16px;
+  font-size: 18px;
   background-color: transparent;
-  border: none;
-  border-bottom: 2px solid black;
+  height: 35px;
+  border-radius: 8px;
+  border: 2px solid #00B9FF;
   width: 40vh;
   color: black;
   outline: none;
   &::placeholder{
     color: black;
+    opacity: 0.5;
+    
+  }
+  @media(max-width: 1450px) {
+    width: 100%;
   }
 `;
 
@@ -107,6 +115,7 @@ export const ContainerRight = styled.div`
 
 export const ContainerLeft = styled.div`
     width: 50%;
+    height: 100%;
     background-color: black;
     position: relative;
     @media(max-width: 850px) {
@@ -134,7 +143,7 @@ export const DivImg = styled.div`
     flex-direction: row-reverse;
     justify-content: flex-end;
     position: absolute;
-    bottom: -150px;
+    bottom: 10px;
     left: 20px;
     @media(max-width: 850px) {
       display: none;
@@ -142,10 +151,10 @@ export const DivImg = styled.div`
 `;
 
 export const DivText = styled.div`
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-left: 100px;
     margin-bottom: 150px;
     gap: 5px;
