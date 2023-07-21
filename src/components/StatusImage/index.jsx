@@ -9,7 +9,7 @@ function StatusImage({ status, isLast }) {
   };
 
   const imageName = statusToImageMap[status];
-  const imageURL = `/src/assets/${imageName}`;
+  const imageURL = `/images/${imageName}`;
 
   const containerStyles = {
     display: "flex",
