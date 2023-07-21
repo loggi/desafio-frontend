@@ -10,15 +10,15 @@ const Diferenciais = () => {
       <DiferenciaisStyle>
         <ul>
           <li>
-            <img src={ampulheta} alt="" />
+            <img src={ampulheta} alt="desenho de ampulheta azulada" />
             <p> a entrega mais rápida do Brasil </p>
           </li>
           <li>
-            <img src={dinheiro} alt="" />
+            <img src={dinheiro} alt="saco volumoso fechado com símbolo do cifrão" />
             <p> melhor custo benefício </p>
           </li>
           <li>
-            <img src={conforto} alt="" />
+            <img src={conforto} alt="desenho entregador se debruçando na janela com caixa na mão e mulher sentada inclinando o corpo para frente, quase de frente para ele, fazendo menção a pegar a caixa" />
             <p> entregue no conforto de seu lar </p>
           </li>
         </ul>
