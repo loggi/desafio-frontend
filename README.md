@@ -17,8 +17,8 @@ nessa tela o usuário tem a possibilidade de inserir o número do seu pedido em 
 Página de rastreamento:
 Ao clicar no botão da tela principal, o usuário é redirecionado para a página de rastreamento. Nela, é possível visualizar o status atual do pedido, quem está levando sua encomenda, a previsão de chegada e também a rota que está sendo seguida para a entrega do produto.
 
-API fake:
-Para garantir a eficácia e a realidade na representação da rota, foi desenvolvido uma API fake especialmente criada para esse fim. Essa API simulada é responsável por fornecer dados fictícios como por exemplo de localização e status do pedido, criando uma experiência realista para o usuário.
+API mock:
+Para garantir a eficácia e a realidade na representação da rota, foi desenvolvido uma API fake especialmente criada para esse fim. Essa API é responsável por fornecer dados fictícios como por exemplo de localização e status do pedido, criando uma experiência realista para o usuário.
 
 ## 🚚 Simulando um rastreio
 
