@@ -11,8 +11,7 @@ export const ContainerHeader = styled.header`
 `;
 
 export const LogoImagem = styled.img`
-    width: 100px;
-    height: fit-content;
+  max-width: 100px;
 `;
 
 export const IconMenu = styled(FaBars)`
