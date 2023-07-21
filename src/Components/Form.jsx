@@ -88,7 +88,7 @@ export default function Form() {
         Acompanhar pacote
       </Button>
       <Link
-        href="#/"
+        href="/Help"
         sx={{
           color: "#000000",
           textDecorationColor: "#000000",
