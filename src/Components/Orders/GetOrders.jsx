@@ -50,8 +50,8 @@ function GetOrders() {
             <div className="status-history">
                 {order.historicoStatus.map((statusItem) => (
                 <div key={statusItem.status} className="status-item">
-                    <p><strong>Descrição:</strong> {statusItem.descricao}</p>
-                    <p><strong>Data do status:</strong> {statusItem.dataStatus}</p>
+                    <p><strong className="track-paragraph">Descrição:</strong> {statusItem.descricao}</p>
+                    <p><strong className="track-paragraph">Data do status:</strong> {statusItem.dataStatus}</p>
                 </div>
                 ))}
             </div>
