@@ -33,7 +33,12 @@ export default function Track() {
     let conteudo = <Typography variant="h1" component="h1" gutterBottom > ...</Typography>
 
     if (erro) {
-        conteudo = <Typography variant="h1" component="h1" gutterBottom > Não encontramos seu pedido! :( </Typography>
+        conteudo = <Box>
+            <Typography variant="h3" component="h3" gutterBottom > Não encontramos seu pedido! :(</Typography>
+            <Typography variant="h3" component="p" gutterBottom >
+                Verifique se o código de rastreamento está correto e tente novamente
+            </Typography>
+        </Box>
     }
 
     if (pedidoData) {
