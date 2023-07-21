@@ -1,15 +1,20 @@
-import { styled } from "styled-components";
-// import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaYoutube  } from "react-icons/fa";
+import { FooterComponent, FooterDivRedes, FooterDivQrCode, IconGoogleStore, IconPlayStore, TextFooter, IconFacebook, IconInstagram, IconTwitter, IconYoutube } from "./Styled";
 
 function Footer() {
-  return <FooterComponent>Footer</FooterComponent>;
+  return <FooterComponent>
+    <FooterDivRedes>
+      <TextFooter>Siga-nos</TextFooter>
+      <IconFacebook/>
+      <IconInstagram/>
+      <IconTwitter/>
+      <IconYoutube/>
+    </FooterDivRedes>
+    <FooterDivQrCode>
+      <TextFooter>Baixe nosso aplicativo</TextFooter>
+      <IconGoogleStore/>
+      <IconPlayStore/>
+    </FooterDivQrCode>
+  </FooterComponent>;
 }
-
-const FooterComponent = styled.footer`
-  height: 120px;
-  background-color: #006AF0;
-  display: flex;
-  align-items:flex-end;
-`;
 
 export default Footer;

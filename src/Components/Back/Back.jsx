@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-import { BackButton } from "./Styled";
+import { BackButton, StyledLink } from "./Styled";
 
 function Back() {
   return (
-    <Link to="/">
+    <StyledLink to="/">
       <BackButton>VOLTAR</BackButton>
-    </Link>
+    </StyledLink>
   );
 }
 

@@ -1,5 +1,5 @@
 import { TrackingSection, TrackingImg, TrackingInput, TrackingCard, TrackingButton, ImgInformation, ImgInformationTwo, InformationSection, DivInformations, TitleInformation, TextInformation, TextCard, TitleCard, ImgPackage } from "./Styled";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import InformationOneImg from "../../Imagens/InformationOne.png";
 import InformationTwoImg from "../../Imagens/InformationTwo.png";
@@ -8,6 +8,7 @@ import IconHomeInformation from "../../Imagens/iconHome.png";
 import Package from "../../Imagens/Package.png"; 
 
 function Home() {
+  const navigate = useNavigate();
   const [TrackingNumber, setTrackingNumber] = useState('');
 
   // Função para lidar com a mudança no input de rastreio
@@ -15,14 +16,9 @@ function Home() {
     setTrackingNumber(event.target.value);
   };
 
-  const handleTrackOrders = () => {
-  
-    if (TrackingNumber.trim() !== '') {
-      history.push(`/TrackingInformation/${TrackingNumber}`);
-    } else {
-      console.log('Digite o número de rastreio.');
-    }
-  };
+  const handleClick = () => {
+    return TrackingNumber && navigate(`/TrackingInformation/${TrackingNumber}`)
+  }
   
   return (
     <>
@@ -35,9 +31,7 @@ function Home() {
           <ImgPackage src={Package}/>
           <TextCard>Primeiro, digite o código de rastreamento.</TextCard>
           <TrackingInput value={TrackingNumber} onChange={handleInputChange}/>
-          <Link to={`/TrackingInformation/${TrackingNumber}`}>
-            <TrackingButton onClick={handleTrackOrders}>ACOMPANHAR PEDIDO</TrackingButton>
-          </Link>
+          <TrackingButton onClick={() => handleClick()}>ACOMPANHAR PEDIDO</TrackingButton>
         </TrackingCard>
         <TrackingImg src={IconHomeInformation}/>
       </TrackingSection>
