@@ -57,6 +57,8 @@ Para iniciar o projeto, os protótipos foram elaborados no Figma. Nesse processo
 
 <div align="center">
   <img width="500" src="https://github.com/analeticiabacha/desafio-loggi-analeticia/assets/30864314/97580259-905c-4e05-ab12-4516ff0e0368"/>
+</div>
+<div align="center">
   <img width="220" height="400" src="https://github.com/analeticiabacha/desafio-loggi-analeticia/assets/30864314/f5b71fab-8a41-47ac-91fa-a92b4de00d71"/>
   <img width="220" height="400" src="https://github.com/analeticiabacha/desafio-loggi-analeticia/assets/30864314/b1053f37-7396-433e-9770-35804d643f5b"/>
 </div>
