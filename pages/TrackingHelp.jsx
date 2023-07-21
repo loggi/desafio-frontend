@@ -7,17 +7,7 @@ export default function TrackingHelp() {
     return (
         <>
             <Header />
-            <Link
-                href="/"
-                sx={{
-                    color: "#000000",
-                    textDecorationColor: "#000000",
-                    marginTop: "40px",
-                }}
-            >
-                Voltar
-            </Link>
-
+            
             <Container sx={{ marginTop: 3 }}>
                 <Typography
                     variant="p"
@@ -139,6 +129,17 @@ export default function TrackingHelp() {
                     escolhido.
                 </Typography>
             </Container>
+            <Link
+                href="/"
+                sx={{
+                    color: "#000000",
+                    textDecorationColor: "#000000",
+                    marginTop: "40px",
+                }}
+            >
+                Voltar
+            </Link>
+
             <Footer />
         </>
     );

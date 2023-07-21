@@ -7,16 +7,6 @@ export default function Help() {
     return (
         <>
             <Header />
-            <Link
-                href="/"
-                sx={{
-                    color: "#000000",
-                    textDecorationColor: "#000000",
-                    marginTop: "40px",
-                }}
-            >
-                Voltar
-            </Link>
             <Container
                 sx={{
                     marginTop: 3,
@@ -323,6 +313,16 @@ export default function Help() {
                     para ajudar.
                 </Typography>
             </Container>
+            <Link
+                href="/"
+                sx={{
+                    color: "#000000",
+                    textDecorationColor: "#000000",
+                    marginTop: "40px",
+                }}
+            >
+                Voltar
+            </Link>
             <Footer />
         </>
     );

@@ -81,33 +81,33 @@ export default function ButtonAppBar() {
       >
         <Toolbar>
           <Link
-            component="button"
-            variant="body2"
-            onClick={() => {
-              console.info("I'm a button.");
-            }}
+            href="/"
           >
             <img
               src="/img/loggi-logo-full.png"
               alt="Página principal"
-              style={{ width: "130px", height: "40px", margin: "10px" }}
+              style={{
+                width: "130px",
+                height: "40px",
+                margin: "10px"
+              }}
             />
           </Link>
           {isDesktop ? (
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ 
-              mr: 2, 
-              marginLeft: "auto", 
-              color: "#00baff" 
-            }}
-            onClick={toggleDrawer}
-          >
-            <MenuIcon sx={{ fontSize: "3rem" }} />
-          </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{
+                mr: 2,
+                marginLeft: "auto",
+                color: "#00baff"
+              }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon sx={{ fontSize: "3rem" }} />
+            </IconButton>
           ) : (
             <IconButton
               size="large"
