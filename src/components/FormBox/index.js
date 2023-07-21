@@ -16,7 +16,6 @@ export default function Forms() {
     const onSubmit = (event) => {
         event.preventDefault();
         router.push(`/track/${pedidoId}`)
-        console.log('ID do pedido:', pedidoId);
     };
 
     return (

@@ -35,7 +35,7 @@ export default function Track() {
         conteudo = <Box>
             <Typography variant="h3" component="h3" gutterBottom > Não encontramos seu pedido! :(</Typography>
             <Typography variant="h3" component="p" gutterBottom >
-                Verifique se o código de rastreamento está correto e tente novamente
+                Verifique se o código de rastreamento está correto e tente novamente.
             </Typography>
         </Box>
     }
