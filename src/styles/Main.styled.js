@@ -27,8 +27,11 @@ export const MainStyle = styled.main`
   margin: 1rem;
   display: flex;
   justify-content: space-evenly;
-    img{
+    .imgDesktop{
       width:70%;
+      @media screen and (max-width: 595px) {
+        display: none;
+      }
     }
 `
 
@@ -60,4 +63,9 @@ export const FormStyle = styled.form`
       border-radius: 2px;
 
     };
+`
+export const ImgMobile = styled.img`
+  @media screen and (min-width: 594px) {
+    display: none;
+  }
 `

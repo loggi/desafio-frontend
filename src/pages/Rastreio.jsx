@@ -2,8 +2,9 @@ import React, { useRef, useState } from 'react';
 import 'react-toastify/dist/ReactToastify.css'
 import requisicoesHTTP from '../API/Requisicoes';
 import { Button } from '../styles/Button.styled';
-import { ContainerForm, FormStyle, Title, MainStyle } from '../styles/Main.styled';
+import { ContainerForm, FormStyle, Title, MainStyle, ImgMobile } from '../styles/Main.styled';
 import entrega from '../assets/TakeAway.svg';
+import imgMobile from '../assets/caixa-entregue.svg';
 import Modal from '../components/Modal';
 
 const Rastreio = () => {
@@ -23,6 +24,7 @@ const Rastreio = () => {
 
     await requisicoesHTTP('GET', rastreio || user)
     .then((response) => {
+      console.log(response)
       return setInfo(response)
     })
     .catch((error)=> {
@@ -43,11 +45,12 @@ const Rastreio = () => {
     </Title>
 
     <MainStyle>
-      <img src={entrega} alt="" />
+      <img className="imgDesktop" src={entrega} alt="motoboy com caixas na garupa e um celular com o desenho de uma rota" />
+      <ImgMobile src={imgMobile} alt="celular com uma rota desenhada na cor azul" />
       <ContainerForm>
         <FormStyle>
           <label> 
-            <p>CPF ou E-mail</p>
+            <p>E-mail</p>
             <input 
               type="text" 
               value={user} 

@@ -21,7 +21,7 @@ export const DiferenciaisStyle = styled.div`
     justify-content: space-around;
     gap: 1rem;
     padding: .3rem;
-    place-items: center;
+    place-items: baseline;
       li{
         width: 60%;
         height: 80%;

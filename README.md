@@ -5,9 +5,9 @@
 
 ## Instruções técnicas para testar localmente
 
-- Faça um `fork` ![fork](<fork (2).png>)
+- Faça um `fork` ![fork](<./src/assets/fork (2).png>)
 
-- Faça um `clone` ![clone](<clone-32 (1).png>) 
+- Faça um `clone` ![clone](<./src/assets/clone-32 (1).png>) 
 
 - Digite no terminal da IDE de sua preferência:
 ```
