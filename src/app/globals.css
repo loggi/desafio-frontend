@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: #2E3545;
+}
+
+:root {
+  --loggi-color: 0, 186, 255;
+  --light-text: #757d8c;
+}
+
+body {
+  background: #FFF;
+}
+
+.div--info {
+  width: 496px;
+}
+
+.div--tracker {
+  background: #0055FF;
+  height: calc(100vh - 19.8rem);
+}
+
+.img {
+  margin-left: -68px;
+}
+
+.span--small {
+  color: var(--light-text);
+}
