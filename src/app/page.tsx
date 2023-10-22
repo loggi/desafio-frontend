@@ -1,26 +1,29 @@
 'use client'
 
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { Button, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material'
 
 export default function Home() {
-  const reg = new RegExp("[0-9]");
+  const reg = new RegExp("^[0-9]+$")
+  const router = useRouter()
 
-  const [codevalue, setCodeValue] = useState("");
-  const [valid, setValid] = useState(true);
+  const [codevalue, setCodeValue] = useState("")
+  const [valid, setValid] = useState(true)
 
   const handleValidation = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setCodeValue(e.target.value);
-    setValid(reg.test(e.target.value));
+    setCodeValue(e.target.value)
+    setValid(reg.test(e.target.value))
   };
 
   const onClick = () => {
-    setValid(reg.test(codevalue) && codevalue.length > 0);
+    setValid(reg.test(codevalue) && codevalue.length > 0)
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    router.push('/tracker?id=' + codevalue)
   }
 
   return (
@@ -43,7 +46,7 @@ export default function Home() {
                   className={"mt-1 w-full" + (!valid ? ' error' : '')}
                   error={ !valid }
                   id="outlined-basic"
-                  inputProps={{ pattern: "[0-9]" }}
+                  inputProps={{ pattern: "^[0-9]+$" }}
                   onChange={ (e) => handleValidation(e) }
                   required={ true }
                   value={ codevalue }
