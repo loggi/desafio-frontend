@@ -55,6 +55,10 @@ input {
   border-color: #00baff !important;
 }
 
+.error .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: red !important;
+}
+
 .span--small {
   color: var(--light-text);
 }
