@@ -18,6 +18,22 @@ body {
   background: #FFF;
 }
 
+button {
+  background: linear-gradient(90deg, #00baff, #007cff) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  width: 205px;
+}
+
+fieldset {
+  height: 44px;
+}
+
+input {
+  padding: 8px 16px !important;
+}
+
 .div--info {
   width: 496px;
 }
@@ -29,6 +45,14 @@ body {
 
 .img {
   margin-left: -68px;
+}
+
+.MuiOutlinedInput-root fieldset {
+  border: 1px solid #757d8c;
+}
+
+.MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #00baff !important;
 }
 
 .span--small {

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Button, TextField } from '@mui/material';
 
 export default function Home() {
   return (
@@ -16,12 +17,19 @@ export default function Home() {
       <main className="flex flex-col">
         <div className="flex flex-row p-12 div--tracker">
           <section className="flex h-full items-center w-1/2">
-            <div className="bg-white h-4/6 ml-40 rounded-2xl p-12 pt-8 div--info">
+            <div className="bg-white flex flex-col h-4/6 ml-40 rounded-2xl p-12 pt-8 div--info">
               <span className="font-sans inline-block mb-2 text-2xl">Olá!</span>
-              <br />
-              <span className="font-sans leading-4 text-2xl">Acompanhe com a Loggi a entrega do seu pedido. 😃</span>
-              <br />
+              <span className="font-sans leading-6 text-2xl">Acompanhe com a Loggi a entrega do seu pedido. 😃</span>
               <span className="font-sans inline-block mt-4 text-base span--small">Primeiro, digite o código de rastreamento.</span>
+              <span className="font-sans inline-block mt-6 text-base span--small">Código de rastreamento.</span>
+
+              <form>
+                <TextField id="outlined-basic" variant="outlined" className="mt-1 w-full" />
+
+                <div className="flex justify-center mt-10">
+                  <Button variant="contained" className="font-sans">Acompanhar pedido</Button>
+                </div>
+              </form>
             </div>
           </section>
 
