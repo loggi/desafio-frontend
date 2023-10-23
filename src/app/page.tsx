@@ -23,7 +23,7 @@ export default function Home() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    router.push('/tracker?id=' + codevalue)
+    router.push('/tracker?' + codevalue)
   }
 
   return (
@@ -31,8 +31,8 @@ export default function Home() {
       <div className="bg-white flex flex-col h-4/6 ml-40 rounded-2xl p-12 pt-8 div--info">
         <span className="font-sans inline-block mb-2 text-2xl">Olá!</span>
         <span className="font-sans leading-6 text-2xl">Acompanhe com a Loggi a entrega do seu pedido. 😃</span>
-        <span className="font-sans inline-block mt-4 text-base span--small">Primeiro, digite o código de rastreamento.</span>
-        <span className="font-sans inline-block mt-6 text-base span--small">Código de rastreamento.</span>
+        <span className="font-sans inline-block mt-4 text-base span--gray">Primeiro, digite o código de rastreamento.</span>
+        <span className="font-sans inline-block mt-6 text-base span--gray">Código de rastreamento.</span>
 
         <form onSubmit={ onSubmit }>
           <TextField
@@ -46,7 +46,9 @@ export default function Home() {
             variant="outlined" />
 
           <div className="flex justify-center mt-10">
-            <Button variant="contained" className="font-sans" type="submit" onClick={ onClick }>Acompanhar pedido</Button>
+            <Button className="button--big font-sans" onClick={ onClick } type="submit" variant="contained">
+              Acompanhar pedido
+            </Button>
           </div>
         </form>
       </div>

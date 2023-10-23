@@ -23,7 +23,6 @@ button {
   font-size: 14px !important;
   font-weight: 600 !important;
   text-transform: none !important;
-  width: 205px;
 }
 
 fieldset {
@@ -34,13 +33,30 @@ input {
   padding: 8px 16px !important;
 }
 
+.button--big {
+  width: 205px;
+}
+
+.button--small {
+  min-width: 45px;
+  width: 45px;
+}
+
 .div--info {
   width: 496px;
+}
+
+.div--instruction {
+  background: linear-gradient(90deg, #F4F6F8, #ECEEF0);
 }
 
 .div--tracker {
   background: #0055FF;
   height: calc(100vh - 19.8rem);
+}
+
+.div--status {
+  background: linear-gradient(90deg, #00baff, #007cff);
 }
 
 .img {
@@ -59,6 +75,10 @@ input {
   border-color: red !important;
 }
 
-.span--small {
+.span--gray {
   color: var(--light-text);
+}
+
+.span--blue {
+  color: rgb(var(--loggi-color));
 }
