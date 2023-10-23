@@ -1,6 +1,6 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { Button, TextField } from '@mui/material'
 import EastIcon from '@mui/icons-material/East'
@@ -9,6 +9,7 @@ import Main from '../components/main'
 
 export default function Tracker() {
   const reg = new RegExp("^[0-9]+$")
+  const router = useRouter()
   const searchParams = useSearchParams()
 
   const [iduser, setIdUser] = useState("")
@@ -25,7 +26,7 @@ export default function Tracker() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    //router.push('/tracker?' + codevalue)
+    router.push('/tracker-detail?' + iduser)
   }
 
   return (
@@ -48,7 +49,7 @@ export default function Tracker() {
         <div className="border-b flex flex-row mt-4 pb-4">
           <div className="border-r flex flex-col px-5 py-2 w-1/2">
             <span className="font-medium font-sans inline-block text-base span--gray">Data da entrega</span>
-            <span className="font-sans inline-block text-sm span--gray">19/10/2023</span>
+            <span className="font-sans inline-block text-sm span--gray">19/10/2023 às 12:39h</span>
           </div>
 
           <div className="flex flex-col pl-5 py-2 w-1/2">
