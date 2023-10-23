@@ -1,5 +1,4 @@
 import InfoIcon from '@mui/icons-material/Info'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
 import Main from '../components/main'
 import Map from '../components/map'
 
@@ -21,7 +20,7 @@ export default function TrackerDetail() {
           </span>
         </div>
 
-        <div className="border-b flex flex-row mt-4 pb-4">
+        <div className="flex flex-row mt-4">
           <div className="border-r flex flex-col px-5 py-2 w-1/2">
             <span className="font-medium font-sans inline-block text-base span--gray">Data da entrega</span>
             <span className="font-sans inline-block text-sm span--gray">19/10/2023</span>
@@ -33,28 +32,23 @@ export default function TrackerDetail() {
           </div>
         </div>
 
-        <div className="border-b p-5">
-          <span className="font-sans inline-block text-base span--gray">
-            Recebido por <span className="cursor-pointer font-medium font-sans span--gray text-base">&nbsp;Caio Roberto</span>
-          </span>
-        </div>
-
-        <div className="flex flex-row h-full pl-5 pt-5">
-          <div className="flex flex-col justify-center w-1/2">
-            <span className="font-sans inline-block text-base span--gray">
-              CEP: 05510-050
-            </span>
-
-            <span className="font-sans inline-block text-base span--gray">
-              Rua Camargo, nº 189, Butantã
-            </span>
-
-            <span className="font-sans inline-block text-base span--gray">
-              São Paulo/SP
-            </span>
+        <div className="flex flex-row p-5 pb-4 pt-0">
+          <div className="border-r flex flex-col w-1/2">
+            <span className="font-sans font-medium  inline-block text-base span--gray">Recebido por</span>
+            <span className="font-sans span--gray text-base">Caio Roberto</span>
           </div>
 
-          <div className="h-full rounded-2xl w-1/2">
+          <div className="flex flex-col justify-center pl-5 w-1/2">
+            <span className="font-sans font-medium  inline-block text-base span--gray">Endereço</span>
+
+            <span className="font-sans inline-block text-base span--gray">
+              Rua Camargo, nº 189, Butantã, São Paulo/SP
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-row h-full">
+          <div className="h-full rounded-2xl w-full">
             <Map />
           </div>
         </div>
