@@ -77,7 +77,7 @@ export default function Tracker() {
         </div>
 
         <div className="p-5 pt-10">
-          <span className="font-sans inline-block text-base span--gray opacity-80">
+          <span className="font-sans inline-block text-base span--gray">
             Se ainda estiver com dúvidas sobre rastreio de pedido,
             <span className="cursor-pointer span--blue">&nbsp;clique aqui.</span>
           </span>
