@@ -46,7 +46,7 @@ export default function Home() {
             variant="outlined" />
 
           <div className="flex justify-center mt-10">
-            <Button className="button--big font-sans" onClick={ onClick } type="submit" variant="contained">
+            <Button className="button--big button--loggi font-sans" onClick={ onClick } type="submit" variant="contained">
               Acompanhar pedido
             </Button>
           </div>

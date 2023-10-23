@@ -74,7 +74,7 @@ export default function Tracker() {
               variant="outlined" />
 
             <div className="flex justify-center ml-4">
-              <Button className="button--small font-sans rounded-full" onClick={ onClick } type="submit" variant="contained">
+              <Button className="button--loggi button--small font-sans rounded-full" onClick={ onClick } type="submit" variant="contained">
                 <EastIcon className="opacity-80" style={{ fill: 'white' }} />
               </Button>
             </div>

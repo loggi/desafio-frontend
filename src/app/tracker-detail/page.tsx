@@ -1,6 +1,7 @@
 import InfoIcon from '@mui/icons-material/Info'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import Main from '../components/main'
+import Map from '../components/map'
 
 export default function TrackerDetail() {
   return (
@@ -38,8 +39,8 @@ export default function TrackerDetail() {
           </span>
         </div>
 
-        <div className="flex flex-row p-5">
-          <div className="flex flex-col">
+        <div className="flex flex-row h-full pl-5 pt-5">
+          <div className="flex flex-col justify-center w-1/2">
             <span className="font-sans inline-block text-base span--gray">
               CEP: 05510-050
             </span>
@@ -51,6 +52,10 @@ export default function TrackerDetail() {
             <span className="font-sans inline-block text-base span--gray">
               São Paulo/SP
             </span>
+          </div>
+
+          <div className="h-full rounded-2xl w-1/2">
+            <Map />
           </div>
         </div>
       </div>

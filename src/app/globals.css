@@ -19,7 +19,6 @@ body {
 }
 
 button {
-  background: linear-gradient(90deg, #00baff, #007cff) !important;
   font-size: 14px !important;
   font-weight: 600 !important;
   text-transform: none !important;
@@ -35,6 +34,10 @@ input {
 
 .button--big {
   width: 205px;
+}
+
+.button--loggi {
+  background: linear-gradient(90deg, #00baff, #007cff) !important;
 }
 
 .button--small {
@@ -61,6 +64,15 @@ input {
 
 .img {
   margin-left: -68px;
+}
+
+.img--logo {
+  width: 100px;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
 }
 
 .MuiOutlinedInput-root fieldset {
