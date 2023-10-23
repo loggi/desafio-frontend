@@ -3,6 +3,8 @@
 import { useSearchParams } from 'next/navigation'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { Button, TextField } from '@mui/material'
+import EastIcon from '@mui/icons-material/East'
+import InfoIcon from '@mui/icons-material/Info'
 import Main from '../components/main'
 
 export default function Tracker() {
@@ -34,7 +36,9 @@ export default function Tracker() {
           <span className="font-sans inline-block text-base text-white opacity-80">O pacote foi recebido no endereço de entrega.</span>
         </div>
 
-        <div className="div--instruction flex flex-col p-5 rounded-b-2xl">
+        <div className="div--instruction flex flex-row p-5 rounded-b-2xl">
+          <InfoIcon className="mr-3 mt-3 opacity-80" style={{ fill: 'grey' }} />
+
           <span className="font-sans inline-block text-base span--gray opacity-80">
             Covid19: veja como receber o seu pacote de forma segura,
             <span className="cursor-pointer span--blue">&nbsp;clique aqui.</span>
@@ -70,7 +74,7 @@ export default function Tracker() {
 
             <div className="flex justify-center ml-4">
               <Button className="button--small font-sans rounded-full" onClick={ onClick } type="submit" variant="contained">
-                {'>'}
+                <EastIcon className="opacity-80" style={{ fill: 'white' }} />
               </Button>
             </div>
           </form>
