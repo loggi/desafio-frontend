@@ -62,6 +62,10 @@ input {
   background: linear-gradient(90deg, #00baff, #007cff);
 }
 
+.error .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: red !important;
+}
+
 .img {
   margin-left: -68px;
 }
@@ -83,8 +87,8 @@ input {
   border-color: #00baff !important;
 }
 
-.error .MuiOutlinedInput-root.Mui-focused fieldset {
-  border-color: red !important;
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 
 .span--gray {
@@ -93,4 +97,13 @@ input {
 
 .span--blue {
   color: rgb(var(--loggi-color));
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }

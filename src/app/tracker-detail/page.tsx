@@ -1,8 +1,19 @@
+'use client'
+
+import { useEffect, useState } from 'react';
 import InfoIcon from '@mui/icons-material/Info'
 import Main from '../components/main'
 import Map from '../components/map'
 
 export default function TrackerDetail() {
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setShowMap(true);
+    }, 1200);
+  }, []);
+
   return (
     <Main>
       <div className="bg-white div--info flex flex-col h-full ml-40 p-8 rounded-2xl">
@@ -48,8 +59,10 @@ export default function TrackerDetail() {
         </div>
 
         <div className="flex flex-row h-full">
-          <div className="h-full rounded-2xl w-full">
-            <Map />
+          <div className="h-full skeleton w-full">
+            {showMap &&
+              <Map />
+            }
           </div>
         </div>
       </div>

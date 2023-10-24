@@ -22,10 +22,7 @@ export default function MapOld() {
 
   return (
     <>
-      { (isLoaded)
-        ? newComponent
-        : <></>
-      }
+      { (isLoaded) ? newComponent : <></> }
     </>
   )
 }
