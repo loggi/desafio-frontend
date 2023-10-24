@@ -71,7 +71,7 @@ export default function Tracker() {
 
             <div className="flex flex-col pl-5 py-2 w-1/2">
               <span className="font-medium font-sans inline-block text-base span--gray">Código de rastreamento</span>
-              <span className="font-sans inline-block text-sm span--gray">{ searchParams }</span>
+              <span className="font-sans inline-block text-sm span--gray">{ d[0].id }</span>
             </div>
           </div>
 
