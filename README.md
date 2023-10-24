@@ -22,7 +22,7 @@ Para este desafio, temos algumas ferramentas que gostaríamos que fossem utiliza
 * [Material UI](https://mui.com/) - Para componentes visuais de front-end
 * GitHub - para versionamento de código
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-next) que usa as ferramentas acima.
+Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs) que usa as ferramentas acima.
 
 Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
 
