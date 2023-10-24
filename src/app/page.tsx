@@ -9,21 +9,21 @@ export default function Home() {
   const reg = new RegExp("^[0-9]+$")
   const router = useRouter()
 
-  const [codevalue, setCodeValue] = useState("")
+  const [id, setId] = useState("")
   const [valid, setValid] = useState(true)
 
   const handleValidation = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setCodeValue(e.target.value)
+    setId(e.target.value)
     setValid(reg.test(e.target.value))
   };
 
   const onClick = () => {
-    setValid(reg.test(codevalue) && codevalue.length > 0)
+    setValid(reg.test(id) && id.length > 0)
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    router.push('/tracker?' + codevalue)
+    router.push('/tracker?' + id)
   }
 
   return (
@@ -42,7 +42,7 @@ export default function Home() {
             inputProps={{ pattern: "^[0-9]+$" }}
             onChange={ (e) => handleValidation(e) }
             required={ true }
-            value={ codevalue }
+            value={ id }
             variant="outlined" />
 
           <div className="flex justify-center mt-10">
