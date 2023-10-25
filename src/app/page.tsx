@@ -1,14 +1,17 @@
+// @ts-nocheck
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react'
 import { Button, TextField } from '@mui/material'
 import Main from './components/main'
 
 export default function Home() {
+  const hasFetchedData = useRef(false)
   const reg = new RegExp("^[0-9]+$")
   const router = useRouter()
 
+  const [data, setData] = useState({})
   const [id, setId] = useState("")
   const [valid, setValid] = useState(true)
 
@@ -23,8 +26,25 @@ export default function Home() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    router.push('/tracker?' + id)
+    const value = data.filter(d => d.id.toString() === id.toString())
+
+    if (value[0] !== undefined) {
+      router.push(`/tracker?id=${value[0].id}`)
+    }
   }
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('data.json')
+      const datafetched = await res.json()
+      return setData(datafetched)
+    }
+
+    if (hasFetchedData.current === false) {
+      fetchData()
+      hasFetchedData.current = true
+    }
+  }, [])
 
   return (
     <Main>
