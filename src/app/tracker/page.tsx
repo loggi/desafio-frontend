@@ -53,7 +53,7 @@ export default function Tracker() {
 
   return (
     <Main>
-      <div className="bg-white div--info flex flex-col h-full ml-40 p-8 rounded-2xl">
+      <div className="bg-white div--info flex flex-col h-full mt-2 p-8 sm:ml-40 sm:mt-0 sm:rounded-2xl">
         <div className="div--status flex flex-col p-5 rounded-t-2xl">
           <span className="font-medium font-sans inline-block text-base text-white">{ data[0]?.status }</span>
           <span className="font-sans inline-block text-base text-white opacity-80">{ data[0]?.status_description }</span>

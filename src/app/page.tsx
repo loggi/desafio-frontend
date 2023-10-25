@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <Main>
-      <div className="bg-white flex flex-col h-4/6 ml-40 rounded-2xl p-12 pt-8 div--info">
+      <div className="bg-white div--info flex flex-col h-4/6 mt-2 p-12 pt-8 sm:ml-40 sm:mt-0 sm:rounded-2xl">
         <span className="font-sans inline-block mb-2 text-2xl">Olá!</span>
         <span className="font-sans leading-6 text-2xl">Acompanhe com a Loggi a entrega do seu pedido. 😃</span>
         <span className="font-sans inline-block mt-4 text-base span--gray">Primeiro, digite o código de rastreamento.</span>
@@ -74,7 +74,7 @@ export default function Home() {
             </Button>
           </div>
 
-          { alert ? <Alert className="mt-8" severity="warning" onClose={() => { setAlert(false) }}>Código do pedido não encontrado.</Alert> : <></> }
+          { alert ? <Alert className="mt-6 sm:mt-8" severity="warning" onClose={() => { setAlert(false) }}>Código do pedido não encontrado.</Alert> : <></> }
         </form>
       </div>
     </Main>

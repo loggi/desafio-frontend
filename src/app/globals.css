@@ -107,3 +107,19 @@ input {
     background-color: hsl(170, 20%, 95%);
   }
 }
+
+@media screen and (max-width: 640px) {
+  .div--info {
+    width: 100%;
+  }
+
+  .div--tracker {
+    background: none;
+    height: calc(100vh - 6rem);
+  }
+
+  .img {
+    margin-left: 0;
+    max-height: 16rem !important;
+  }
+}

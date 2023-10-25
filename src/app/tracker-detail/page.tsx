@@ -27,7 +27,7 @@ export default function TrackerDetail() {
 
   return (
     <Main>
-      <div className="bg-white div--info flex flex-col h-full ml-40 p-8 rounded-2xl">
+      <div className="bg-white div--info flex flex-col h-full mt-2 p-8 sm:ml-40 sm:mt-0 sm:rounded-2xl">
         <div className="div--status flex flex-col p-5 rounded-t-2xl">
           <span className="font-medium font-sans inline-block text-base text-white">{ data[0]?.status }</span>
           <span className="font-sans inline-block text-base text-white opacity-80">{ data[0]?.status_description }</span>
@@ -42,7 +42,7 @@ export default function TrackerDetail() {
           </span>
         </div>
 
-        <div className="flex flex-row mt-4">
+        <div className="flex flex-row mt-8 sm:mt-4">
           <div className="border-r flex flex-col px-5 py-2 w-1/2">
             <span className="font-medium font-sans inline-block text-base span--gray">Data da entrega</span>
             <span className="font-sans inline-block text-sm span--gray">{ data[0]?.date }</span>
@@ -54,7 +54,7 @@ export default function TrackerDetail() {
           </div>
         </div>
 
-        <div className="flex flex-row pb-4 pt-0">
+        <div className="flex flex-row mb-4 pb-4 pt-0 sm:mb-0">
           <div className="border-r flex flex-col pb-2 px-5 w-1/2">
             <span className="font-sans font-medium inline-block text-base span--gray">Recebido por</span>
             <span className="font-sans span--gray text-sm">{ data[0]?.receiver }</span>

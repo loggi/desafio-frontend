@@ -1,18 +1,14 @@
 import Image from 'next/image'
 
-export default function Main({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Main({ children, }: { children: React.ReactNode }) {
   return (
     <main className="flex flex-col">
-      <div className="flex flex-row p-12 div--tracker">
-        <section className="flex h-full items-center w-1/2">
+      <div className="div--tracker flex flex-col sm:p-12 sm:flex-row">
+        <section className={`flex sm:h-full sm:items-center w-full sm:w-1/2 ${(window.location.search).replace('?id=', '') !== '' ? 'h-full' : 'h-1/2'}`}>
           { children }
         </section>
 
-        <section className="h-full w-1/2">
+        <section className={`h-1/2 sm:block sm:h-full sm:w-1/2 w-full ${(window.location.search).replace('?id=', '') !== '' ? 'hidden' : ''}`}>
           <div className="h-full relative">
             <Image alt="Loggi Order" className="object-contain img" fill priority src="/loggi_order.svg" />
           </div>
