@@ -1,0 +1,42 @@
+.tracker {
+  .tracker__statusList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    li {
+      display: flex;
+      margin: 0 0 30px 0;
+      
+      @media (min-width: 768px) {
+        max-width: 150px;
+      }
+      
+      svg {
+        width: 50px;
+        height: auto;
+        margin: 0 10px;
+      }
+
+      &.trackerStatus__inactive {
+        opacity: .5;
+      }
+
+      .trackerStatus__infoContainer {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      @media (min-width: 768px) {
+        margin: 20px 0;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;     
+      }
+    }
+  }
+}

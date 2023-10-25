@@ -1,0 +1,39 @@
+.home__imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+    @media (min-width: 768px) {
+      width: 280px;
+      margin-top: 50px;
+    }
+  }
+}
+
+.home__trackingBox {
+  padding: 20px 30px;
+  border-radius: 15px;
+  color: #00baff;
+  margin: 20px auto;
+  @media (min-width: 768px) {
+    padding: 30px 40px;
+    margin: 50px auto;
+  }
+
+  .trackingBox__form {
+    > div,
+    > button {
+      width: 100%
+    }
+    @media (min-width: 768px) {
+      > div,
+      > button {
+        width: auto;
+      }
+    }
+  }  
+}
