@@ -3,7 +3,7 @@
 
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react'
-import { Button, TextField } from '@mui/material'
+import { Alert, Button, TextField } from '@mui/material'
 import Main from './components/main'
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
   const reg = new RegExp("^[0-9]+$")
   const router = useRouter()
 
+  const [alert, setAlert] = useState(false);
   const [data, setData] = useState({})
   const [id, setId] = useState("")
   const [valid, setValid] = useState(true)
@@ -30,6 +31,8 @@ export default function Home() {
 
     if (value[0] !== undefined) {
       router.push(`/tracker?id=${value[0].id}`)
+    } else {
+      setAlert(true)
     }
   }
 
@@ -70,6 +73,8 @@ export default function Home() {
               Acompanhar pedido
             </Button>
           </div>
+
+          { alert ? <Alert className="mt-8" severity="warning" onClose={() => { setAlert(false) }}>Código do pedido não encontrado.</Alert> : <></> }
         </form>
       </div>
     </Main>

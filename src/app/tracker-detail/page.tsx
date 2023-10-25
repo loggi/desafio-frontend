@@ -1,13 +1,12 @@
 // @ts-nocheck
 'use client'
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import InfoIcon from '@mui/icons-material/Info'
 import Main from '../components/main'
 import Map from '../components/map'
 
 export default function TrackerDetail() {
-  const hasFetchedData = useRef(false)
   const param = (window.location.search).replace('?id=', '')
 
   const [data, setData] = useState({})
@@ -23,11 +22,8 @@ export default function TrackerDetail() {
       return setData(value)
     }
 
-    if (hasFetchedData.current === false) {
       fetchData()
-      hasFetchedData.current = true
-    }
-  }, [])
+  })
 
   return (
     <Main>

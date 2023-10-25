@@ -2,18 +2,18 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react'
-import { Button, TextField } from '@mui/material'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import { Alert, Button, TextField } from '@mui/material'
 import EastIcon from '@mui/icons-material/East'
 import InfoIcon from '@mui/icons-material/Info'
 import Main from '../components/main'
 
 export default function Tracker() {
-  const hasFetchedData = useRef(false)
   const param = (window.location.search).replace('?id=', '')
   const reg = new RegExp("^[0-9]+$")
   const router = useRouter()
 
+  const [alert, setAlert] = useState(false);
   const [data, setData] = useState({})
   const [iduser, setIdUser] = useState("")
   const [valid, setValid] = useState(true)
@@ -35,6 +35,8 @@ export default function Tracker() {
 
     if (value !== undefined) {
       router.push('/tracker-detail?id=' + param)
+    } else {
+      setAlert(true)
     }
   }
 
@@ -46,11 +48,8 @@ export default function Tracker() {
       return setData(value)
     }
 
-    if (hasFetchedData.current === false) {
-      fetchData()
-      hasFetchedData.current = true
-    }
-  }, [])
+    fetchData()
+  })
 
   return (
     <Main>
@@ -113,6 +112,8 @@ export default function Tracker() {
             <span className="cursor-pointer span--blue">&nbsp;clique aqui.</span>
           </span>
         </div>
+
+        { alert ? <Alert severity="warning" onClose={() => { setAlert(false) }}>CPF ou CNPJ não encontrado para este pedido.</Alert> : <></> }
       </div>
     </Main>
   )
