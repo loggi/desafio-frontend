@@ -6,3 +6,19 @@
     padding: 50px;
   }
 }
+
+.orderNotFound__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h4 {
+    text-align: center;
+    color: #00baff;
+    font-weight: 600;
+  }
+  a {
+    color: #00baff;
+  }
+}
