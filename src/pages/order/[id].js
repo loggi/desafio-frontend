@@ -1,6 +1,7 @@
-import { Container, Box  } from '@mui/material';
+import { Container, Typography  } from '@mui/material';
 
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 
@@ -32,13 +33,23 @@ export default function Order() {
       <Head>
         <title>Acompanhe suas Entregas em Tempo Real | Loggi</title>
       </Head>
-      <Container  className={styles.order__container} >
-        {order && 
+      <Container className={styles.order__container} >
+        {order !== null && order !== undefined &&
           <>
             <OrderInfo order={order} />
             <TrackingSteps order={order} />
           </>
-        }        
+        }
+        {order === null || order === undefined && 
+          <Container className={styles.orderNotFound__container}>
+            <Typography variant="h4" gutterBottom mb={4}  >
+              Pedido nao encontrado.  
+            </Typography>
+            <Typography variant="body1" gutterBottom mb={2} >
+              Por favor <Link href="/">tente novamente</Link>.
+            </Typography>
+          </Container>
+        }   
       </Container>
     </div>
   )
