@@ -1,0 +1,23 @@
+.order__info {
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+    @media (min-width: 768px) {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+  }
+  .orderInfo__cardContainer {
+    margin-bottom: 40px;
+    @media (min-width: 768px) {
+      margin-bottom: 80px;
+    }
+  }
+  .orderInfo__card {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+      min-height: 150px;
+    }   
+  }  
+}

@@ -63,48 +63,48 @@ export default function TrackingSteps({order}) {
   }
 
   return (
-    <>
-    {order && order.historicoStatus && 
-      <ul className={styles.tracker__statusList}>
-        {order.historicoStatus.map((status, index) => {
-          let curretStatus = index + 1 === order.historicoStatus.length;
-            return (<li key={index} className={`${curretStatus ? styles.currentStatus : styles.status}`}>
-            <Box className={styles.trackerStatus__iconContainer}>
-              {getTrackingStatus(status.descricao)}
-            </Box>                
-            <Box className={styles.trackerStatus__infoContainer}>
-              <Typography variant="body1" gutterBottom color="#000">
-                {status.descricao}
-              </Typography>
-              <Typography variant="body2" gutterBottom color="#999">
-                {status.dataStatus}
-              </Typography>
-            </Box>              
-          </li>)
-        })}
-        {order.historicoStatus.length < 5 && 
-          trackingStatusSteps.map((step, i) => {
-            return (
-              step.step > order.historicoStatus.length ? 
-                <li key={i} className={styles.trackerStatus__inactive}>
-                  <Box className={styles.trackerStatus__iconContainer}>
-                    {getTrackingStatus(step.description)}
-                  </Box>                
-                  <Box className={styles.trackerStatus__infoContainer}>
-                    <Typography variant="body1" gutterBottom color="#000">
-                      {step.description}
-                    </Typography>
-                    <Typography variant="body2" gutterBottom color="#999">
-                      sem data
-                    </Typography>
-                  </Box>                    
-                </li> 
-              : ''
-            )
-          })
-        }
-      </ul>
+    <Box className={styles.order__trackingSteps}>
+      {order && order.historicoStatus && 
+        <ul className={styles.tracker__statusList}>
+          {order.historicoStatus.map((status, index) => {
+            let curretStatus = index + 1 === order.historicoStatus.length;
+              return (<li key={index} className={`${curretStatus ? styles.currentStatus : styles.status}`}>
+              <Box className={styles.trackerStatus__iconContainer}>
+                {getTrackingStatus(status.descricao)}
+              </Box>                
+              <Box className={styles.trackerStatus__infoContainer}>
+                <Typography variant="body1" gutterBottom color="#000">
+                  {status.descricao}
+                </Typography>
+                <Typography variant="body2" gutterBottom color="#999">
+                  {status.dataStatus}
+                </Typography>
+              </Box>              
+            </li>)
+          })}
+          {order.historicoStatus.length < 5 && 
+            trackingStatusSteps.map((step, i) => {
+              return (
+                step.step > order.historicoStatus.length ? 
+                  <li key={i} className={styles.trackerStatus__inactive}>
+                    <Box className={styles.trackerStatus__iconContainer}>
+                      {getTrackingStatus(step.description)}
+                    </Box>                
+                    <Box className={styles.trackerStatus__infoContainer}>
+                      <Typography variant="body1" gutterBottom color="#000">
+                        {step.description}
+                      </Typography>
+                      <Typography variant="body2" gutterBottom color="#999">
+                        sem data
+                      </Typography>
+                    </Box>                    
+                  </li> 
+                : ''
+              )
+            })
+          }
+        </ul>
       }
-    </>
+    </Box>
   )
 }

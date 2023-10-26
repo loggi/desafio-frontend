@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import styles from './order.module.scss';
 import { trackOrder } from '@/api/order';
 import TrackingSteps from '@/components/trackingSteps/trackingSteps';
+import OrderInfo from '@/components/orderInfo/orderInfo';
 
 export default function Order() {
 
@@ -27,17 +28,17 @@ export default function Order() {
   }, [trackingCode])
 
   return (
-    <div className={styles.tracker}>   
+    <div className={styles.order__page}>   
       <Head>
         <title>Acompanhe suas Entregas em Tempo Real | Loggi</title>
       </Head>
-      <Container sx={{ margin: '50px auto', padding: '50px' }} >
-        <Box className={styles.order__info}>
-
-        </Box>
-        <Box className={styles.order__trackingSteps}>
-          <TrackingSteps order={order} />
-        </Box>        
+      <Container  className={styles.order__container} >
+        {order && 
+          <>
+            <OrderInfo order={order} />
+            <TrackingSteps order={order} />
+          </>
+        }        
       </Container>
     </div>
   )

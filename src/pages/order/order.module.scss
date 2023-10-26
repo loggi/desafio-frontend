@@ -1,3 +1,8 @@
-.tracker {
-  
+.order__container {
+  margin: 0;
+  padding: 20px;
+  @media (min-width: 768px) {
+    margin: 50px auto;
+    padding: 50px;
+  }
 }
