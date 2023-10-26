@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './styles.module.scss';
 import Logo from './../../assets/logo-loggi.svg'
@@ -17,7 +18,7 @@ export default function Header() {
 
     return (
         <Box component="header" className={styles.header__container}>
-            <Image className={styles.navigation__logo} src={Logo} alt='Loggi logo'/>
+            <Link href="/"><Image className={styles.navigation__logo} src={Logo} alt='Loggi logo'/></Link>            
             <Box className={styles.hamburguer__container}>
                 <Button className={`${styles.hamburguer} ${displayNav ? styles.showNav : styles.hideNav}`} onClick={() => setDisplayNav(!displayNav)} />
             </Box>
