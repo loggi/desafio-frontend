@@ -1,64 +1,40 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+## Desafio da Loggi para vaga de front-end developer
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+O desafio consiste em construir, com a minha visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**, levando em consideração a experiência de uso do serviço para o usuário, a criatividade da solução e a responsividade.
 
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+Considerações a ter em conta:
+- Histórico de commits
+- Documentação de como rodar o projeto
+- Organização do código 
+- Componentização e extensibilidade dos componentes Javascript
 
-## O desafio
-
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
-
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
-
-
-## Instruções técnicas
-
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
-
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
-
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
+Para este desafio foram utilizadas as seguintes ferramentas (propostas no desafio):
 * [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
 * [Material UI](https://mui.com/) - Para componentes visuais de front-end
 * GitHub - para versionamento de código
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-next) que usa as ferramentas acima.
+## Descrição do projeto
+A aplicação consta de duas telas: a home page, onde o usuário poderá inserir o codigo do rastreamento, e a tela do pedido, onde poderá ver as informações do mesmo (como data o pedido, data de entrega local de entrega), e a barra de estado, com o andamento da entrega, as datas das diferentes etapas e em qual etapa se encontra.
+Se utilizou um conjunto de dados fictícios para representar o acima nomeado.
 
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+## Decisões do projeto
+- A imagem utilizada na homepage é uma imagem tirada da internet, dado que não tive tempo de criar uma. Foi só utilizada a modo ilustrativo.
+- Se realizou o básico para inserir um código de rastreamento e mostrar as informações do mesmo devido a o curto prazo de entrega.
+- Algumas das ideias que eu tive para implementações futuras foram:
+  - rastreio live no google maps caso fosse possível via GPS.
+  - Chat para contato com o entregador para o usuário poder tirar dúvidas ou combinar o horário de entrega.
+  
+## Instruções técnicas para rodar seu projeto
+Para poder rodar este projeto localmente precisa:
+1 - fazer um fork deste projeto
+2 - clonar o repositório
+3 - No seu terminal, no diretório do projeto rodar os seguintes comandos: 
+  ```npm install``` (para instalar as dependências)
+  ```npm run dev``` (para rodar o projeto localmente)
+4 - acessar [Link](http://localhost:3000) no seu navegador para ver o projeto localmente
 
+## Acessar o projeto online
+Para visualizar o projeto, clique em [Link](https://loggi-desafio-frontend-sigma.vercel.app/).
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
- 
-Separamos alguns níveis de avaliação.
-
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
-
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório a partir do fork
-
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
-
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
+## Como testar o projeto
+Para testar o projeto, basta simular um rastreio na aplicação inserindo um código de pedido no campo "Código de rastreamento" (códigos com resultado: 1, 2 e 3. Código sem resultado: qualquer outro número) e clicar no botão "Acompanhar pedido"
