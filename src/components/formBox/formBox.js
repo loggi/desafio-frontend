@@ -59,13 +59,13 @@ export default function FormBox() {
       </Box>
       
       {loading && 
-        <Typography variant="body1" gutterBottom mb={1}  sx={{ color: '#666',}}>
+        <Typography variant="body1" gutterBottom mt={2}  sx={{ color: '#666',}}>
             loading...
         </Typography>                
       }
 
       {!loading && error && 
-        <Typography variant="body1" gutterBottom mb={1}  sx={{ color: 'red',}}>
+        <Typography variant="body1" gutterBottom mt={2}  sx={{ color: 'red',}}>
             Codigo nao encontrado
         </Typography>
       }
