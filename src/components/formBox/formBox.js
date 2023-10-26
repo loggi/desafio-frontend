@@ -11,11 +11,24 @@ export default function FormBox() {
   const [trackingCode, setTrackingCode] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [invalidCode, setInvalidCode] = useState(false);  
 
   const router = useRouter()
+
+  const validateCode = (e) => {
+    e.preventDefault()
+    setError(false) 
+    setInvalidCode(false)
+    let regex = /^[0-9]$/
+    if(regex.test(trackingCode)) {
+      handleTrackingClick()
+    } else {
+      setInvalidCode(true)
+    }        
+  }
   
-  const handleTrackingClick = async () => {   
-    setLoading(true) 
+  const handleTrackingClick = async () => {
+    setLoading(true)
     const orders = await trackOrder();
     const order = orders.find((item) => item.id === Number(trackingCode));
     
@@ -52,7 +65,7 @@ export default function FormBox() {
         />
         <Button sx={{ height: '54px'}}
           variant="contained"
-          onClick={handleTrackingClick}
+          onClick={(e) => validateCode(e)}
         >
           Acompanhar pedido
         </Button>
@@ -67,6 +80,11 @@ export default function FormBox() {
       {!loading && error && 
         <Typography variant="body1" gutterBottom mt={2}  sx={{ color: 'red',}}>
             Codigo nao encontrado
+        </Typography>
+      }
+      {invalidCode && 
+        <Typography variant="body1" gutterBottom mt={2}  sx={{ color: 'red',}}>
+            Codigo invalido
         </Typography>
       }
     </Card>
