@@ -73,18 +73,18 @@ export default function FormBox() {
       
       {loading && 
         <Typography variant="body1" gutterBottom mt={2}  sx={{ color: '#666',}}>
-            loading...
+            carregando...
         </Typography>                
       }
 
       {!loading && error && 
         <Typography variant="body1" gutterBottom mt={2}  sx={{ color: 'red',}}>
-            Codigo nao encontrado
+            Código não encontrado
         </Typography>
       }
       {invalidCode && 
         <Typography variant="body1" gutterBottom mt={2}  sx={{ color: 'red',}}>
-            Codigo invalido
+            Código invalido
         </Typography>
       }
     </Card>
