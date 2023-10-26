@@ -20,6 +20,7 @@ Se utilizou um conjunto de dados fictícios para representar o acima nomeado.
 ## Decisões do projeto
 - A imagem utilizada na homepage é uma imagem tirada da internet, dado que não tive tempo de criar uma. Foi só utilizada a modo ilustrativo.
 - Se realizou o básico para inserir um código de rastreamento e mostrar as informações do mesmo devido a o curto prazo de entrega.
+- Foi feita uma validação do código de rastreio inserido para evitar o request caso o código seja invalido. Neste caso, o regex foi feito para número único. No caso real, faria uma validação tendo em conta como é formado o código de rastreio (se tiver letras, números, quantidade de caracteres, etc.)
 - Algumas das ideias que eu tive para implementações futuras foram:
   - rastreio live no google maps caso fosse possível via GPS.
   - Chat para contato com o entregador para o usuário poder tirar dúvidas ou combinar o horário de entrega.
