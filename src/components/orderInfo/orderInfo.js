@@ -4,8 +4,7 @@ import styles from './orderInfo.module.scss';
 import { formatDate } from '@/utils/formatDate';
 
 export default function OrderInfo({ order }) {
-  console.log(order)
-
+  
   const { localEntrega } = order;
 
   return (
