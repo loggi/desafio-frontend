@@ -6,6 +6,7 @@ import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined
 import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
 
 import styles from './trackingSteps.module.scss';
+import { formatDate } from '@/utils/formatDate';
 
 export const trackingStatusImage = {
   PEDIDO_RECEBIDO: 'Pedido recebido',
@@ -77,7 +78,7 @@ export default function TrackingSteps({order}) {
                   {status.descricao}
                 </Typography>
                 <Typography variant="body2" gutterBottom color="#999">
-                  {status.dataStatus}
+                  {formatDate(status.dataStatus)}
                 </Typography>
               </Box>              
             </li>)

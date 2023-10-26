@@ -1,6 +1,7 @@
 import { Box, Card, Grid, Typography  } from '@mui/material';
 
 import styles from './orderInfo.module.scss';
+import { formatDate } from '@/utils/formatDate';
 
 export default function OrderInfo({ order }) {
   console.log(order)
@@ -30,8 +31,9 @@ export default function OrderInfo({ order }) {
               Status do pedido: {order.descricao}
             </Typography>
             <Typography variant="body1" gutterBottom mb={2} >
-              Data do pedido: {order.dataPedido}<br></br>
-              {order.dataEntrega ? `Data de entrega: ${order.dataEntrega}` : `Data prevista de entrega: ${order.dataPrevistaEntrega}`}
+              {/* Data do pedido: {order.dataPedido}<br></br> */}
+              Data do pedido: {formatDate(order.dataPedido)}<br></br>              
+              {order.dataEntrega ? `Data de entrega: ${formatDate(order.dataEntrega)}` : `Data prevista de entrega: ${formatDate(order.dataPrevistaEntrega)}`}
             </Typography>
           </Card>
         </Grid>
