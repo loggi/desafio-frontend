@@ -2,14 +2,13 @@
 
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/navigation'
-
+import StyledCard from '@/components/BasicComponents/StyledCard'
 
 const TrackingForm = () => {
     const [trackingCode, setTrackingCode] = useState('')
@@ -17,13 +16,15 @@ const TrackingForm = () => {
     const router = useRouter()
 
     return (
-        <Card>
-          <CardContent>
+        <StyledCard>
+          <CardContent sx={{ p: 0 }}>
             <Typography gutterBottom variant="h5" component="div">
               Olá!
+            </Typography>
+            <Typography gutterBottom variant="h5" component="div" sx={{ mb: '21px' }}>
               Acompanhe com a Loggi a entrega do seu pedido. 😃
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" sx={{ mb: '12px' }}>
               Primeiro, digite o código de rastreamento
             </Typography>
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
@@ -33,7 +34,7 @@ const TrackingForm = () => {
                 size="small" 
                 margin='normal' 
                 helperText={errorMessage}
-                sx={{ width: '60%'}}
+                sx={{ width: '100%'}}
                 onChange={e => {
                   const { value } = e.target
                   setTrackingCode(value);
@@ -48,6 +49,7 @@ const TrackingForm = () => {
               size="medium" 
               variant='contained' 
               sx={{ 
+                mt: '21px',
                 textTransform: 'none', 
                 background: 'linear-gradient(90deg,#00baff,#007cff);' 
               }}
@@ -62,7 +64,7 @@ const TrackingForm = () => {
               Acompanhar pedido
             </Button>
           </CardActions>
-        </Card>
+        </StyledCard>
     )
 }
 
