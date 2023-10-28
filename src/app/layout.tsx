@@ -1,29 +1,24 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
-import { IconButton } from "@mui/material";
+import { Header } from "@/components/Header";
 
 type RootLayoutProps = {
   children: React.ReactNode;
 };
 
 export const metadata = {
-  title: "Next APP",
-  description: "...",
+  title: "Loggi",
+  description:
+    "Com a Loggi você consegue acompanhar sua entrega e saber exatamente quando seu pedido vai chegar. Acesse nosso rastreador e veja como é fácil!",
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body>
         <ThemeRegistry>
-          <AppBar position="sticky">
-            <Toolbar>
-              <IconButton>LOGO</IconButton>
-            </Toolbar>
-          </AppBar>
+          <Header />
           <Box component="main">{children}</Box>
         </ThemeRegistry>
       </body>
