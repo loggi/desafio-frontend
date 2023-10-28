@@ -17,7 +17,7 @@ describe('<TrackingForm />', () => {
     render(<TrackingForm />);
     
     expect(screen.getByText('Olá!')).toBeInTheDocument();
-    expect(screen.getByText(/Acompanhe com a Loggi a entrega do seu pedido/g)).toBeInTheDocument();
+    expect(screen.getByText(/Acompanhe com a Loggi a entrega do seu pedido/i)).toBeInTheDocument();
     expect(screen.getByText('Primeiro, digite o código de rastreamento')).toBeInTheDocument();
     expect(screen.getByText('Acompanhar pedido')).toBeInTheDocument();
   });
