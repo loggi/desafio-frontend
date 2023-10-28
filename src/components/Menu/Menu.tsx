@@ -17,6 +17,7 @@ type MenuProps = {
 export function Menu({ isOpen, handleOpenMenu }: MenuProps) {
   return (
     <Drawer
+      data-testid="drawer-component"
       anchor="left"
       open={isOpen}
       onClose={handleOpenMenu}
