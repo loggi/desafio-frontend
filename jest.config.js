@@ -14,5 +14,8 @@ module.exports = {
     coverageDirectory: "coverage",
     coveragePathIgnorePatterns: ["src/index.js"],
     coverageReporters: ["json", "lcov", "text", "clover"],
+    moduleNameMapper: {
+      '^@/(.*)$': '<rootDir>/src/$1',
+    },
   };
   
