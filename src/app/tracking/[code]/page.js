@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import CardContent from '@mui/material/CardContent';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
@@ -9,7 +9,7 @@ import useTrackingCode from '@/hooks/useTrackingCode';
 import { Box, Button, Divider } from '@mui/material';
 import Link from 'next/link';
 import TextField from '@mui/material/TextField';
-import { formatDate } from '@/utils/date'
+import { formatDate } from '@/utils/date';
 
 const TrackingPage = ({ params }) => {
 
