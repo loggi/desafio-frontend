@@ -9,6 +9,7 @@ type LogoProps = {
 export function Logo({ height = 33, width = 100, ariaLabel }: LogoProps) {
   return (
     <svg
+      role="img"
       width={width}
       height={height}
       viewBox="0 0 92 31"
