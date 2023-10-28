@@ -14,7 +14,19 @@ const theme = createTheme({
   typography: {
     fontFamily: openSans.style.fontFamily,
   },
-  components: {},
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: "#fff",
+          boxShadow: "initial",
+          borderBottom: "1px solid",
+          borderBottomColor: "#b3becd",
+          color: "#000",
+        },
+      },
+    },
+  },
 });
 
 export default theme;
