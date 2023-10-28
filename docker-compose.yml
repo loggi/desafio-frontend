@@ -1,0 +1,16 @@
+version: '3'
+services:
+  # Serviço para a aplicação Next.js
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs-app
+    working_dir: /app # Diretório de trabalho no contêiner
+    ports:
+      - "3000:3000" # Mapeamento da porta do host para a porta do contêiner
+    volumes:
+      - ./:/app # Mapeamento do diretório local para o diretório do contêiner
+    environment:
+      - NODE_ENV=development # Configuração do ambiente para desenvolvimento
+    command: ["npm", "run", "dev"] # Comando para iniciar o servidor Next.js
