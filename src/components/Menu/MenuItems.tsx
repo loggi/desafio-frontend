@@ -3,36 +3,14 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import ListItem from "@mui/material/ListItem";
 import { usePathname } from "next/navigation";
-
-const menuLinks = [
-  {
-    title: "Para você",
-    slug: "/para-voce",
-  },
-  {
-    title: "Para empresas",
-    slug: "/para-empresas",
-  },
-  {
-    title: "Para entregar",
-    slug: "/para-entregar",
-  },
-  {
-    title: "Venda e suporte",
-    slug: "/venda-e-suporte",
-  },
-  {
-    title: "Acompanhe seu pedido",
-    slug: "/",
-  },
-];
+import menu from "@/_mock/menu.json";
 
 export function MenuItems() {
   const currentPath = usePathname();
 
   return (
     <>
-      {menuLinks.map((link) => (
+      {menu.menuLinks.map((link) => (
         <ListItem
           key={link.title}
           sx={{

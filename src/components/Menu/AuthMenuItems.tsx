@@ -2,18 +2,14 @@ import React from "react";
 import Link from "next/link";
 import ListItem from "@mui/material/ListItem";
 import Button from "@mui/material/Button";
-
-const authRoutes = [
-  { name: "Criar Conta", href: "/" },
-  { name: "Entrar", href: "/" },
-];
+import menu from "@/_mock/menu.json";
 
 export function AuthMenuItems() {
   return (
     <>
-      {authRoutes.map((route, index) => (
+      {menu.authLinks.map((route, index) => (
         <ListItem
-          key={route.name}
+          key={route.title}
           sx={{
             margin: 0,
             padding: 0,
@@ -39,10 +35,10 @@ export function AuthMenuItems() {
           <Button
             variant={index === 0 ? "text" : "outlined"}
             component={Link}
-            href={route.href}
+            href={route.slug}
             sx={{ width: "max-content" }}
           >
-            {route.name}
+            {route.title}
           </Button>
         </ListItem>
       ))}
