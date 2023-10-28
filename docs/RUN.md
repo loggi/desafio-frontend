@@ -55,3 +55,27 @@ Se você preferir usar o Docker para rodar o projeto, siga estas etapas:
     ```
 
 O servidor estará disponível em http://localhost:3000, da mesma forma que na seção anterior.
+
+## Executando os testes
+
+Este guia explica como executar os testes automatizados.
+
+existem 3 comandos que podem executar os testes no projeto:
+
+1. Executar todos os testes.
+
+    ```bash
+    npm test
+    ```
+
+2. Executar os testes em modo watch (executa todos os testes novamente após salvar algum arquivo):
+
+    ```bash
+    npm run test:watch
+    ```
+
+3. Executa os testes com relatório de cobertura:
+
+    ```bash
+    npm run test:coverage
+    ```
