@@ -1,0 +1,74 @@
+[
+  {
+    "orderNumber": "123456",
+    "trackingNumber": "ABCD12345",
+    "status": "Em trânsito",
+    "estimatedDeliveryDate": "2023-06-30",
+    "location": "Centro de distribuição",
+    "history": [
+      {
+        "timestamp": "2023-06-15T10:00:00",
+        "status": "Pedido confirmado",
+        "location": "Loja"
+      },
+      {
+        "timestamp": "2023-06-16T08:30:00",
+        "status": "Embarcado",
+        "location": "Centro de distribuição"
+      },
+      {
+        "timestamp": "2023-06-20T15:45:00",
+        "status": "Chegou na cidade de destino",
+        "location": "Cidade XYZ"
+      }
+    ]
+  },
+  {
+    "orderNumber": "789012",
+    "trackingNumber": "EFGH67890",
+    "status": "Entregue",
+    "estimatedDeliveryDate": "2023-06-25",
+    "location": "Casa do Cliente",
+    "history": [
+      {
+        "timestamp": "2023-06-15T10:00:00",
+        "status": "Pedido confirmado",
+        "location": "Loja"
+      },
+      {
+        "timestamp": "2023-06-16T08:30:00",
+        "status": "Embarcado",
+        "location": "Centro de distribuição"
+      },
+      {
+        "timestamp": "2023-06-20T15:45:00",
+        "status": "Chegou na cidade de destino",
+        "location": "Cidade XYZ"
+      },
+      {
+        "timestamp": "2023-06-24T14:00:00",
+        "status": "Entregue",
+        "location": "Casa do Cliente"
+      }
+    ]
+  },
+  {
+    "orderNumber": "345678",
+    "trackingNumber": "IJKL34567",
+    "status": "Em trânsito",
+    "estimatedDeliveryDate": "2023-07-05",
+    "location": "Centro de distribuição",
+    "history": [
+      {
+        "timestamp": "2023-07-01T09:30:00",
+        "status": "Pedido confirmado",
+        "location": "Loja"
+      },
+      {
+        "timestamp": "2023-07-02T11:15:00",
+        "status": "Embarcado",
+        "location": "Centro de distribuição"
+      }
+    ]
+  }
+]
