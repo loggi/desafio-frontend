@@ -5,11 +5,9 @@ import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material/styles";
 import { TrackerForm } from "@/components/TrackerForm";
 import { ShipmentCaptureCta } from "@/components/ShipmentCaptureCta";
-import ptBR from "@/_mock/lang/pt-BR";
 
 export default function TrackerPage() {
   const { palette } = useTheme();
-  const { form } = ptBR.trackerPage;
 
   return (
     <Box
@@ -46,7 +44,7 @@ export default function TrackerPage() {
         }}
       >
         <Box>
-          <TrackerForm {...form} />
+          <TrackerForm />
           <ShipmentCaptureCta />
         </Box>
       </Container>
