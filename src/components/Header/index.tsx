@@ -47,7 +47,11 @@ export function Header() {
             }}
             component="nav"
           >
-            <Button component={Link} href="/" sx={{ padding: 0 }}>
+            <Button
+              component={Link}
+              href="/"
+              sx={{ padding: { xs: 2, lg: 0 } }}
+            >
               <Logo ariaLabel="Logo Loggi" />
             </Button>
 
