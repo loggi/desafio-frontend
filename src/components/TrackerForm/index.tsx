@@ -27,15 +27,19 @@ export function TrackerForm({
     <Box
       component="form"
       sx={{
-        padding: 4,
-        paddingLeft: {
-          xs: 3,
-        },
-        paddingRight: {
-          xs: 3,
-        },
         backgroundColor: palette.background.paper,
         borderRadius: 2,
+        padding: {
+          xs: 4,
+          sm: 12,
+          lg: 4,
+        },
+        paddingBottom: {
+          lg: 4.2,
+        },
+        height: {
+          lg: "fit-content",
+        },
       }}
       onSubmit={handleSubmit}
     >
