@@ -3,19 +3,13 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useTheme } from "@mui/material";
+import ptBR from "@/_mock/lang/pt-BR";
 
-type ShipmentCaptureCtaProps = {
-  title: string;
-  subTitle: string;
-  buttonLabel: string;
-};
-
-export function ShipmentCaptureCta({
-  title,
-  subTitle,
-  buttonLabel,
-}: ShipmentCaptureCtaProps) {
+export function ShipmentCaptureCta() {
   const { palette } = useTheme();
+  const {
+    aside: { title, subTitle, buttonLabel },
+  } = ptBR.trackerPage;
 
   return (
     <Box
