@@ -27,28 +27,28 @@ export default function TrackerPage() {
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            md: "1fr 1fr",
+            lg: "500px 1fr",
           },
           gap: {
             sx: 0,
-            md: 5,
+            lg: 5,
           },
-          paddingLeft: {
+          padding: {
             xs: 0,
-          },
-          paddingRight: {
-            xs: 0,
+            lg: 8,
           },
           paddingTop: {
-            md: 16,
+            lg: 16,
           },
           paddingBottom: {
             md: 16,
           },
         }}
       >
-        <TrackerForm {...form} />
-        <ShipmentCaptureCta />
+        <Box>
+          <TrackerForm {...form} />
+          <ShipmentCaptureCta />
+        </Box>
       </Container>
     </Box>
   );
