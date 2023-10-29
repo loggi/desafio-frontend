@@ -45,7 +45,7 @@ export function useTrackerForm(): UseTrackerForm {
 
         const { orderNumber, trackingNumber } = await response.json();
 
-        router.push(`/tracker/${orderNumber}/${trackingNumber}`);
+        router.push(`/rastreamento/${orderNumber}/${trackingNumber}`);
       })
       .catch((error) => {
         if (error.message.includes(404)) {
