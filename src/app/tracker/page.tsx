@@ -44,7 +44,12 @@ export default function TrackerPage() {
           },
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            border: { md: `1px solid ${palette.background.paper}` },
+            borderRadius: 2,
+          }}
+        >
           <TrackerForm />
           <ShipmentCaptureCta />
         </Box>
