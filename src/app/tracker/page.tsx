@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material/styles";
 import { TrackerForm } from "@/components/TrackerForm";
 import { ShipmentCaptureCta } from "@/components/ShipmentCaptureCta";
+import { OurServices } from "@/components/OurServices";
 
 export default function TrackerPage() {
   const { palette } = useTheme();
@@ -39,7 +40,7 @@ export default function TrackerPage() {
             lg: 16,
           },
           paddingBottom: {
-            md: 16,
+            lg: 16,
           },
         }}
       >
@@ -47,6 +48,7 @@ export default function TrackerPage() {
           <TrackerForm />
           <ShipmentCaptureCta />
         </Box>
+        <OurServices />
       </Container>
     </Box>
   );
