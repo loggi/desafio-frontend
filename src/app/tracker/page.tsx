@@ -14,7 +14,6 @@ export default function TrackerPage() {
     <Box
       sx={{
         display: "flex",
-        height: "100%",
         backgroundImage: {
           lg: `linear-gradient(${palette.primary.main}, ${palette.primary.light})`,
         },
