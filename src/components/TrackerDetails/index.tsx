@@ -58,6 +58,7 @@ export function TrackerDetails({ orderData, loading }: TrackerDetailsProps) {
           marginBottom: {
             xs: 3,
           },
+          paddingLeft: 2,
         }}
       >
         {orderData?.history.map((step) => (
