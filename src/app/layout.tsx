@@ -2,15 +2,15 @@ import React from "react";
 import Box from "@mui/material/Box";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import { Header } from "@/components/Header";
+import ptBR from "@/_mock/lang/pt-BR";
 
 type RootLayoutProps = {
   children: React.ReactNode;
 };
 
 export const metadata = {
-  title: "Loggi",
-  description:
-    "Com a Loggi você consegue acompanhar sua entrega e saber exatamente quando seu pedido vai chegar. Acesse nosso rastreador e veja como é fácil!",
+  title: ptBR.metadata.title,
+  description: ptBR.metadata.description,
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
