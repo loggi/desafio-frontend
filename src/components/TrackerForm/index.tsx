@@ -7,19 +7,10 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useTheme } from "@mui/material";
 import { useTrackerForm } from "./useTrackerForm";
 
-type TrackerFormProps = {
-  title: string;
-  subTitle: string;
-  inputPlaceholder: string;
-  buttonLabel: string;
-};
+import ptBR from "@/_mock/lang/pt-BR";
 
-export function TrackerForm({
-  title,
-  subTitle,
-  inputPlaceholder,
-  buttonLabel,
-}: TrackerFormProps) {
+export function TrackerForm() {
+  const { title, subTitle, inputPlaceholder, buttonLabel } = ptBR.trackingForm;
   const { palette } = useTheme();
   const { handleSubmit, handleChange, isLoading, error } = useTrackerForm();
 
