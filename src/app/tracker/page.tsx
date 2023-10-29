@@ -9,7 +9,7 @@ import ptBR from "@/_mock/lang/pt-BR";
 
 export default function TrackerPage() {
   const { palette } = useTheme();
-  const { form, aside } = ptBR.trackerPage;
+  const { form } = ptBR.trackerPage;
 
   return (
     <Box
@@ -27,6 +27,7 @@ export default function TrackerPage() {
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
+            md: "1fr 1fr",
           },
           gap: {
             sx: 0,
@@ -47,7 +48,7 @@ export default function TrackerPage() {
         }}
       >
         <TrackerForm {...form} />
-        <ShipmentCaptureCta {...aside} />
+        <ShipmentCaptureCta />
       </Container>
     </Box>
   );
