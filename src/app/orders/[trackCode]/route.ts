@@ -9,7 +9,8 @@ export async function GET(request: Request, { params }) {
   });
 
   const orderData = orders.find(
-    ({ trackingNumber }) => trackingNumber === trackCode
+    ({ trackingNumber }) =>
+      trackingNumber.toLowerCase() === trackCode?.toLowerCase()
   );
 
   if (!orderData) {
