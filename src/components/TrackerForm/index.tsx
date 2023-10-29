@@ -19,7 +19,8 @@ export function TrackerForm() {
       component="form"
       sx={{
         backgroundColor: palette.background.paper,
-        borderRadius: 2,
+        borderTopLeftRadius: 5,
+        borderTopRightRadius: 5,
         padding: {
           xs: 4,
           sm: 12,
