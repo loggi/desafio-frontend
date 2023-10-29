@@ -18,7 +18,19 @@ export function Header() {
   return (
     <>
       <AppBar position="sticky">
-        <Container maxWidth="xl">
+        <Container
+          maxWidth="xl"
+          sx={{
+            paddingLeft: {
+              xs: 0,
+              lg: 8,
+            },
+            paddingRight: {
+              xs: 0,
+              lg: 8,
+            },
+          }}
+        >
           <Toolbar
             disableGutters
             sx={{
@@ -35,7 +47,7 @@ export function Header() {
             }}
             component="nav"
           >
-            <Button component={Link} href="/">
+            <Button component={Link} href="/" sx={{ padding: 0 }}>
               <Logo ariaLabel="Logo Loggi" />
             </Button>
 
