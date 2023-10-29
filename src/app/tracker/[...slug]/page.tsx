@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Alert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
+import { useTheme } from "@mui/material/styles";
 import { ShipmentCaptureCta } from "@/components/ShipmentCaptureCta";
 import { TrackerDetails } from "@/components/TrackerDetails";
-import { Alert, Snackbar } from "@mui/material";
 
 type TrackerPageDetailsProps = {
   params: {
@@ -19,6 +21,7 @@ export default function TrackerPageDetails({
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
   const [openSnack, setOpenSnack] = useState(false);
+  const { palette } = useTheme();
 
   useEffect(() => {
     (async () => {
@@ -52,31 +55,36 @@ export default function TrackerPageDetails({
   }
 
   return (
-    <Box>
+    <Box
+      sx={{
+        backgroundImage: {
+          lg: `linear-gradient(${palette.primary.main}, ${palette.primary.light})`,
+        },
+      }}
+    >
       <Container
         maxWidth="xl"
         sx={{
           display: "grid",
           gridTemplateColumns: {
             xs: "1fr",
-            md: "1fr 1fr",
+            lg: "1fr 500px",
           },
           gap: {
             sx: 0,
-            md: 5,
+            lg: 5,
           },
-          paddingLeft: {
+          padding: {
             xs: 0,
-          },
-          paddingRight: {
-            xs: 0,
+            lg: 8,
           },
           paddingTop: {
             xs: 2,
-            md: 16,
+            lg: 16,
           },
           paddingBottom: {
-            md: 16,
+            xs: 2,
+            lg: 16,
           },
         }}
       >
