@@ -17,9 +17,13 @@ export function ShipmentCaptureCta() {
       sx={{
         backgroundImage: {
           xs: `linear-gradient(${palette.primary.main}, ${palette.primary.light})`,
-          md: "none",
+          lg: "none",
         },
-        padding: 4,
+        padding: {
+          xs: 4,
+          sm: 12,
+          lg: 4,
+        },
         paddingLeft: {
           xs: 3,
         },
