@@ -10,6 +10,7 @@ import StepLabel from "@mui/material/StepLabel";
 import Stepper from "@mui/material/Stepper";
 import Typography from "@mui/material/Typography";
 import { TrackerDetailsSkeleton } from "./skeleton";
+import { useTheme } from "@mui/material";
 
 type TrackerDetailsProps = {
   orderData: OrderDetails;
@@ -22,6 +23,8 @@ const messageStatus = {
 };
 
 export function TrackerDetails({ orderData, loading }: TrackerDetailsProps) {
+  const { palette } = useTheme();
+
   if (loading) {
     return <TrackerDetailsSkeleton />;
   }
@@ -29,6 +32,13 @@ export function TrackerDetails({ orderData, loading }: TrackerDetailsProps) {
   return (
     <Box
       sx={{
+        backgroundColor: palette.background.paper,
+        borderRadius: 2,
+        padding: {
+          xs: 4,
+          sm: 8,
+          lg: 4,
+        },
         paddingLeft: {
           xs: 3,
         },
