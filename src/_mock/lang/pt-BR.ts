@@ -21,4 +21,33 @@ export default {
     inputPlaceholder: "Código de rastreamento",
     buttonLabel: "Acompanhar pedido",
   },
+  ourServices: {
+    title: "Vá mais longe com a nossa experiência logística!",
+    services: [
+      {
+        iconName: "AirportShuttle",
+        title: "Loggi Fácil",
+        text: "Entrega em qualquer lugar do Brasil, sem precisar embalar ou imprimir etiqueta.",
+        buttonLabel: "saiba mais",
+      },
+      {
+        iconName: "Handshake",
+        title: "Envio pelos Correios",
+        text: "Emita uma etiqueta com até 45% de desconto em PAC e SEDEX dos Correios",
+        buttonLabel: "saiba mais",
+      },
+      {
+        iconName: "RocketLaunch",
+        title: "Loggi Expresso",
+        text: "Entrega em qualquer lugar do Brasil, sem precisar embalar ou imprimir etiqueta.",
+        buttonLabel: "saiba mais",
+      },
+      {
+        iconName: "LocalShipping",
+        title: "Loggi Envios",
+        text: "Entrega em qualquer lugar do Brasil, sem precisar embalar ou imprimir etiqueta.",
+        buttonLabel: "saiba mais",
+      },
+    ],
+  },
 };
