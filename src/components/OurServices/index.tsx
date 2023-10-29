@@ -63,9 +63,6 @@ export function OurServices() {
                 width: "100%",
                 boxShadow: theme.shadows[6],
                 backgroundColor: theme.palette.background.paper,
-                border: {
-                  xs: `1px solid ${theme.palette.primary.light}`,
-                },
               }}
             >
               <Avatar
