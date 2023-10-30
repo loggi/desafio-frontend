@@ -2,7 +2,7 @@
 
 https://challenge-tracker-frontend.vercel.app/rastreamento
 
-Códigos de ratreio de pedidos mocados
+Códigos de ratreio dos pedidos mocados.
 | ID | Status |
 | --- | --- |
 | ABCD12345 | Em trânsito |
@@ -11,53 +11,53 @@ Códigos de ratreio de pedidos mocados
 
 ---
 
-## Descrição do desafio e requisitos técnicos
+## Descrição do desafio e requisitos técnicos:
 
-Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challenge.md) para obter mais detalhes
+Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challenge.md) para obter mais detalhes.
 
 ---
 
-## Como rodar o projeto
+## Como rodar o projeto:
 
 ### Clone o repositório:
 
 ```shell
-  git clone git@github.com:jonataspinto/challenge-tracker-frontend.git
+  $ git clone git@github.com:jonataspinto/challenge-tracker-frontend.git
 ```
 
 ### Requisitos:
 
 ```
-Nodejs versão 18
+  Nodejs versão 18
 ```
 
 > **Note**
-> A versão sugerida já está configurada no `.nvmrc` bas executar `$ nvm use`
+> A versão sugerida já está configurada no `.nvmrc` basta executar `$ nvm use`
 
 ### Instale as dependencias:
 
-- Navegue para a raiz do projeto
+- Navegue para a raiz do projeto.
 
 ```shell
-  cd challenge-tracker-frontend
+  $ cd challenge-tracker-frontend
 ```
 
 ```shell
-  yarn
+  $ yarn
 
   ou
 
-  npm run install
+  $ npm run install
 ```
 
 ### Iniciar servidor de desenvolvimento:
 
 ```shell
-  yarn dev
+  $ yarn dev
 
   ou
 
-  npm run dev
+  $ npm run dev
 ```
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
@@ -65,21 +65,21 @@ Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador.
 ### Build de produção:
 
 ```shell
-  yarn build
+  $ yarn build
 
   ou
 
-  npm run build
+  $ npm run build
 ```
 
 ### Iniciar servidor após build:
 
 ```shell
-  yarn start
+  $ yarn start
 
   ou
 
-  npm run start
+  $ npm run start
 ```
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
