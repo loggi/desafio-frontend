@@ -82,14 +82,14 @@ export function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="false"
               onClick={handleOpenMenu}
-              color="inherit"
+              color="primary"
               sx={{
                 display: {
                   lg: "none",
                 },
               }}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="large" />
             </IconButton>
           </Toolbar>
         </Container>
