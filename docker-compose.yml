@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  next-app:
+    container_name: challenge-tracker-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
