@@ -79,7 +79,7 @@ export default function TrackerPageDetails({
             lg: 8,
           },
           paddingTop: {
-            xs: 2,
+            xs: 0,
             lg: 16,
           },
           paddingBottom: {
