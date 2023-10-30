@@ -1,3 +1,4 @@
+import OrdersService from "@/services/OrdersService";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 
@@ -35,28 +36,22 @@ export function useTrackerForm(): UseTrackerForm {
       return;
     }
 
-    setIsLoading(true);
+    try {
+      setIsLoading(true);
+      const response = await OrdersService.getOrder(trackCode.value);
 
-    await fetch(`/orders/${trackCode.value}`)
-      .then(async (response) => {
-        if (response.status && response.status > 399) {
-          throw new Error(`${response.status} (${response.statusText})`);
-        }
+      const { orderNumber, trackingNumber } = response;
 
-        const { orderNumber, trackingNumber } = await response.json();
-
-        router.push(`/rastreador/${orderNumber}/${trackingNumber}`);
-      })
-      .catch((error) => {
-        if (error.message.includes(404)) {
-          setError("Não encontramos pedidos com esse código");
-        } else {
-          setError("Ocorreu um erro ao buscar o pedido");
-        }
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+      router.push(`/rastreador/${orderNumber}/${trackingNumber}`);
+    } catch (error) {
+      if (error.message.includes(404)) {
+        setError("Não encontramos pedidos com esse código");
+      } else {
+        setError("Ocorreu um erro ao buscar o pedido");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return {
