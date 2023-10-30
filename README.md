@@ -94,4 +94,26 @@ ou
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
 
+### Rodando com Docker
+
+#### Requisitos
+
+Instale o [Docker Desktop](https://docs.docker.com/get-docker/) para Mac, Windows ou Linux. `Docker Desktop` inclui `Docker Compose`` como parte da instalação.
+
+#### Iniciar servidor de desenvolvimento:
+
+Build da imagem:
+
+```shell
+  docker compose build
+```
+
+Rodando o container da aplicação:
+
+```shell
+  docker compose up -d
+```
+
+Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
+
 ---
