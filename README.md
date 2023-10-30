@@ -117,3 +117,38 @@ Rodando o container da aplicação:
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
 
 ---
+
+## Testes automatizados.
+
+### Testes unitários/integração:
+
+Rodando os testes:
+
+```sell
+  yarn test
+```
+
+ou
+
+```shell
+  npm run test
+```
+
+### Testes e2e:
+
+> **Note**
+> O cypress está configurado para acessar o ambiente http://localhost:3000, então o projeto deve estar rodando antes de executar o comando de testes.
+
+Rodando os testes:
+
+```sell
+  yarn test:cypress
+```
+
+ou
+
+```shell
+  npm run test:cypress
+```
+
+---
