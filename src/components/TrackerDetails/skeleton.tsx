@@ -7,6 +7,11 @@ export function TrackerDetailsSkeleton() {
   return (
     <Box
       sx={{
+        padding: {
+          xs: 4,
+          sm: 12,
+          lg: 4,
+        },
         paddingLeft: {
           xs: 3,
         },

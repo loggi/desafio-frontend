@@ -36,7 +36,7 @@ export function TrackerDetails({ orderData, loading }: TrackerDetailsProps) {
         borderRadius: 2,
         padding: {
           xs: 4,
-          sm: 8,
+          sm: 12,
           lg: 4,
         },
         paddingLeft: {
