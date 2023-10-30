@@ -51,6 +51,7 @@ export function FooterMenu({ items }: FooterMenuItems) {
             lg: 0,
           },
           paddingBottom: {
+            xs: 6,
             lg: 8,
           },
           width: "100%",

@@ -21,6 +21,10 @@ export default function LinksStoreApp() {
           xs: 2,
           lg: 0,
         },
+        marginTop: {
+          xs: 3,
+          lg: 0,
+        },
       }}
     >
       <Button

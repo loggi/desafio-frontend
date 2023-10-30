@@ -23,6 +23,10 @@ export function Footer() {
             xs: 2,
             lg: 2,
           },
+          paddingTop: {
+            xs: 4,
+            lg: 6,
+          },
         }}
       >
         <FooterMenu items={footer.footerMenuLinks} />
