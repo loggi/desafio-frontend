@@ -152,3 +152,31 @@ ou
 ```
 
 ---
+
+## Explicando algumas decisões:
+
+#### Nextjs + Material UI
+
+Segui o que foi proposto [desafio](challenge.md).
+
+#### Typescript
+
+Embora o boilerplate sugerido ainda não esteja configurado, optei pelo TypeScript devido à minha familiaridade com a linguagem.
+
+#### Corbetura de testes
+
+Testes de unidade e integração, implementados com o uso do Jest e do RTL, desempenham um papel crucial na garantia de que os componentes reutilizáveis em uma aplicação se comportem de maneira consistente em diversos cenários. Entretanto, é inegável que escrever uma quantidade substancial de testes para abranger toda a aplicação pode ser um processo demorado.
+
+Diante dessa realidade, embora tenha desenvolvido alguns testes com Jest e RTL como demonstrações de boas práticas, tomei a decisão estratégica de dar ênfase aos testes end-to-end (E2E) em uma parte significativa da cobertura. Essa decisão se fundamenta na eficiência da implementação e na minha aspiração de demonstrar competência em uma ferramenta menos convencional.
+
+Vale ressaltar que um dos fatores que contribuíram para essa escolha foi a utilização do Material-UI, uma vez que todos os componentes já são submetidos a testes abrangentes, o que aumenta a confiabilidade do sistema como um todo.
+
+#### Layout
+
+No modelo original, o cabeçalho era visível somente na visualização para desktop. Optei por manter o cabeçalho visível em ambas as visualizações, desktop e mobile, enquanto reorganizava os elementos de navegação, separando-os em links de páginas e links de autenticação.
+
+No formulário, mantive a estrutura geral, com foco na melhoria da consistência dos espaçamentos, bordas e na paleta de cores. Além disso, acrescentei informações detalhadas sobre os serviços disponíveis no catálogo da Loggi.
+
+No rodapé, a estrutura permaneceu a mesma, com uma exceção: um bloco adicional que inclui os links para as redes sociais e os termos. A exclusão desse último bloco ocorreu devido ao prazo de entrega do desafio.
+
+Na tela de detalhes, mantive a estrutura principal, concentrando-me na aprimoração da consistência dos espaçamentos, bordas e paleta de cores.
