@@ -50,4 +50,30 @@ export default {
       },
     ],
   },
+  menuLinks: [
+    {
+      title: "Para você",
+      slug: "/para-voce",
+    },
+    {
+      title: "Para empresas",
+      slug: "/para-empresas",
+    },
+    {
+      title: "Para entregar",
+      slug: "/para-entregar",
+    },
+    {
+      title: "Venda e suporte",
+      slug: "/venda-e-suporte",
+    },
+    {
+      title: "Acompanhe seu pedido",
+      slug: "/rastreamento",
+    },
+  ],
+  authLinks: [
+    { title: "Criar Conta", slug: "/" },
+    { title: "Entrar", slug: "/" },
+  ],
 };
