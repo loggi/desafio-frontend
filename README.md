@@ -22,7 +22,7 @@ Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challe
 ### Clone o repositório:
 
 ```shell
-  $ git clone git@github.com:jonataspinto/challenge-tracker-frontend.git
+  git clone git@github.com:jonataspinto/challenge-tracker-frontend.git
 ```
 
 ### Requisitos:
@@ -34,30 +34,36 @@ Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challe
 > **Note**
 > A versão sugerida já está configurada no `.nvmrc` basta executar `$ nvm use`
 
-### Instale as dependencias:
+### Instalação de dependências:
 
 - Navegue para a raiz do projeto.
 
 ```shell
-  $ cd challenge-tracker-frontend
+  cd challenge-tracker-frontend
 ```
 
+- Instalando as dependências.
+
 ```shell
-  $ yarn
+  yarn
+```
 
-  ou
+ou
 
-  $ npm run install
+```shell
+  npm run install
 ```
 
 ### Iniciar servidor de desenvolvimento:
 
 ```shell
-  $ yarn dev
+  yarn dev
+```
 
-  ou
+ou
 
-  $ npm run dev
+```shell
+  npm run dev
 ```
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
@@ -65,21 +71,25 @@ Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador.
 ### Build de produção:
 
 ```shell
-  $ yarn build
-
-  ou
-
-  $ npm run build
+  yarn build
 ```
 
-### Iniciar servidor após build:
+ou
 
 ```shell
-  $ yarn start
+  npm run build
+```
 
-  ou
+### Iniciar servidor após Build:
 
-  $ npm run start
+```shell
+  yarn start
+```
+
+ou
+
+```shell
+  npm run start
 ```
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
