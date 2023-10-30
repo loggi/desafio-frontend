@@ -76,4 +76,83 @@ export default {
     { title: "Criar Conta", slug: "/" },
     { title: "Entrar", slug: "/" },
   ],
+  footer: {
+    footerMenuLinks: [
+      {
+        id: "loc9w2882pwvno5mmu9",
+        name: "Para Você",
+        links: [
+          {
+            id: "loc9w288ssymbsl7be",
+            name: "Entregador via aplicativo",
+            href: "/",
+          },
+        ],
+      },
+      {
+        id: "loc9w288c9bhe89j33",
+        name: "Para Empresas",
+        links: [
+          {
+            id: "loc9w288bejl9gbciu",
+            name: "Entregador para escritórios",
+            href: "/",
+          },
+          {
+            id: "loc9w2889wv3vznu0q6",
+            name: "Soluções para varejo",
+            href: "/",
+          },
+          {
+            id: "loc9w288jxoqs92hb7",
+            name: "Entrega para e-commerce",
+            href: "/",
+          },
+        ],
+      },
+      {
+        id: "loc9w288jeifvxildb",
+        name: "Para entregar",
+        links: [
+          {
+            id: "loc9w28891ozqa1dm64",
+            name: "Seja uma transportadora Leve",
+            href: "/",
+          },
+          {
+            id: "loc9w288xxuk97jpgue",
+            name: "Seja um entregador",
+            href: "/",
+          },
+        ],
+      },
+      {
+        id: "loc9w288hvoffzuptq8",
+        name: "Logi",
+        links: [
+          {
+            id: "loc9w288hd2j2oezu6d",
+            name: "Trabalhe conosco",
+            href: "/",
+          },
+        ],
+      },
+      {
+        id: "loc9w2889t1opk8wfk",
+        name: "Dúvidas",
+        links: [
+          {
+            id: "loc9w288yjaippu8cnj",
+            name: "loggi.com/ajuda",
+            href: "/",
+          },
+          {
+            id: "loc9w288xyb6qjo0xhb",
+            name: "Imprensa",
+            href: "/",
+          },
+        ],
+      },
+    ],
+  },
 };
