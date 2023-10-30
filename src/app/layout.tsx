@@ -20,7 +20,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <ThemeRegistry>
           <Header />
-          <Box component="main">{children}</Box>
+          <Box
+            sx={{ borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}
+            component="main"
+          >
+            {children}
+          </Box>
           <Footer />
         </ThemeRegistry>
       </body>
