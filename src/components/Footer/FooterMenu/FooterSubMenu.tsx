@@ -18,6 +18,8 @@ export default function FooterSubMenu({ links }: FooterSubMenuProps) {
             flexDirection: "column",
             alignItems: "flex-start",
             padding: 0,
+
+            marginTop: 1,
           }}
         >
           <Link

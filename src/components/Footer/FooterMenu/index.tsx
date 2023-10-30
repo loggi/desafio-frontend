@@ -3,6 +3,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
 import FooterSubMenu from "./FooterSubMenu";
+import LinksStoreApp from "../LinksStoreApp";
 
 type FooterMenuItems = {
   items: {
@@ -18,7 +19,16 @@ type FooterMenuItems = {
 
 export function FooterMenu({ items }: FooterMenuItems) {
   return (
-    <Box component="nav">
+    <Box
+      component="nav"
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column-reverse",
+          lg: "row",
+        },
+      }}
+    >
       <List
         sx={{
           display: {
@@ -43,6 +53,7 @@ export function FooterMenu({ items }: FooterMenuItems) {
           paddingBottom: {
             lg: 8,
           },
+          width: "100%",
         }}
       >
         {items.map((menuItem) => (
@@ -62,6 +73,7 @@ export function FooterMenu({ items }: FooterMenuItems) {
           </ListItem>
         ))}
       </List>
+      <LinksStoreApp />
     </Box>
   );
 }
