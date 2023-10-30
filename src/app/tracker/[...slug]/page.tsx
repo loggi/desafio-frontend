@@ -7,6 +7,7 @@ import Snackbar from "@mui/material/Snackbar";
 import { useTheme } from "@mui/material/styles";
 import { ShipmentCaptureCta } from "@/components/ShipmentCaptureCta";
 import { TrackerDetails } from "@/components/TrackerDetails";
+import OrdersService from "@/services/OrdersService";
 
 type TrackerPageDetailsProps = {
   params: {
@@ -25,28 +26,17 @@ export default function TrackerPageDetails({
 
   useEffect(() => {
     (async () => {
-      setLoading(true);
-      const [, trackingNumber] = params.slug;
-
-      await fetch(`/orders/${trackingNumber}`)
-        .then(async (response) => {
-          if (!response.ok) throw new Error("Failed to load order details");
-
-          if (response.status && response.status > 399) {
-            throw new Error(`${response.status} (${response.statusText})`);
-          }
-
-          const data = await response.json();
-
-          setOrderData(data);
-        })
-        .catch((error) => {
-          setOpenSnack(true);
-          setErrorMessage(error.message);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+      try {
+        setLoading(true);
+        const [, trackingCode] = params.slug;
+        const response = await OrdersService.getOrder(trackingCode);
+        setOrderData(response);
+      } catch (error) {
+        setErrorMessage(error.message);
+        setOpenSnack(true);
+      } finally {
+        setLoading(false);
+      }
     })();
   }, []);
 
