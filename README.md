@@ -19,13 +19,13 @@ Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challe
 
 ## Como rodar o projeto:
 
-### Clone o repositório:
+#### Clone o repositório:
 
 ```shell
   git clone git@github.com:jonataspinto/challenge-tracker-frontend.git
 ```
 
-### Requisitos:
+#### Requisitos:
 
 ```
   Nodejs versão 18
@@ -34,7 +34,7 @@ Leia a descrição do desafio e os requisitos técnicos no [challenge.md](challe
 > **Note**
 > A versão sugerida já está configurada no `.nvmrc` basta executar `$ nvm use`
 
-### Instalação de dependências:
+#### Instalação de dependências:
 
 - Navegue para a raiz do projeto.
 
@@ -54,7 +54,7 @@ ou
   npm run install
 ```
 
-### Iniciar servidor de desenvolvimento:
+#### Iniciar servidor de desenvolvimento:
 
 ```shell
   yarn dev
@@ -68,7 +68,7 @@ ou
 
 Acesse [localhost:3000](http://localhost:3000) para visualizar em seu navegador. :tada:
 
-### Build de produção:
+#### Build de produção:
 
 ```shell
   yarn build
@@ -80,7 +80,7 @@ ou
   npm run build
 ```
 
-### Iniciar servidor após Build:
+#### Iniciar servidor após Build:
 
 ```shell
   yarn start
