@@ -19,6 +19,15 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/rastreamento",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
