@@ -55,7 +55,7 @@ export function TrackerDetails({ orderData, loading }: TrackerDetailsProps) {
       <List>
         <ListItem>
           <ListItemText
-            primary={"Códito de rastreamento"}
+            primary={"Código de rastreamento"}
             secondary={orderData?.trackingNumber}
           />
         </ListItem>
