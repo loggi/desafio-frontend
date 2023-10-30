@@ -10,11 +10,11 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/rastreamento",
+        source: "/rastreador",
         destination: "/tracker",
       },
       {
-        source: "/rastreamento/:slug*",
+        source: "/rastreador/:slug*",
         destination: "/tracker/:slug*",
       },
     ];
@@ -23,7 +23,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/rastreamento",
+        destination: "/rastreador",
         permanent: true,
       },
     ];

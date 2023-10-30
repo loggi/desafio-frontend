@@ -69,7 +69,7 @@ export default {
     },
     {
       title: "Acompanhe seu pedido",
-      slug: "/rastreamento",
+      slug: "/rastreador",
     },
   ],
   authLinks: [

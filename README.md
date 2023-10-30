@@ -1,6 +1,6 @@
 ## Live at:
 
-https://challenge-tracker-frontend.vercel.app/rastreamento
+https://challenge-tracker-frontend.vercel.app/rastreador
 
 Códigos de ratreio dos pedidos mocados.
 | ID | Status |
