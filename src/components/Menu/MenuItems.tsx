@@ -3,14 +3,14 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import ListItem from "@mui/material/ListItem";
 import { usePathname } from "next/navigation";
-import menu from "@/_mock/menu.json";
+import lang from "@/_mock/lang/pt-BR";
 
 export function MenuItems() {
   const currentPath = usePathname();
 
   return (
     <>
-      {menu.menuLinks.map((link) => (
+      {lang.menuLinks.map((link) => (
         <ListItem
           key={link.title}
           sx={{

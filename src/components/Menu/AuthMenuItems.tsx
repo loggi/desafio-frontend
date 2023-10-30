@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import ListItem from "@mui/material/ListItem";
 import Button from "@mui/material/Button";
-import menu from "@/_mock/menu.json";
+import lang from "@/_mock/lang/pt-BR";
 
 export function AuthMenuItems() {
   return (
     <>
-      {menu.authLinks.map((route, index) => (
+      {lang.authLinks.map((route, index) => (
         <ListItem
           key={route.title}
           sx={{
