@@ -1,10 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
 import { Header } from "@/components/Header";
-import { authLinks, menuLinks } from "@/_mock/menu.json";
+import lang from "@/_mock/lang/pt-BR";
 
 describe("Header component", () => {
   it("should render elements correctly", () => {
+    const { authLinks, menuLinks } = lang;
     render(<Header />);
 
     const logoLoggi = screen.getByRole("img", { name: /logo loggi/i });
