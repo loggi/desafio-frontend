@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import { Header } from "@/components/Header";
 import ptBR from "@/_mock/lang/pt-BR";
+import { Footer } from "@/components/Footer";
 
 type RootLayoutProps = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeRegistry>
           <Header />
           <Box component="main">{children}</Box>
+          <Footer />
         </ThemeRegistry>
       </body>
     </html>
