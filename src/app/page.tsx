@@ -1,10 +1,10 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
 
 export default function HomePage() {
   return (
-    <Box sx={{ display: "flex" }}>
-      <div>Index</div>
-    </Box>
+    <Typography variant="body1" gutterBottom>
+      Aqui vem a home page
+    </Typography>
   );
 }
