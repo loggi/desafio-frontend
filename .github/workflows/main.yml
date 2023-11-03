@@ -1,0 +1,150 @@
+name: CI/CD
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main", "dev"]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  lint:
+    name: ⬣ ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: 🔬 Lint
+        run: npm run lint
+
+  typecheck:
+    name: ʦ TypeScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: 🔎 Type check
+        run: npm run typecheck --if-present
+
+  # tests:
+  #   name: Unit tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: 🛑 Cancel Previous Runs
+  #       uses: styfle/cancel-workflow-action@0.11.0
+
+  #     - name: ⬇️ Checkout repo
+  #       uses: actions/checkout@v3
+
+  #     - name: ⎔ Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+
+  #     - name: 📥 Download deps
+  #       uses: bahmutov/npm-install@v1
+  #       with:
+  #         useLockFile: false
+
+  #     - name: Running test
+  #       run: npm run test:unit
+
+  # test-e2e:
+  #   needs: ["tests"]
+  #   name: E2E
+  #   timeout-minutes: 60
+  #   runs-on: ubuntu-latest
+  #   if: ${{ success() }}
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 16
+
+  #     - name: Install dependencies
+  #       run: yarn
+
+  #     - name: Install Playwright Browsers
+  #       run: yarn playwright install --with-deps
+
+  #     - name: Run Playwright tests
+  #       run: yarn test-dev
+
+  #     - name: upload tests results
+  #       uses: actions/upload-artifact@v3
+  #       if: always()
+  #       with:
+  #         name: playwright-report
+  #         path: playwright-report/
+  #         retention-days: 30
+
+  # build-deploy-preview:
+  #   needs: [test-e2e]
+  #   runs-on: ubuntu-latest
+  #   if: ${{ success() }}
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Install Vercel CLI
+  #       run: npm install --global vercel@canary
+
+  #     - name: Pull Vercel Environment Information
+  #       run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+  #     - name: Build Project Artifacts
+  #       run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+  #     - name: Deploy Project Artifacts to Vercel
+  #       run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+  # build-deploy-production:
+  #   needs: [test-e2e]
+  #   runs-on: ubuntu-latest
+  #   if: ${{ success() }}
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Install Vercel CLI
+  #       run: npm install --global vercel@latest
+
+  #     - name: Pull Vercel Environment Information
+  #       run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+  #     - name: Build Project Artifacts
+  #       run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+  #     - name: Deploy Project Artifacts to Vercel
+  #       run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
