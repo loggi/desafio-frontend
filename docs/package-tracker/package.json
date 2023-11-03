@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier:format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "prettier:check": "prettier --check \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -14,10 +17,15 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
-    "eslint": "latest",
     "eslint-config-next": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3"
   }
 }
