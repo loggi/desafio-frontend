@@ -1,6 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/tasks/page": "app/tasks/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/starred/page": "app/starred/page.js"
-}
