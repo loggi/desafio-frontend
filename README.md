@@ -1,63 +1,37 @@
-# Welcome to desafio-frontend 👋
+# Order Tracker Application
 
-  * [Description](#description)
-  * [Getting Started](#getting-started)
-    + [Prerequisites](#prerequisites)
-    + [Install](#install)
-    + [Docker](#docker)
-  * [How to run the project](#how-to-run-the-project)
-  * [How to run tests](#how-to-run-tests)
-  * [How to deploy the project](#how-to-deploy-the-project)
-  * [Documentation](#documentation)
+This application simulates a simple order tracker. It's built with [NextJS](https://nextjs.org/), [Tailwindcss](https://tailwindcss.com/), and [Material UI](https://mui.com/material-ui/).
 
-## Description
-Add a description for project desafio-frontend, explaining what it does, why it exists, etc.
+## Repository Pattern
 
-## Getting Started
-Here you must explain what is necessary to run the project, if it is necessary to add any lib, how to install, etc.
+This application uses the **Repository Pattern** to simulate an external API. The `src/pages/repositories/InMemoryRepository.js` file has an in memory database called **orders**.
 
-### Prerequisites
+## API
 
-- library
-- [...]
+You can find the API endpoint responsible for providing the order information on `src/pages/api/order.js`
 
-### Install
-```sh
+## Videos
+
+https://github.com/darde/order-tracker/assets/24977035/16e5a3f1-c268-4e4c-aec7-75131ddb82fa
+
+## Running the application
+
+To run the application you need to install the dependencies and start the **dev** script as below:
+
+```bash
+npm install
+
+npm run dev
 ```
 
-### Docker
-**Run**
-```sh
-docker run --name [...]
-```
-**Build local image**
-```sh
-docker-compose build
-```
-**Create a `.env` file**
-```sh
-```
-**Start containers**
-```sh
-docker-compose up -d
+## Running the tests
+
+You can run the unit test with the command:
+
+```bash
+npm run test
 ```
 
-## How to run the project
-Describe the steps required to get the project up and running.
-```sh
-```
 
-## How to run tests
-Describes how to run unit and integration tests. Explain how to run a test function or a folder with several tests. Do the tests run inside a docker container? How to see test coverage for what the developer is delivering?
-```sh
-```
 
-## How to deploy the project
-In which environments is this service hosted? How to deploy to each of them? Which files define the deployment infrastructure? How to test in development and staging environments?
-```sh
-```
 
-## Documentation
-Add diagrams and design docs related to this service to the docs folder.
-
-[Documentation](https://github.com/loggi/desafio-frontend/docs/)
