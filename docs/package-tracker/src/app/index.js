@@ -1,8 +1,16 @@
 import * as React from 'react';
-export default function HomePage() {
+import Box from '@mui/material/Box';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+export default function HomePage({ children }) {
   return (
-    <div>
-      <h1>Welcome to my Next.js project</h1>
-    </div>
+    <html lang="en">
+      <body>
+        <Header />
+        <Box component="main">{children}</Box>
+        <Footer />
+      </body>
+    </html>
   );
 }
