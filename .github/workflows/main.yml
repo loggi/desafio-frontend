@@ -113,23 +113,23 @@ jobs:
   #         path: playwright-report/
   #         retention-days: 30
 
-  # build-deploy-preview:
-  #   needs: [test-e2e]
-  #   runs-on: ubuntu-latest
-  #   if: ${{ success() }}
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Install Vercel CLI
-  #       run: npm install --global vercel@canary
+  build-deploy-preview:
+    needs: [typecheck]
+    runs-on: ubuntu-latest
+    if: ${{ success() }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Vercel CLI
+        run: npm install --global vercel@canary
 
-  #     - name: Pull Vercel Environment Information
-  #       run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-  #     - name: Build Project Artifacts
-  #       run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-  #     - name: Deploy Project Artifacts to Vercel
-  #       run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
   # build-deploy-production:
   #   needs: [test-e2e]
