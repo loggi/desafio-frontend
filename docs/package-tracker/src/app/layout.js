@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import '../styles/global.css';
 
 const metadata = {
   title: 'Loggi - Rastreador de Pacotes',
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
       <Head>
         <MetaTags {...metadata} />
       </Head>
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
