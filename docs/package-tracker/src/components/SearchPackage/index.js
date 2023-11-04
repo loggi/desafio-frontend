@@ -1,5 +1,6 @@
+'use client';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,11 +8,25 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 export default function SearchPackage() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Input Value:', inputValue);
+  };
+
   return (
     <>
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
+      <Container component="main">
+        <Grid container alignItems="flex-end">
           <Grid item xs={12} md={12}>
             <Card>
               <CardContent>
@@ -29,9 +44,18 @@ export default function SearchPackage() {
                 </Box>
               </CardContent>
               <CardActions>
-                <Button fullWidth variant="outlined">
-                  Sign up for free
-                </Button>
+                <form onSubmit={handleSubmit}>
+                  <TextField
+                    label="Código de rastreamento"
+                    variant="outlined"
+                    fullWidth
+                    value={inputValue}
+                    onChange={handleInputChange}
+                  />
+                  <Button type="submit" variant="contained" color="primary">
+                    Acompanhar pedido
+                  </Button>
+                </form>
               </CardActions>
             </Card>
           </Grid>

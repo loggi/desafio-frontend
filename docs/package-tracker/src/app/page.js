@@ -4,11 +4,11 @@ import Footer from '@/components/Footer';
 import HighlightBanner from '@/components/HighlightBanner';
 import Box from '@mui/material/Box';
 
-export default function HomePage({ children }) {
+export default function HomePage() {
   return (
     <>
       <Header />
-      <Box component="main" sx={{ backgroundColor: 'blue' }}>
+      <Box sx={{ backgroundColor: 'blue' }}>
         <HighlightBanner />
       </Box>
       <Footer />

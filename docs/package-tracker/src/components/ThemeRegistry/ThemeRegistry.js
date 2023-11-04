@@ -5,14 +5,25 @@ import CssBaseline from '@mui/material/CssBaseline';
 import NextAppDirEmotionCacheProvider from './EmotionCache';
 import theme from './theme';
 
-export default function ThemeRegistry({ children }) {
+import React, { createContext, useContext } from 'react';
+
+const ThemeContext = createContext();
+
+export function ThemeRegistryProvider({ children }) {
   return (
     <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         {children}
       </ThemeProvider>
     </NextAppDirEmotionCacheProvider>
   );
+}
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeRegistryProvider');
+  }
+  return context;
 }
