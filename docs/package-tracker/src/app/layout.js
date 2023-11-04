@@ -1,5 +1,8 @@
-export const metadata = {
-  title: 'Loggi - Rasteador de pacotes',
+import React from 'react';
+import Head from 'next/head';
+
+const metadata = {
+  title: 'Loggi - Rastreador de Pacotes',
   description: 'A powerful package tracking application by Loggi.',
   keywords: 'Loggi, package tracking, delivery, logistics',
   author: 'Amanda Albuquerque',
@@ -19,9 +22,9 @@ const MetaTags = ({ title, description, keywords, author }) => (
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <MetaTags {...metadata} />
-      </head>
+      </Head>
       <body style={{ margin: 0, padding: 0 }}>{children}</body>
     </html>
   );
