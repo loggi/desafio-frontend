@@ -1,66 +1,44 @@
 'use client';
-import { useState } from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
+import FormInput from '@/components/FormInput';
+import FORM from '@/locales/searchPackage';
 
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-
-export default function SearchPackage() {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Input Value:', inputValue);
-  };
-
+function SearchPackage() {
   return (
-    <>
-      <Container component="main">
-        <Grid container alignItems="flex-end">
-          <Grid item xs={12} md={12}>
-            <Card>
-              <CardContent>
-                <Box
-                  sx={{
-                    mb: 2,
-                  }}
-                >
-                  <Typography variant="h6" color="text.secondary">
-                    Olá! Acompanhe com a Loggi a entrega do seu pedido. 😃
-                  </Typography>
-                  <Typography variant="h6" color="text.secondary">
-                    Primeiro, digite o código de rastreamento.
-                  </Typography>
-                </Box>
-              </CardContent>
-              <CardActions>
-                <form onSubmit={handleSubmit}>
-                  <TextField
-                    label="Código de rastreamento"
-                    variant="outlined"
-                    fullWidth
-                    value={inputValue}
-                    onChange={handleInputChange}
-                  />
-                  <Button type="submit" variant="contained" color="primary">
-                    Acompanhar pedido
-                  </Button>
-                </form>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
-    </>
+    <Grid container alignItems="flex-end">
+      <Grid item xs={12} md={12}>
+        <Card sx={styles.card}>
+          <CardContent>
+            <Typography {...styles.title}>{FORM.TITLE}</Typography>
+            <Typography {...styles.subtitle}>{FORM.SUBTITILE}</Typography>
+          </CardContent>
+          <CardActions>
+            <FormInput labelText={FORM.LABEL} buttonText={FORM.BUTTON} />
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
   );
 }
+
+const styles = {
+  card: {
+    padding: 6,
+  },
+  title: {
+    variant: 'h6',
+    textAlign: 'center',
+    color: 'text.primary',
+    marginBottom: 8,
+  },
+  subtitle: {
+    textAlign: 'center',
+    color: 'text.primary',
+  },
+};
+
+export default SearchPackage;
