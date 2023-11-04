@@ -29,7 +29,6 @@ const Footer = () => {
 
 const styles = {
   footerContainer: {
-    mt: 8,
     py: [3, 6],
   },
   gridItem: {

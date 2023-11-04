@@ -15,7 +15,7 @@ function FormInput({ labelText, buttonText }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={styles.form}>
       <TextField
         label={labelText}
         variant="outlined"
@@ -38,8 +38,15 @@ function FormInput({ labelText, buttonText }) {
 }
 
 const styles = {
+  form: {
+    witdh: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   button: {
-    fontWeight: 'bold',
+    marginBottom: 2,
     fontSize: '1rem',
   },
   input: {

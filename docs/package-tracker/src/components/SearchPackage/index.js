@@ -16,7 +16,7 @@ function SearchPackage() {
             <Typography {...styles.title}>{FORM.TITLE}</Typography>
             <Typography {...styles.subtitle}>{FORM.SUBTITILE}</Typography>
           </CardContent>
-          <CardActions>
+          <CardActions sx={styles.cardActions}>
             <FormInput labelText={FORM.LABEL} buttonText={FORM.BUTTON} />
           </CardActions>
         </Card>
@@ -28,6 +28,13 @@ function SearchPackage() {
 const styles = {
   card: {
     padding: 6,
+  },
+  cardActions: {
+    witdh: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
     variant: 'h6',

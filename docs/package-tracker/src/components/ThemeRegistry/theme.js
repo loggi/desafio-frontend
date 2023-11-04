@@ -9,19 +9,40 @@ const roboto = Roboto({
 
 const theme = createTheme({
   palette: {
+    primary: {
+      main: '#007bff',
+    },
+    secondary: {
+      main: '#3F51B5',
+    },
+    background: {
+      default: '#f0f0f0',
+    },
     mode: 'light',
   },
   typography: {
+    h1: {
+      fontSize: '2rem',
+      fontWeight: 700,
+    },
+    body1: {
+      fontSize: '1rem',
+    },
     fontFamily: roboto.style.fontFamily,
   },
   components: {
-    MuiAlert: {
+    MuiButton: {
       styleOverrides: {
-        root: ({ ownerState }) => ({
-          ...(ownerState.severity === 'info' && {
-            backgroundColor: '#60a5fa',
-          }),
-        }),
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          border: '1px solid #ccc',
+        },
       },
     },
   },
