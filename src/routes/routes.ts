@@ -1,4 +1,4 @@
 export const navItems = [
-  { label: "Home", link: "/" },
-  { label: "Detalhes", link: "packdetails" },
+  { label: "Inicio", link: "/" },
+  { label: "Detalhes", link: "details" },
 ];
