@@ -1,74 +1,21 @@
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import Link from '@/components/Link';
 import Container from '@mui/material/Container';
+import Copyright from '@/components/Copyright';
+import LINKS from '@/locales/footer';
 
-function Copyright(props) {
+const Footer = () => {
   return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://www.loggi.com/">
-        Loggi
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-const footers = [
-  {
-    title: 'Para você',
-    description: ['Entragador via aplicativo'],
-  },
-  {
-    title: 'Para empresas',
-    description: [
-      'Entregador para escritórios',
-      'Soluções para varejo',
-      'Entrega para e-commerces',
-    ],
-  },
-  {
-    title: 'Para entregar',
-    description: ['Seja uma Transportadora Leve', 'Seja um entregador'],
-  },
-  {
-    title: 'Loggi',
-    description: ['Trabalhe conosco'],
-  },
-  {
-    title: 'Dúvidas',
-    description: ['loggi.com/ajuda', 'Imprensa'],
-  },
-];
-
-export default function Footer() {
-  return (
-    <Container
-      component="footer"
-      sx={{
-        mt: 8,
-        py: [3, 6],
-      }}
-    >
-      <Grid container spacing={4} justifyContent="space-evenly">
-        {footers.map((footer) => (
-          <Grid item xs={5} sm={2} key={footer.title}>
-            <Typography variant="h6" color="text.primary" gutterBottom>
-              {footer.title}
-            </Typography>
+    <Container component="footer" sx={styles.footerContainer}>
+      <Grid container justifyContent="space-evenly">
+        {LINKS.map((item) => (
+          <Grid item key={item.title} sx={styles.gridItem}>
+            <Typography {...styles.linkTypography}>{item.title}</Typography>
             <ul>
-              {footer.description.map((item) => (
-                <li key={item}>
-                  <Link href="#" variant="subtitle1" color="text.secondary">
-                    {item}
-                  </Link>
+              {item.description.map((i) => (
+                <li key={i}>
+                  <Link text={i} sx={styles.linkList}></Link>
                 </li>
               ))}
             </ul>
@@ -78,4 +25,30 @@ export default function Footer() {
       <Copyright sx={{ mt: 5 }} />
     </Container>
   );
-}
+};
+
+const styles = {
+  footerContainer: {
+    mt: 8,
+    py: [3, 6],
+  },
+  gridItem: {
+    xs: 5,
+    sm: 2,
+  },
+  linkTypography: {
+    variant: 'h6',
+    color: 'text.primary',
+    gutterBottom: true,
+    sx: {
+      mx: 0,
+      my: 2,
+    },
+  },
+  linkList: {
+    mx: 0,
+    my: 2,
+  },
+};
+
+export default Footer;
