@@ -14,7 +14,7 @@ import Link from "next/link";
 const drawerWidth = 240;
 type TSideBar = {
   handleDrawerToggle: () => void;
-  navItems: { label: string; link: string }[];
+  navItems: { label: string; link?: string }[];
   container: any;
   mobileOpen: boolean;
 };
@@ -31,7 +31,7 @@ export function SideBar({
       open={mobileOpen}
       onClose={handleDrawerToggle}
       ModalProps={{
-        keepMounted: true, // Better open performance on mobile.
+        keepMounted: true,
       }}
       sx={{
         display: { xs: "block", sm: "none" },
@@ -48,7 +48,7 @@ export function SideBar({
         <Divider />
         <List>
           {navItems.map((item) => (
-            <Link key={item.label.toString()} href={item.link}>
+            <Link key={item.label.toString()} href={`${item.link}`}>
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: "center" }}>
                   <ListItemText primary={item.label} />

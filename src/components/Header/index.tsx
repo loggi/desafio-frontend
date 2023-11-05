@@ -55,7 +55,7 @@ export default function HeaderBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Link key={item.label} href={item.link}>
+              <Link key={item.label} href={`${item.link}`}>
                 <Button sx={{ color: "#fff" }}>{item.label}</Button>
               </Link>
             ))}
