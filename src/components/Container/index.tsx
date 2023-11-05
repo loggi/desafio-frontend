@@ -9,17 +9,15 @@ import { Box, Container } from "@mui/material";
 
 export function MainContainer({ children }: { children: React.ReactNode }) {
   return (
-    <Container>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {children}
-      </Box>
-    </Container>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {children}
+    </Box>
   );
 }

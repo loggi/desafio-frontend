@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import { SideBar } from "./sideBar";
 import Link from "next/link";
 import { navItems } from "@/routes/routes";
+import { Container } from "@mui/material";
 
 /**
  * Should be only used in the root app/layout
@@ -70,10 +71,10 @@ export default function HeaderBar(props: Props) {
           mobileOpen={mobileOpen}
         />
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
+      <Container component="main" sx={{ p: 3 }}>
         <Toolbar />
         {props.children}
-      </Box>
+      </Container>
     </Box>
   );
 }
