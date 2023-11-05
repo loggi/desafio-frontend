@@ -3,7 +3,7 @@ import { fetchOrders } from "./http";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between text-gray-950">
+    <main className="flex flex-col items-center justify-between text-gray-950 w-screen">
       <Main fetchOrders={fetchOrders} />
     </main>
   );

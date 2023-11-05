@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
+import Footer from "./Footer";
 import Topbar from "./Topbar";
 
 type ContainerProps = {
@@ -29,11 +30,10 @@ export default function Container({ children }: ContainerProps) {
   }, []);
 
   return (
-    <div className="flex flex-col w-screen h-screen">
-      {/* <div className="h-[80px] w-full"> */}
-        <Topbar scrollRatio={scrollRatio} />
-      {/* </div> */}
-      <div className="bg-white flex flex-1">{children}</div>
+    <div className="flex flex-col w-screen h-screen justify-between">
+      <Topbar scrollRatio={scrollRatio} />
+      <div className="bg-white flex">{children}</div>
+      <Footer />
     </div>
   );
 }
