@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -30,7 +31,7 @@ const styles = {
     padding: 6,
   },
   cardActions: {
-    witdh: '100%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -40,7 +41,7 @@ const styles = {
     variant: 'h6',
     textAlign: 'center',
     color: 'text.primary',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   subtitle: {
     textAlign: 'center',
