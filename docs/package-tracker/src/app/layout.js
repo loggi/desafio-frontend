@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import * as Sentry from '@sentry/node';
 import '../styles/global.css';
 
 const metadata = {
@@ -19,6 +20,12 @@ const MetaTags = ({ title, description, keywords, author }) => (
     <meta name="author" content={author} />
   </>
 );
+
+if (process.env.SENTRY_KEY) {
+  Sentry.init({
+    dsn: process.env.SENTRY_KEY,
+  });
+}
 
 export default function RootLayout({ children }) {
   return (
