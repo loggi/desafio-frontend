@@ -3,10 +3,10 @@
 exports[`InstallAppBanner matches the snapshot 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container css-1hbmzt3-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-qnhrqk-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-sqk107-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1jauxx7-MuiGrid-root"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-9pht23-MuiButtonBase-root-MuiButton-root"
@@ -84,7 +84,7 @@ exports[`InstallAppBanner matches the snapshot 1`] = `
       </button>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-sqk107-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-1jauxx7-MuiGrid-root"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-9pht23-MuiButtonBase-root-MuiButton-root"

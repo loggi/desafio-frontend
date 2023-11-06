@@ -6,13 +6,13 @@ exports[`HighlightBanner matches the snapshot 1`] = `
     class="MuiGrid-root MuiGrid-container css-1oz2sp6-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-1nkx0c4-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 css-158w1yl-MuiGrid-root"
     >
-      <h3
-        class="MuiTypography-root MuiTypography-h3 css-109pgbq-MuiTypography-root"
+      <h2
+        class="MuiTypography-root MuiTypography-h2 css-100tzgh-MuiTypography-root"
       >
         A melhor solução para envio de encomendas no Brasil.
-      </h3>
+      </h2>
       <h5
         class="MuiTypography-root MuiTypography-h5 css-5ndcwm-MuiTypography-root"
       >

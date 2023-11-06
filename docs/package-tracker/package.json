@@ -11,6 +11,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "prettier:check": "prettier --check \"**/*.{js,jsx,json,md}\"",
     "test": "jest --config jest.config.js",
+    "test:coverage": "npm test -- --coverage",
     "test:e2e": "cypress open",
     "test:run": "cypress run",
     "lighthouse": "lighthouse http://localhost:3000/ --output-path=./lighthouse-report.html"

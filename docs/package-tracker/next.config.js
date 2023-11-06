@@ -19,6 +19,7 @@ const nextConfig = {
       },
     ],
   },
+  collectCoverage: true,
 };
 
 module.exports = nextConfig;
