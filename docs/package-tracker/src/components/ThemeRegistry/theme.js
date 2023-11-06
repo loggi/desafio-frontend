@@ -30,6 +30,9 @@ const theme = createTheme({
     },
     fontFamily: roboto.style.fontFamily,
   },
+  button: {
+    fontFamily: roboto.style.fontFamily,
+  },
   components: {
     MuiButton: {
       styleOverrides: {

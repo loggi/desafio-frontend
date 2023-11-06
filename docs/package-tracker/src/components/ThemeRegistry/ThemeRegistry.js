@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import NextAppDirEmotionCacheProvider from './EmotionCache';
-import theme from './theme';
+import NextAppDirEmotionCacheProvider from '@/components/EmotionCache';
+import theme from '@/components/theme';
 
 import React, { createContext, useContext } from 'react';
 
