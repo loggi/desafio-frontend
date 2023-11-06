@@ -29,7 +29,7 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
     <FormControl fullWidth>
       <Box marginBottom={2}>
         <InputLabel id="demo-simple-select-label">
-          Selecione modo pesquisa
+          Selecione modo de pesquisa
         </InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -39,8 +39,8 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
           onChange={handleChange}
           fullWidth
         >
-          <MenuItem value={"code"}>Code</MenuItem>
           <MenuItem value={"cpf"}>CPF</MenuItem>
+          <MenuItem value={"code"}>Code</MenuItem>
         </Select>
       </Box>
       {filter === "code" ? (
