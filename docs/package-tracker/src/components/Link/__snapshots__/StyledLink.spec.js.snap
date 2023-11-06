@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link matches the snapshot 1`] = `
+<div>
+  <a
+    class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-17f0go1-MuiTypography-root-MuiLink-root"
+    data-testid="link"
+  />
+</div>
+`;

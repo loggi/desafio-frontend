@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import Link from '@mui/material/Link';
 
 const StyledLink = ({ text, onClick, sx }) => {
@@ -10,6 +11,7 @@ const StyledLink = ({ text, onClick, sx }) => {
       sx={sx}
       underline="none"
       textTransform="math-auto"
+      data-testid="link"
     >
       {text}
     </Link>
