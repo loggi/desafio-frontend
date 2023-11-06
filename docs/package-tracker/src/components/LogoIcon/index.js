@@ -100,7 +100,7 @@ export function generateSVG(width, height) {
 }
 
 export default function LogoIcon() {
-  const svgContent = generateSVG(120, 60);
+  const svgContent = generateSVG(110, 50);
   return (
     <div>
       <div dangerouslySetInnerHTML={{ __html: svgContent }} />

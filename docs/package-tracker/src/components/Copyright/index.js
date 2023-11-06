@@ -11,6 +11,7 @@ const Copyright = ({ props }) => {
       variant="body2"
       color="text.secondary"
       align="center"
+      sx={styles.copyrightText}
       {...props}
     >
       {'Copyright © '}
@@ -21,6 +22,14 @@ const Copyright = ({ props }) => {
       {'.'}
     </Typography>
   );
+};
+
+const styles = {
+  copyrightText: {
+    my: 4,
+    py: 4,
+    borderTop: '1px solid #666666',
+  },
 };
 
 export default Copyright;

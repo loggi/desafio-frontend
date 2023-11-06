@@ -42,14 +42,6 @@ const Navigation = () => {
     setSubmenuOpen(null);
   };
 
-  const handleMouseEnter = (subItems) => {
-    setSubmenuOpen(subItems);
-  };
-
-  const handleMouseLeave = () => {
-    setSubmenuOpen(null);
-  };
-
   const renderMobileMenu = () => {
     return (
       <>
@@ -70,8 +62,6 @@ const Navigation = () => {
             <MenuItem
               key={indexMobile}
               onClick={() => handleSubmenuOpen(menuItem.submenu)}
-              onMouseEnter={() => handleMouseEnter(menuItem.submenu)}
-              onMouseLeave={handleMouseLeave}
               sx={styles.mobileMenuItem}
             >
               {menuItem.label}
@@ -131,6 +121,8 @@ const Navigation = () => {
 const styles = {
   container: {
     display: 'flex',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
   },
   mobileMenuItem: {
     display: 'block',

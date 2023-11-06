@@ -2,7 +2,9 @@
 
 exports[`LoggedOutContent matches the snapshot 1`] = `
 <div>
-  <div>
+  <div
+    style="display: flex; flex: 2; width: 250px; justify-content: space-between; align-items: center;"
+  >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-button MuiButton-buttonText.primary MuiButton-sizeMedium MuiButton-buttonSizeMedium MuiButton-root MuiButton-button MuiButton-buttonText.primary MuiButton-sizeMedium MuiButton-buttonSizeMedium css-1w1rijm-MuiButtonBase-root-MuiButton-root"
       tabindex="0"

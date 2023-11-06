@@ -1,6 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import { Grid, Typography } from '@mui/material/';
 import SearchPackage from '@/components/SearchPackage';
 import LOCALES from '@/locales/hightLightBanner';
 
@@ -8,7 +7,7 @@ const HighlightBanner = () => {
   return (
     <Grid container justifyContent="space-evenly" sx={styles.container}>
       <Grid item xs={12} sm={4} sx={styles.textContainer}>
-        <Typography variant="h3" sx={styles.text}>
+        <Typography variant="h2" component="h2" sx={styles.text}>
           {LOCALES.TITLE}
         </Typography>
         <Typography variant="h5" sx={styles.text}>
@@ -28,8 +27,8 @@ const styles = {
     pb: 6,
   },
   textContainer: {
-    pt: 8,
     pb: 6,
+    mx: 2,
   },
   text: {
     mb: 2,

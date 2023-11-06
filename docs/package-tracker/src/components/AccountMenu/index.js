@@ -4,11 +4,15 @@ import Navigation from '@/components/Navigation';
 import LoggedInContent from '@/components/LoggedInContent';
 import LoggedOutContent from '@/components/LoggedOutContent';
 
+import { useMediaQuery } from '@mui/material';
+
 const AccountMenu = () => {
   const [isLogged, setIsLogged] = useState(false);
 
+  const isMobile = useMediaQuery('(max-width:768px)');
+
   return (
-    <div style={styles.container}>
+    <div style={isMobile ? styles.mobileContainer : styles.desktopContainer}>
       <Navigation data-testid="navigation" />
       {isLogged ? (
         <LoggedInContent
@@ -26,7 +30,13 @@ const AccountMenu = () => {
 };
 
 const styles = {
-  container: {
+  mobileContainer: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  desktopContainer: {
     display: 'flex',
   },
 };

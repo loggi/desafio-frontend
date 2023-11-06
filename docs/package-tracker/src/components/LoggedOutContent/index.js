@@ -1,13 +1,16 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import { useMediaQuery } from '@mui/material';
 
 import LOCALES from '@/locales/navigation';
 
 const { AUTH } = LOCALES;
 
 const LoggedOutContent = ({ setIsLogged }) => {
+  const isMobile = useMediaQuery('(max-width:768px)');
+
   return (
-    <div style={styles.container}>
+    <div style={isMobile ? styles.mobileContainer : styles.desktopContainer}>
       <Button
         variant="button"
         color="text.primary"
@@ -23,12 +26,20 @@ const LoggedOutContent = ({ setIsLogged }) => {
 };
 
 const styles = {
-  container: {
+  desktopContainer: {
+    display: 'flex',
+    flex: 2,
+    width: 250,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  mobileContainer: {
     display: 'flex',
     flex: 2,
     width: 240,
-    justifyContent: 'space-between',
     alignItems: 'center',
+    marginHorizontal: 10,
+    paddingHorizontal: 20,
   },
 };
 

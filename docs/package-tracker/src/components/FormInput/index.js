@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import { TextField, Button } from '@mui/material';
 
 function FormInput({ labelText, buttonText }) {
   const [inputValue, setInputValue] = useState('');

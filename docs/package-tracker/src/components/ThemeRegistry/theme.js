@@ -25,6 +25,18 @@ const theme = createTheme({
       fontSize: '2rem',
       fontWeight: 700,
     },
+    h2: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+    },
+    h3: {
+      fontSize: '1rem',
+      fontWeight: 700,
+    },
+    h4: {
+      fontSize: '0.5rem',
+      fontWeight: 700,
+    },
     body1: {
       fontSize: '1rem',
     },
@@ -45,6 +57,29 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           border: '1px solid #ccc',
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          marginHorizontal: 10,
+        },
+        h1: {
+          fontSize: '3rem',
+        },
+        h2: {
+          fontSize: '2.5rem',
+        },
+        h3: {
+          fontSize: '2rem',
+        },
+        h4: {
+          fontSize: '1.5rem',
+        },
+        h5: {
+          fontSize: '1rem',
         },
       },
     },

@@ -2,13 +2,15 @@
 
 exports[`AccountMenu matches the snapshot 1`] = `
 <div>
-  <div>
-    <nav>
+  <div
+    style="display: flex;"
+  >
+    <div>
       <div
-        style="display: flex;"
+        class="MuiBox-root css-1mfpmt0"
       >
         <div
-          style="position: relative; margin: 0px 1.5rem;"
+          sx="[object Object]"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
@@ -22,7 +24,7 @@ exports[`AccountMenu matches the snapshot 1`] = `
           </button>
         </div>
         <div
-          style="position: relative; margin: 0px 1.5rem;"
+          sx="[object Object]"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
@@ -36,7 +38,7 @@ exports[`AccountMenu matches the snapshot 1`] = `
           </button>
         </div>
         <div
-          style="position: relative; margin: 0px 1.5rem;"
+          sx="[object Object]"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
@@ -50,7 +52,7 @@ exports[`AccountMenu matches the snapshot 1`] = `
           </button>
         </div>
         <div
-          style="position: relative; margin: 0px 1.5rem;"
+          sx="[object Object]"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
@@ -64,7 +66,7 @@ exports[`AccountMenu matches the snapshot 1`] = `
           </button>
         </div>
         <div
-          style="position: relative; margin: 0px 1.5rem;"
+          sx="[object Object]"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
@@ -78,8 +80,10 @@ exports[`AccountMenu matches the snapshot 1`] = `
           </button>
         </div>
       </div>
-    </nav>
-    <div>
+    </div>
+    <div
+      style="display: flex; flex: 2; width: 250px; justify-content: space-between; align-items: center;"
+    >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-button MuiButton-buttonText.primary MuiButton-sizeMedium MuiButton-buttonSizeMedium MuiButton-root MuiButton-button MuiButton-buttonText.primary MuiButton-sizeMedium MuiButton-buttonSizeMedium css-1w1rijm-MuiButtonBase-root-MuiButton-root"
         tabindex="0"

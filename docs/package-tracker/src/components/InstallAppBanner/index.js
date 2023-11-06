@@ -6,13 +6,18 @@ import Button from '@/components/Button';
 
 const InstallAppBanner = () => {
   return (
-    <Grid container justifyContent="center" alignItems="center">
-      <Grid item xs={12} sm={2} textAlign="center" sx={styles.container}>
+    <Grid
+      container
+      justifyContent="center"
+      alignItems="center"
+      sx={styles.container}
+    >
+      <Grid item xs={12} sm={2} textAlign="center" sx={styles.item}>
         <Button>
           <PlayStoreIcon />
         </Button>
       </Grid>
-      <Grid item xs={12} sm={2} textAlign="center" sx={styles.container}>
+      <Grid item xs={12} sm={2} textAlign="center" sx={styles.item}>
         <Button>
           <AppStoreIcon />
         </Button>
@@ -23,8 +28,10 @@ const InstallAppBanner = () => {
 
 const styles = {
   container: {
-    pt: 10,
-    pb: 6,
+    mt: 10,
+  },
+  item: {
+    py: 4,
   },
 };
 

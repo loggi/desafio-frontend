@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Link from '@/components/Link';
 import Container from '@mui/material/Container';
+import Link from '@/components/Link';
 import Copyright from '@/components/Copyright';
 import LINKS from '@/locales/footer';
 

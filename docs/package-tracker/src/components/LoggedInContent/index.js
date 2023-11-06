@@ -1,14 +1,16 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { Typography, Button } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
 import LOCALES from '@/locales/navigation';
 
 const { AUTH } = LOCALES;
 
 const LoggedInContent = ({ setIsLogged }) => {
+  const isMobile = useMediaQuery('(max-width:768px)');
+
   return (
-    <div style={styles.container}>
+    <div style={isMobile ? styles.mobileContainer : styles.desktopContainer}>
       <Typography component="p" sx={styles.loginContent}>
         {AUTH.WELCOME}
       </Typography>
@@ -20,12 +22,20 @@ const LoggedInContent = ({ setIsLogged }) => {
 };
 
 const styles = {
-  container: {
+  desktopContainer: {
+    display: 'flex',
+    flex: 2,
+    width: 250,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  mobileContainer: {
     display: 'flex',
     flex: 2,
     width: 240,
-    justifyContent: 'space-between',
     alignItems: 'center',
+    marginHorizontal: 10,
+    paddingHorizontal: 20,
   },
   loginContent: {
     px: 2,

@@ -1,6 +1,5 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
+import { AppBar, Toolbar } from '@mui/material';
 import AccountMenu from '@/components/AccountMenu';
 import LogoIcon from '@/components/LogoIcon';
 
