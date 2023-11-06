@@ -1,4 +1,6 @@
-export function generateSVG(width, height) {
+import React from 'react';
+
+export function generateSVG() {
   const svg = `
   <svg width="123px" height="38px" viewBox="0 0 123 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
