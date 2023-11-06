@@ -16,7 +16,12 @@ const HomePage = () => {
     } catch (err) {}
   };
   return (
-    <Grid container spacing={10} justifyContent="space-between">
+    <Grid
+      container
+      spacing={10}
+      justifyContent="space-between"
+      alignItems="center"
+    >
       <Grid item xs={12} sm={12} md={6}>
         <Typography
           variant="h5"
