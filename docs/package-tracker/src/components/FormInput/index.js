@@ -39,7 +39,7 @@ function FormInput({ labelText, buttonText }) {
 
 const styles = {
   form: {
-    witdh: '100%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
