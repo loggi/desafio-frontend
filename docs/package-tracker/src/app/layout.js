@@ -21,12 +21,6 @@ const MetaTags = ({ title, description, keywords, author }) => (
   </>
 );
 
-if (process.env.SENTRY_KEY) {
-  Sentry.init({
-    dsn: process.env.SENTRY_KEY,
-  });
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -1,5 +1,7 @@
 # **Desafio - Rastreador de Pacotes**
 
+Demo: [link para hospedagem vercel](https://desafio-frontend-focvnnc3s-alalbux.vercel.app/)
+
 ## **Descrição**
 
 Este repositório apresenta a aplicação resultante de um desafio, que inicialmente tinha como objetivo redesenhar a tela de rastreamento de pacotes.
@@ -185,7 +187,7 @@ make clean
 
 Gostaria de expressar minha gratidão por ter a oportunidade de participar do processo seletivo. O desafio foi uma experiência desafiadora e enriquecedora.
 
-Iniciei o desenvolvimento usando o template fornecido no projeto. Inicialmente, enfrentei algumas dificuldades devido à minha falta de familiaridade com a biblioteca de componentes, o que acabou resultando em um tempo de desenvolvimento um pouco mais longo do que o planejado. Reconheço que não consegui atingir o padrão de estilo desejado para o projeto.
+Iniciei o desenvolvimento usando o template fornecido no projeto. Inicialmente, enfrentei algumas dificuldades devido à minha falta de familiaridade com a biblioteca de componentes do material ui, o que acabou resultando em um tempo de desenvolvimento um pouco mais longo do que o planejado. Normalmente acabo trabalhando mais com componentes customizado. Reconheço que não consegui atingir o padrão de estilo desejado para o projeto.
 
 Ao trabalhar no design, optei por criar um visual mais limpo, aderindo à paleta de cores branca e azul da Loggi. Além disso, projetei a caixa de pesquisa de código de rastreamento na lateral direita da tela para melhorar a usabilidade. Essa decisão é para dar mais destaque ao campo de busca, tornando a mensagem da caixa de pesquisa mais visível. Embora tenha tentado aplicar design tokens, não consegui manter a consistência ao longo do projeto, principalmente em termos de espaçamento, tamanho de fonte/estilos de tipografia e cores.
 
