@@ -121,7 +121,6 @@ const Navigation = () => {
 const styles = {
   container: {
     display: 'flex',
-    flexDirection: 'row-reverse',
     alignItems: 'center',
   },
   mobileMenuItem: {

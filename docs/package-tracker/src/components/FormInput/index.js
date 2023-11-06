@@ -21,7 +21,7 @@ function FormInput({ labelText, buttonText }) {
         fullWidth
         value={inputValue}
         onChange={handleInputChange}
-        id="tracking-code-input" // Add an ID for accessibility
+        id="tracking-code-input"
         sx={styles.button}
       />
       <Button
