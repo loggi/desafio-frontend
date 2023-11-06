@@ -1,7 +1,7 @@
 import React from "react";
 
 import HeaderBar from "@/components/Header";
-import { MainContainer } from "@/components/Container";
+import { MainContainer } from "@/components";
 
 export const metadata = {
   title: "Loggi",

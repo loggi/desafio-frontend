@@ -10,10 +10,14 @@ export function MediaCard({
   heading,
   text,
   img,
+  style,
+  loginButton,
 }: {
   heading?: string;
   text?: string;
   img: StaticImageData;
+  style?: object;
+  loginButton?: boolean;
 }) {
   return (
     <Box>
@@ -26,6 +30,7 @@ export function MediaCard({
           maxWidth: "100%",
           height: "100%",
           objectFit: "cover",
+          ...style,
         }}
       />
       <CardContent>
@@ -36,9 +41,11 @@ export function MediaCard({
           {text}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Login</Button>
-      </CardActions>
+      {loginButton && (
+        <CardActions>
+          <Button size="small">Login</Button>
+        </CardActions>
+      )}
     </Box>
   );
 }

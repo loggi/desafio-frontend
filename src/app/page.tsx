@@ -29,7 +29,7 @@ const HomePage = () => {
           marginBottom={2}
           color="GrayText"
         >
-          Acompanhe seu pedido
+          Rastreie seu pedido
         </Typography>
         <SelectFilter onSubmit={handleOnSubmitForm} />
       </Grid>
@@ -37,7 +37,7 @@ const HomePage = () => {
         <Hidden smDown>
           <MediaCard
             img={SearchPackage}
-            text="Buscando mais facilidade? Faça login e tenha tudo em um unico lugar!"
+            text="Buscando mais facilidade? Faça login e tenha tudo em um só lugar!"
           />
         </Hidden>
       </Grid>

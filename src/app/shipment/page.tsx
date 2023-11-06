@@ -1,10 +1,22 @@
-import * as React from "react";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { Steps } from "@/components";
+import { Box, Grid, Typography } from "@mui/material";
 
-export default function PackDetails() {
+export default function ShipmentDetails() {
   return (
-    <Typography variant="body1" gutterBottom>
-      Aqui vem os detalhes do pacote
-    </Typography>
+    <Grid container justifyContent="center">
+      <Box justifyContent="center" alignContent="center" marginBottom={5}>
+        <Typography align="center" variant="h5" marginBottom={1}>
+          Acompanhe seu pacote
+        </Typography>
+        <Typography align="center" variant="subtitle2">
+          Rapido, Fácil e Intuitivo. Aqui voce encontra todos os detalhes do seu
+          pacote!
+        </Typography>
+      </Box>
+      <Grid item md={12} marginBottom={10}>
+        <Steps />
+      </Grid>
+    </Grid>
   );
 }
