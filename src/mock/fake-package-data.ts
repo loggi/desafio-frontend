@@ -1,3 +1,4 @@
+const userCPF = "00011122233";
 const fakePackageData = [
   {
     id: "1",
@@ -8,7 +9,7 @@ const fakePackageData = [
     status: "Delivered",
     currentLocation: "Rio de Janeiro, RJ",
     shipmentType: "Standard",
-    userCpf: "000.111.222-33",
+    userCpf: userCPF,
     items: [
       {
         name: "Product A",
@@ -28,12 +29,12 @@ const fakePackageData = [
     id: "2",
     trackingNumber: "TRK987654321",
     origin: "Belo Horizonte, MG",
-    destination: "São Paulo, SP",
+    destination: "Rio de Janeiro, RJ",
     estimatedDeliveryDate: "2023-11-15",
     status: "In Transit",
     currentLocation: "Campinas, SP",
     shipmentType: "Express",
-    userCpf: "000.111.222-33",
+    userCpf: userCPF,
     items: [
       {
         name: "Product C",
@@ -53,12 +54,12 @@ const fakePackageData = [
     id: "3",
     trackingNumber: "TRK567890123",
     origin: "Curitiba, PR",
-    destination: "Florianópolis, SC",
+    destination: "Rio de Janeiro, RJ",
     estimatedDeliveryDate: "2023-11-14",
     status: "Out for Delivery",
     currentLocation: "Joinville, SC",
     shipmentType: "Standard",
-    userCpf: "000.111.222-33",
+    userCpf: userCPF,
     items: [
       {
         name: "Product E",

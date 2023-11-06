@@ -4,14 +4,14 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { SearchPackage } from "@/assets";
 import { Hidden } from "@mui/material";
-import { SelectFilter, MediaCard } from "@/components";
+import { SelectFilter, MediaCard, ShipmentList } from "@/components";
 import { getShipmentByPost } from "@/service";
 
 const HomePage = () => {
   const [shipment, setShipment] = useState([]);
   const handleOnSubmitForm = async (filterType: string, value: string) => {
     try {
-      const data = await getShipmentByPost(filterType, value);
+      const { data } = await getShipmentByPost(filterType, value);
       setShipment(data);
     } catch (err) {}
   };
@@ -40,6 +40,9 @@ const HomePage = () => {
             text="Buscando mais facilidade? Faça login e tenha tudo em um unico lugar!"
           />
         </Hidden>
+      </Grid>
+      <Grid item xs={12} sm={12} md={12}>
+        {shipment.length > 0 && <ShipmentList shipments={shipment} />}
       </Grid>
     </Grid>
   );

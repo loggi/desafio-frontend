@@ -8,6 +8,7 @@ const fakeUserData = {
   role: "user",
   address: "123 Main St, City, Country",
   phone: "123-456-7890",
+  cpf: "00011122233",
 };
 
 export { fakeUserData };
