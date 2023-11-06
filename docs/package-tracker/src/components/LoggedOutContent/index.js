@@ -7,7 +7,7 @@ const { AUTH } = LOCALES;
 
 const LoggedOutContent = ({ setIsLogged }) => {
   return (
-    <div>
+    <div style={styles.container}>
       <Button
         variant="button"
         color="text.primary"
@@ -20,6 +20,16 @@ const LoggedOutContent = ({ setIsLogged }) => {
       </Button>
     </div>
   );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flex: 2,
+    width: 240,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 };
 
 export default LoggedOutContent;

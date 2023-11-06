@@ -1,132 +1,159 @@
 import React, { useState } from 'react';
-import IconButton from '@mui/material/IconButton';
+import {
+  IconButton,
+  Menu,
+  MenuItem,
+  Button,
+  Box,
+  Paper,
+  useMediaQuery,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useMediaQuery, useTheme } from '@mui/material';
-import Link from '@/components/Link';
-import Button from '@mui/material/Button';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
+import MenuMobile from '@/components/MenuMobile';
 import LOCALES from '@/locales/navigation';
 
-const { MENU, MOBILE_MENU } = LOCALES;
+const { MENU } = LOCALES;
 
 const Navigation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState(null);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [submenuOpen, setSubmenuOpen] = useState(null);
+
+  const isMobile = useMediaQuery('(max-width:768px)');
 
   const toggleDrawer = (open) => () => {
     setIsDrawerOpen(open);
   };
 
-  const handleMouseEnter = (index) => {
-    setActiveSubmenu(index);
+  const openMobileMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+    toggleDrawer(true);
+  };
+
+  const closeMobileMenu = () => {
+    setAnchorEl(null);
+  };
+
+  const handleSubmenuOpen = (subItems) => {
+    setSubmenuOpen(subItems);
+  };
+
+  const handleSubmenuClose = () => {
+    setSubmenuOpen(null);
+  };
+
+  const handleMouseEnter = (subItems) => {
+    setSubmenuOpen(subItems);
   };
 
   const handleMouseLeave = () => {
-    setActiveSubmenu(null);
+    setSubmenuOpen(null);
   };
 
-  const renderMobileMenuButton = () => (
-    <IconButton
-      color="text.primary"
-      edge="start"
-      aria-label="menu"
-      onClick={toggleDrawer(true)}
-    >
-      <MenuIcon />
-    </IconButton>
-  );
-
-  const MenuItem = ({ item, index }) => (
-    <div
-      style={{ position: 'relative', margin: '0 1.5rem' }}
-      onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
-    >
-      <Button variant="text">{item.text}</Button>
-      {activeSubmenu === index && item.submenu && (
-        <SubMenu items={item.submenu} />
-      )}
-    </div>
-  );
-
-  const SubMenu = ({ items }) => {
+  const renderMobileMenu = () => {
     return (
-      <div style={submenuStyles.container}>
-        {items.map((subitem, subindex) => (
-          <div key={subindex}>
-            <Link sx={menuStyles.link} href={subitem.redirection}>
-              {subitem.text}
-            </Link>
+      <>
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={openMobileMenu}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={closeMobileMenu}
+        >
+          {MENU.map((menuItem, indexMobile) => (
+            <MenuItem
+              key={indexMobile}
+              onClick={() => handleSubmenuOpen(menuItem.submenu)}
+              onMouseEnter={() => handleMouseEnter(menuItem.submenu)}
+              onMouseLeave={handleMouseLeave}
+              sx={styles.mobileMenuItem}
+            >
+              {menuItem.label}
+            </MenuItem>
+          ))}
+        </Menu>
+      </>
+    );
+  };
+
+  const renderDesktopMenu = () => {
+    return (
+      <>
+        {MENU.map((menuItem, index) => (
+          <div
+            key={index}
+            sx={styles.desktopMenuItem}
+            onMouseEnter={() => handleSubmenuOpen(menuItem.submenu)}
+            onMouseLeave={handleSubmenuClose}
+          >
+            <Button variant="text">{menuItem.label}</Button>
+            {submenuOpen === menuItem.submenu &&
+              menuItem.submenu.length > 0 && (
+                <Paper sx={styles.submenu}>
+                  {menuItem.submenu.map((subItem, subIndex) => (
+                    <MenuItem
+                      key={subIndex}
+                      component="a"
+                      href={subItem.redirection}
+                    >
+                      {subItem.label}
+                    </MenuItem>
+                  ))}
+                </Paper>
+              )}
           </div>
         ))}
-      </div>
+      </>
     );
   };
-
-  const MenuMobile = () => {
-    return (
-      <Drawer anchor="top" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-        <List>
-          {MOBILE_MENU.map((item, index) => (
-            <ListItem key={item.text} onClick={toggleDrawer(false)}>
-              <Link
-                variant="button"
-                color="text.primary"
-                href={item.description}
-              >
-                {item.text}
-              </Link>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-    );
-  };
-
-  const renderDesktopMenu = () => (
-    <div style={{ display: 'flex' }}>
-      {MENU.map((item, index) => (
-        <MenuItem key={index} item={item} index={index} />
-      ))}
-    </div>
-  );
 
   return (
-    <nav>
-      {isMobile ? renderMobileMenuButton() : renderDesktopMenu()}
+    <div>
+      <Box sx={styles.container}>
+        {isMobile ? renderMobileMenu() : renderDesktopMenu()}
+      </Box>
+
       <MenuMobile
         isDrawerOpen={isDrawerOpen}
+        toggleDrawer={toggleDrawer}
         isOpen={isDrawerOpen}
-        toggleDrawer={toggleDrawer()}
       />
-    </nav>
+    </div>
   );
 };
 
-const menuStyles = {
-  link: {
-    my: 1,
-  },
-  button: {
-    my: 1,
-  },
-};
-
-const submenuStyles = {
+const styles = {
   container: {
-    position: 'absolute',
-    top: '100%',
-    left: '0',
-    zIndex: 2,
-    backgroundColor: 'white',
-    border: '1px solid #ccc',
     display: 'flex',
-    flexDirection: 'row',
-    padding: '0.5rem',
+  },
+  mobileMenuItem: {
+    display: 'block',
+    '&:hover': {
+      backgroundColor: '#FCFCFC',
+    },
+  },
+  desktopMenuItem: {
+    position: 'relative',
+    display: 'block',
+    '&:hover': {
+      backgroundColor: '#FCFCFC',
+    },
+  },
+  submenu: {
+    position: 'absolute',
+    top: 50,
+    zIndex: 999,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 4,
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 2,
   },
 };
 

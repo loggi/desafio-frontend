@@ -8,7 +8,7 @@ const AccountMenu = () => {
   const [isLogged, setIsLogged] = useState(false);
 
   return (
-    <div>
+    <div style={styles.container}>
       <Navigation data-testid="navigation" />
       {isLogged ? (
         <LoggedInContent
@@ -23,6 +23,12 @@ const AccountMenu = () => {
       )}
     </div>
   );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+  },
 };
 
 export default AccountMenu;
