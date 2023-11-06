@@ -1,17 +1,14 @@
 'use client';
-import { useState } from 'react';
-import Link from '@mui/material/Link';
+import React from 'react';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import Link from '@mui/material/Link';
+import LOCALES from '@/locales/navigation';
 
-const MenuMobile = ({ isOpen }) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+const { MENU } = LOCALES;
 
-  const toggleDrawer = (open) => () => {
-    setIsDrawerOpen(open);
-  };
-
+const MenuMobile = ({ isDrawerOpen, toggleDrawer, isOpen }) => {
   return (
     <Drawer
       anchor="top"
@@ -19,36 +16,13 @@ const MenuMobile = ({ isOpen }) => {
       onClose={toggleDrawer(false)}
     >
       <List>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Para você
-          </Link>
-        </ListItem>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Para empresas
-          </Link>
-        </ListItem>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Para entregar
-          </Link>
-        </ListItem>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Venda e suporte
-          </Link>
-        </ListItem>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Acompanha seu pedido
-          </Link>
-        </ListItem>
-        <ListItem button onClick={toggleDrawer(false)}>
-          <Link variant="button" color="text.primary" href="#">
-            Entrar
-          </Link>
-        </ListItem>
+        {MENU.map((item, index) => (
+          <ListItem key={item.text} onClick={toggleDrawer(false)}>
+            <Link variant="button" color="text.primary" href={item.description}>
+              {item.text}
+            </Link>
+          </ListItem>
+        ))}
       </List>
     </Drawer>
   );
