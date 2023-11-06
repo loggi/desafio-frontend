@@ -1,4 +1,6 @@
+import { HOME, SHIPMENT_PAGE } from "@/config/route-utils";
+
 export const navItems = [
-  { label: "Inicio", link: "/" },
-  { label: "Detalhes", link: process.env.NEXT_PUBLIC_SHIPMENT_PAGE },
+  { label: "Inicio", link: HOME },
+  { label: "Pedidos", link: SHIPMENT_PAGE },
 ];

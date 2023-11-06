@@ -1,23 +1,31 @@
-import * as React from 'react';
-import Image from 'next/image';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Image, { StaticImageData } from "next/image";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 
-export default function MediaCard({ heading, text }: { heading: string; text: string }) {
+export function MediaCard({
+  heading,
+  text,
+  img,
+}: {
+  heading?: string;
+  text?: string;
+  img: StaticImageData;
+}) {
   return (
-    <Card>
+    <Box>
       <Image
         alt="Random image"
-        src="https://source.unsplash.com/random"
+        src={img}
         width={640}
         height={480}
         style={{
-          maxWidth: '100%',
-          height: '200px',
-          objectFit: 'cover',
+          maxWidth: "100%",
+          height: "100%",
+          objectFit: "cover",
         }}
       />
       <CardContent>
@@ -29,9 +37,8 @@ export default function MediaCard({ heading, text }: { heading: string; text: st
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Login</Button>
       </CardActions>
-    </Card>
+    </Box>
   );
 }

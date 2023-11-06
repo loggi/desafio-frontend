@@ -8,7 +8,7 @@ const fakePackageData = [
     status: "Delivered",
     currentLocation: "Rio de Janeiro, RJ",
     shipmentType: "Standard",
-    userId: 1,
+    userCpf: "000.111.222-33",
     items: [
       {
         name: "Product A",
@@ -33,7 +33,7 @@ const fakePackageData = [
     status: "In Transit",
     currentLocation: "Campinas, SP",
     shipmentType: "Express",
-    userId: 1,
+    userCpf: "000.111.222-33",
     items: [
       {
         name: "Product C",
@@ -58,7 +58,7 @@ const fakePackageData = [
     status: "Out for Delivery",
     currentLocation: "Joinville, SC",
     shipmentType: "Standard",
-    userId: 1,
+    userCpf: "000.111.222-33",
     items: [
       {
         name: "Product E",

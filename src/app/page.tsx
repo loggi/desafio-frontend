@@ -1,15 +1,23 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { SearchPackage } from "@/assets";
-import Image from "next/image";
 import { Hidden } from "@mui/material";
-import { SelectFilter } from "@/components";
+import { SelectFilter, MediaCard } from "@/components";
+import { getShipmentByPost } from "@/service";
+
 const HomePage = () => {
+  const [shipment, setShipment] = useState([]);
+  const handleOnSubmitForm = async (filterType: string, value: string) => {
+    try {
+      const data = await getShipmentByPost(filterType, value);
+      setShipment(data);
+    } catch (err) {}
+  };
   return (
-    <Grid container spacing={12}>
-      <Grid item xs={12} sm={12} md={8}>
+    <Grid container spacing={10} justifyContent="space-between">
+      <Grid item xs={12} sm={12} md={6}>
         <Typography
           variant="h5"
           component="div"
@@ -18,11 +26,14 @@ const HomePage = () => {
         >
           Acompanhe seu pedido
         </Typography>
-        <SelectFilter onSubmit={(filter, value) => {}} />
+        <SelectFilter onSubmit={handleOnSubmitForm} />
       </Grid>
-      <Grid item xs={12} sm={12} md={4} lg={4}>
+      <Grid item xs={12} sm={12} md={4}>
         <Hidden smDown>
-          <Image src={SearchPackage} alt="Search Package" />
+          <MediaCard
+            img={SearchPackage}
+            text="Buscando mais facilidade? Faça login e tenha tudo em um unico lugar!"
+          />
         </Hidden>
       </Grid>
     </Grid>
