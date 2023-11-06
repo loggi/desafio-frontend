@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copyright matches the snapshot 1`] = `
+<div>
+  <p
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+  >
+    Copyright © 
+    <a
+      class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-17f0go1-MuiTypography-root-MuiLink-root"
+      data-testid="link"
+    />
+     
+    2023
+    .
+  </p>
+</div>
+`;
