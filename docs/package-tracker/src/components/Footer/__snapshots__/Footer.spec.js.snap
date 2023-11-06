@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match the snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="MuiContainer-root MuiContainer-maxWidthLg css-1ks4v4o-MuiContainer-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-hwacae-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item css-elk0q-MuiGrid-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-93ilsc-MuiTypography-root"
+        >
+          Para você
+        </h6>
+        <ul>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Entregador via aplicativo
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-elk0q-MuiGrid-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-93ilsc-MuiTypography-root"
+        >
+          Para empresas
+        </h6>
+        <ul>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Entregador para escritórios
+            </a>
+          </li>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Soluções para varejo
+            </a>
+          </li>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Entrega para e-commerces
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-elk0q-MuiGrid-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-93ilsc-MuiTypography-root"
+        >
+          Para entregar
+        </h6>
+        <ul>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Seja uma Transportadora Leve
+            </a>
+          </li>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Seja um entregador
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-elk0q-MuiGrid-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-93ilsc-MuiTypography-root"
+        >
+          Loggi
+        </h6>
+        <ul>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Trabalhe conosco
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item css-elk0q-MuiGrid-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-93ilsc-MuiTypography-root"
+        >
+          Dúvidas
+        </h6>
+        <ul>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              loggi.com/ajuda
+            </a>
+          </li>
+          <li>
+            <a
+              class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-7ei8qr-MuiTypography-root-MuiLink-root"
+              data-testid="link"
+            >
+              Imprensa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-1vl95ex-MuiTypography-root"
+    >
+      Copyright © 
+      <a
+        class="MuiTypography-root MuiTypography-button MuiLink-root MuiLink-underlineNone css-17f0go1-MuiTypography-root-MuiLink-root"
+        data-testid="link"
+      />
+       2023.
+    </p>
+  </footer>
+</DocumentFragment>
+`;
