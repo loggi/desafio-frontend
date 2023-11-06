@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run"
+    "test:unit": "vitest run"
   },
   "dependencies": {
     "@emotion/cache": "latest",

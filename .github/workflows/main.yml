@@ -61,28 +61,28 @@ jobs:
       - name: 🔎 Type check
         run: npm run typecheck --if-present
 
-  # tests:
-  #   name: Unit tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 🛑 Cancel Previous Runs
-  #       uses: styfle/cancel-workflow-action@0.11.0
+  test:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
 
-  #     - name: ⬇️ Checkout repo
-  #       uses: actions/checkout@v3
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
-  #     - name: ⎔ Setup node
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-  #     - name: 📥 Download deps
-  #       uses: bahmutov/npm-install@v1
-  #       with:
-  #         useLockFile: false
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
 
-  #     - name: Running test
-  #       run: npm run test:unit
+      - name: Running test
+        run: npm run test:unit
 
   # test-e2e:
   #   needs: ["tests"]
@@ -114,7 +114,7 @@ jobs:
   #         retention-days: 30
 
   build-deploy-preview:
-    needs: [typecheck]
+    needs: [test]
     runs-on: ubuntu-latest
     if: ${{ success() }}
     steps:
