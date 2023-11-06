@@ -1,5 +1,13 @@
 # Desafio Loggi
 
+## Important Information
+
+* [Technical Specification](https://www.notion.so/Loggi-Challenge-436129ef534d4c4b9ff0b8c69b92b0a2?pvs=4)
+
+* [User Experience Flow](https://www.figma.com/file/L2ayTwZDoTshDk2bIFysdr/Loggi-Challenge?type=whiteboard&node-id=0%3A1&t=GMKF9KaXx3IsjFe2-1)
+
+* [Kanban Board](https://www.notion.so/5ffa03c3ea26491f92b5f40a86b3db54?v=4fa9f66e3b224449bb999a27db18eeff&pvs=4)
+
 ## How to use
 
 Clone this repo
