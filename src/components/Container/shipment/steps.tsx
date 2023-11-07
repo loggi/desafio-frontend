@@ -22,12 +22,13 @@ export function Steps({ activeSteps }: TSteps) {
     <Box sx={{ width: "100%" }}>
       <Hidden smDown>
         <Stepper
+          data-testid="parent-step"
           alternativeLabel
           activeStep={step}
           connector={<ColorlibConnector />}
         >
           {steps.map((label) => (
-            <Step key={label}>
+            <Step key={label} data-testid={`child-step-${label}`}>
               <StepLabel StepIconComponent={ColorlibStepIcon}>
                 {label}
               </StepLabel>

@@ -11,17 +11,11 @@ export class PlayConfigPage {
     await this.page.close();
   }
 
-  async goto() {
-    await this.page.goto("http://localhost:3000/");
+  async goto(route: string = "/") {
+    await this.page.goto("http://localhost:3000" + route);
   }
 
-  async commonHomeAssertions() {
-    await expect(
-      this.page.getByRole("button", { name: /Home/i })
-    ).toBeVisible();
-
-    await expect(this.page.getByText(/Loggi/i)).toBeVisible();
-
+  async homeContentAssertion() {
     //image
     await expect(
       this.page.getByText(
@@ -33,7 +27,15 @@ export class PlayConfigPage {
         name: /random image/i,
       })
     ).toBeVisible();
+  }
 
+  async appAssertion() {
+    //header
+    await expect(
+      this.page.getByRole("button", { name: /Home/i })
+    ).toBeVisible();
+
+    await expect(this.page.getByText(/Loggi/i)).toBeVisible();
     //footer
     await expect(this.page.getByRole("contentinfo")).toBeVisible();
   }

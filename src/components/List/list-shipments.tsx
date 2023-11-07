@@ -30,7 +30,7 @@ const TableHeaderCell = ({ children }: { children: React.ReactNode }) => (
 
 export const ShipmentList: React.FC<ListProps> = ({ shipments, onClick }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="shipment-table">
       <Table
         style={{
           backgroundColor: colors.blue[600],

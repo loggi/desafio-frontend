@@ -7,8 +7,9 @@ test.describe("Home Page", () => {
     ConfigPage = new PlayConfigPage(page);
     await ConfigPage.goto();
   });
-  test("should open home page properly ", async ({ page }) => {
-    await ConfigPage.commonHomeAssertions();
+  test("should open home page properly ", async () => {
+    await ConfigPage.appAssertion();
+    await ConfigPage.homeContentAssertion();
   });
 
   test("should show error by type wrong code ", async ({ page }) => {

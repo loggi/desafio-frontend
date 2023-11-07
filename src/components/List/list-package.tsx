@@ -28,7 +28,7 @@ const TableHeaderCell = ({ children }: { children: React.ReactNode }) => (
 
 export const PackageDetailsList: React.FC<ListProps> = ({ packages }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="package-table">
       <Table
         style={{
           backgroundColor: colors.blue[600],
