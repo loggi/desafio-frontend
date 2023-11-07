@@ -1,6 +1,3 @@
-import { HOME, SHIPMENT_PAGE } from "@/config/route-utils";
+import { HOME } from "@/config/route-utils";
 
-export const navItems = [
-  { label: "Inicio", link: HOME },
-  { label: "Pedidos", link: SHIPMENT_PAGE },
-];
+export const navItems = [{ label: "Home", link: HOME }];
