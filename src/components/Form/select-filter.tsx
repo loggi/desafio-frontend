@@ -49,7 +49,7 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
           fullWidth
         >
           <MenuItem value={"cpf"}>CPF</MenuItem>
-          <MenuItem value={"code"}>Code</MenuItem>
+          <MenuItem value={"code"}>Código</MenuItem>
         </Select>
       </Box>
       {filter === "code" ? (

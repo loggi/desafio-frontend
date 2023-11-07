@@ -44,7 +44,7 @@ test.describe("Home Page", () => {
     });
     await expect(combobox).toBeVisible();
     combobox.click(); //opening the combobox
-    const optionCode = await page.getByRole("option", { name: /code/i });
+    const optionCode = await page.getByRole("option", { name: /Código/i });
     const optionCpf = await page.getByRole("option", { name: /CPF/i });
     await expect(optionCode).toBeVisible();
     await expect(optionCpf).toBeVisible();

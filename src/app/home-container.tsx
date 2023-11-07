@@ -3,12 +3,24 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { SearchPackage } from "@/assets";
-import { Alert, AlertTitle, Hidden } from "@mui/material";
+import { Alert, AlertTitle, Box, Hidden, colors } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { SelectFilter, MediaCard, ShipmentList } from "@/components";
 import { getShipmentByPost } from "@/service";
 import { Shipment } from "@/types/Shipment";
 import { SHIPMENT_PAGE } from "@/config/route-utils";
+
+const Subtitle = ({
+  children,
+  color,
+}: {
+  children: React.ReactNode;
+  color: any;
+}) => (
+  <Typography variant="subtitle2" component="div" color={color}>
+    {children}
+  </Typography>
+);
 
 const HomeContainer = () => {
   const router = useRouter();
@@ -47,6 +59,16 @@ const HomeContainer = () => {
         >
           Rastreie seu pedido
         </Typography>
+        <Box marginBottom={3} marginTop={2}>
+          <Subtitle color="GrayText">Para pesquisar é simples</Subtitle>
+          <Subtitle color={colors.blue[500]}>
+            1 - Selecione <strong> Codigo</strong> ou <strong> CPF</strong>
+          </Subtitle>
+          <Subtitle color={colors.blue[500]}>
+            2 - Digita o valor de acordo com o campo selecionado
+          </Subtitle>
+          <Subtitle color={colors.blue[500]}>3 - Clique em buscar</Subtitle>
+        </Box>
         <SelectFilter onSubmit={handleOnSubmitForm} />
       </Grid>
       <Hidden smDown>

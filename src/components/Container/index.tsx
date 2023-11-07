@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 /**
  * should be used only once in the root app/layout or if you need to override
@@ -9,15 +9,14 @@ import { Box } from "@mui/material";
 
 export function MainContainer({ children }: { children: React.ReactNode }) {
   return (
-    <Box
+    <Container
       sx={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
       }}
+      style={{ minHeight: "100vh", overflow: "auto", paddingTop: "7%" }}
     >
       {children}
-    </Box>
+    </Container>
   );
 }
