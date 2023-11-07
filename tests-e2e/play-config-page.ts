@@ -15,17 +15,20 @@ export class PlayConfigPage {
     await expect(
       this.page.getByRole("button", { name: /Home/i })
     ).toBeVisible();
+
     await expect(this.page.getByText(/Loggi/i)).toBeVisible();
 
     //image
-    const imageDescription = await this.page.getByText(
-      "buscando mais facilidade? faça login e tenha tudo em um só lugar!"
-    );
-    const image = await this.page.getByRole("img", {
-      name: /random image/i,
-    });
-    expect(imageDescription).toBeVisible();
-    expect(image).toBeVisible();
+    await expect(
+      this.page.getByText(
+        "buscando mais facilidade? faça login e tenha tudo em um só lugar!"
+      )
+    ).toBeVisible();
+    await expect(
+      this.page.getByRole("img", {
+        name: /random image/i,
+      })
+    ).toBeVisible();
 
     //footer
     await expect(this.page.getByRole("contentinfo")).toBeVisible();
