@@ -66,7 +66,11 @@ export const ShipmentList: React.FC<ListProps> = ({ shipments, onClick }) => {
               <TableCell>{shipment.destination}</TableCell>
               {onClick && (
                 <TableCell>
-                  <Button variant="outlined" color="primary">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={() => onClick(shipment)}
+                  >
                     Ver Mais
                   </Button>
                 </TableCell>
