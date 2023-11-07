@@ -31,3 +31,5 @@ export enum DeliveryStatus {
 }
 
 export type Shipment = z.infer<typeof packageSchema>;
+
+export type Package = z.infer<typeof itemSchema>;

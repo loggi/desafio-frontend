@@ -1,5 +1,5 @@
 import React from "react";
-import { Steps, ShipmentList } from "@/components";
+import { Steps, ShipmentList, PackageDetailsList } from "@/components";
 import { Box, Grid, Typography } from "@mui/material";
 import { getShipmentByGet } from "@/service";
 
@@ -26,6 +26,9 @@ export default async function ShipmentDetails({
       </Grid>
       <Grid item md={12} xs={12} sm={12}>
         <ShipmentList shipments={data} />
+      </Grid>
+      <Grid item md={12} xs={12} sm={12} marginTop={5}>
+        <PackageDetailsList packages={data[0].items} />
       </Grid>
     </Grid>
   );
