@@ -69,6 +69,7 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
 
       <Box>
         <Button
+          disabled={filter === "cpf" ? value.length < 11 : value.length < 5}
           variant="contained"
           color="primary"
           onClick={() => onSubmit(filter, value)}

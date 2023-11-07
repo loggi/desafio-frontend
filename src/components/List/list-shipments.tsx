@@ -70,6 +70,7 @@ export const ShipmentList: React.FC<ListProps> = ({ shipments, onClick }) => {
                     variant="outlined"
                     color="primary"
                     onClick={() => onClick(shipment)}
+                    data-testid={`btn-vermais-${shipment.trackingNumber}`}
                   >
                     Ver Mais
                   </Button>
