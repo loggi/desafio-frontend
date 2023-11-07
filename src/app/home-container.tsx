@@ -20,6 +20,8 @@ const HomeContainer = () => {
       const { data } = await getShipmentByPost(filterType, value);
       if (!data.length) {
         setOpenAlert(true);
+      } else {
+        setOpenAlert(false);
       }
       setShipment(data);
     } catch (err) {}
