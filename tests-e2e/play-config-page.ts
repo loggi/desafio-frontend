@@ -17,11 +17,11 @@ export class PlayConfigPage {
 
   async homeContentAssertion() {
     //image
-    await expect(
-      this.page.getByText(
-        "buscando mais facilidade? faça login e tenha tudo em um só lugar!"
-      )
-    ).toBeVisible();
+    // await expect(
+    //   this.page.getByText(
+    //     "buscando mais facilidade? faça login e tenha tudo em um só lugar!"
+    //   )
+    // ).toBeVisible();
     await expect(
       this.page.getByRole("img", {
         name: /random image/i,

@@ -12,7 +12,7 @@ test.describe("Home Page", () => {
     await ConfigPage.homeContentAssertion();
   });
 
-  test("should show error by type wrong code ", async ({ page }) => {
+  test("should show error after type wrong code ", async ({ page }) => {
     await expect(
       page.getByRole("button", { name: /pesquisar/i })
     ).toBeDisabled(); // check if the button is disabled
@@ -21,7 +21,7 @@ test.describe("Home Page", () => {
       .getByRole("textbox", {
         name: /digite o código do pedido/i,
       })
-      .fill("123456789101"); // fill input with wrong code
+      .fill("TRK123456781"); // fill input with wrong code
 
     await expect(
       page.getByRole("button", { name: /pesquisar/i })
@@ -32,7 +32,9 @@ test.describe("Home Page", () => {
     await expect(page.getByText(/ooooops!/i)).toBeVisible();
   });
 
-  test("should show response by search using CPF", async ({ page }) => {
+  test("should show response table after search using CPF", async ({
+    page,
+  }) => {
     //content
     await expect(page.getByText(/rastreie seu pedido/i)).toBeVisible();
 

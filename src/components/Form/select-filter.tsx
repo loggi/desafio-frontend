@@ -11,6 +11,7 @@ import {
   Select,
   SelectChangeEvent,
 } from "@mui/material";
+import { TextCpfComponent, TextCodeComponent } from "./custom-masked-input";
 
 type TSelectFilter = {
   onSubmit: (filterType: string, inputValue: string) => void;
@@ -19,6 +20,14 @@ type TSelectFilter = {
 export function SelectFilter({ onSubmit }: TSelectFilter) {
   const [filter, setSelectFilter] = useState("code");
   const [value, setValue] = useState("");
+
+  const formatValue = (value: string) => {
+    if (filter === "cpf") {
+      return value.replace(new RegExp(/[^a-z0-9]/gi), "");
+    } else {
+      return value.toUpperCase();
+    }
+  };
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue("");
@@ -51,7 +60,8 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
             variant="outlined"
             fullWidth
             value={value}
-            onChange={(evt) => setValue(evt.target.value)}
+            onChange={(evt) => setValue(evt.target.value.toUpperCase())}
+            InputProps={{ inputComponent: TextCodeComponent as any }}
           />
         </Box>
       ) : (
@@ -63,16 +73,19 @@ export function SelectFilter({ onSubmit }: TSelectFilter) {
             fullWidth
             value={value}
             onChange={(evt) => setValue(evt.target.value)}
+            InputProps={{
+              inputComponent: TextCpfComponent as any,
+            }}
           />
         </Box>
       )}
 
       <Box>
         <Button
-          disabled={filter === "cpf" ? value.length < 11 : value.length < 5}
+          disabled={filter === "cpf" ? value.length < 14 : value.length < 12}
           variant="contained"
           color="primary"
-          onClick={() => onSubmit(filter, value)}
+          onClick={() => onSubmit(filter, formatValue(value))}
         >
           Pesquisar
         </Button>

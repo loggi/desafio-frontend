@@ -61,7 +61,7 @@ const fakePackageData = [
     destination,
     estimatedDeliveryDate: "2023-11-14",
     status: DeliveryStatus.OUT_FOR_DELIVERY,
-    currentLocation: "Joinville, SC",
+    currentLocation: destination,
     shipmentType: "Standard",
     userCpf: userCPF,
     items: [

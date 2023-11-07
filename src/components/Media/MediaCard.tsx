@@ -34,12 +34,16 @@ export function MediaCard({
         }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {heading}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {text}
-        </Typography>
+        {heading && (
+          <Typography gutterBottom variant="h5" component="div">
+            {heading}
+          </Typography>
+        )}
+        {text && (
+          <Typography variant="body2" color="text.secondary">
+            {text}
+          </Typography>
+        )}
       </CardContent>
       {loginButton && (
         <CardActions>

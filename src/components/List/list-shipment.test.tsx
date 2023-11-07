@@ -42,7 +42,7 @@ describe("Shipment List", () => {
       screen.getAllByRole("cell", {
         name: fakePackageData[0].destination,
       })
-    ).toHaveLength(4);
+    ).toHaveLength(5);
 
     expect(
       screen.getByRole("cell", { name: fakePackageData[0].status }).innerHTML

@@ -51,10 +51,7 @@ const HomeContainer = () => {
       </Grid>
       <Hidden smDown>
         <Grid item xs={12} sm={12} md={4}>
-          <MediaCard
-            img={SearchPackage}
-            text="Buscando mais facilidade? Faça login e tenha tudo em um só lugar!"
-          />
+          <MediaCard img={SearchPackage} />
         </Grid>
       </Hidden>
       <Grid item xs={12} sm={12} md={12}>
