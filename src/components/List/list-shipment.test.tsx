@@ -40,15 +40,15 @@ describe("Shipment List", () => {
 
     expect(
       screen.getByRole("cell", { name: fakePackageData[0].status }).innerHTML
-    ).toEqual("Delivered");
+    ).toEqual("Entregue");
 
     expect(
       screen.getByRole("cell", { name: fakePackageData[1].status }).innerHTML
-    ).toEqual("In Transit");
+    ).toEqual("Em Transito");
 
     expect(
       screen.getByRole("cell", { name: fakePackageData[2].status }).innerHTML
-    ).toEqual("Out for Delivery");
+    ).toEqual("Saiu para Entrega");
 
     fakePackageData.map((item) => {
       expect(

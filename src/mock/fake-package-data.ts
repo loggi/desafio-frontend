@@ -1,12 +1,16 @@
+import { DeliveryStatus } from "@/types/Shipment";
+
 const userCPF = "00011122233";
+const destination = "Rio de Janeiro, RJ";
+
 const fakePackageData = [
   {
     id: "1",
     trackingNumber: "TRK123456789",
     origin: "São Paulo, SP",
-    destination: "Rio de Janeiro, RJ",
+    destination,
     estimatedDeliveryDate: "2023-11-10",
-    status: "Delivered",
+    status: DeliveryStatus.DELIVERED,
     currentLocation: "Rio de Janeiro, RJ",
     shipmentType: "Standard",
     userCpf: userCPF,
@@ -29,9 +33,9 @@ const fakePackageData = [
     id: "2",
     trackingNumber: "TRK987654321",
     origin: "Belo Horizonte, MG",
-    destination: "Rio de Janeiro, RJ",
+    destination,
     estimatedDeliveryDate: "2023-11-15",
-    status: "In Transit",
+    status: DeliveryStatus.IN_TRANSIT,
     currentLocation: "Campinas, SP",
     shipmentType: "Express",
     userCpf: userCPF,
@@ -54,9 +58,9 @@ const fakePackageData = [
     id: "3",
     trackingNumber: "TRK567890123",
     origin: "Curitiba, PR",
-    destination: "Rio de Janeiro, RJ",
+    destination,
     estimatedDeliveryDate: "2023-11-14",
-    status: "Out for Delivery",
+    status: DeliveryStatus.OUT_FOR_DELIVERY,
     currentLocation: "Joinville, SC",
     shipmentType: "Standard",
     userCpf: userCPF,

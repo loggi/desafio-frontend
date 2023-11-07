@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-
 import {
   Table,
   TableBody,
@@ -11,10 +11,11 @@ import {
   Button,
   colors,
 } from "@mui/material";
-import { Shipment } from "@/types/Shipment";
+import { DeliveryStatus, Shipment } from "@/types/Shipment";
 
 type ListProps = {
   shipments: Shipment[];
+  onClick?: (item: Shipment) => void;
 };
 
 const TableHeaderCell = ({ children }: { children: React.ReactNode }) => (
@@ -27,7 +28,7 @@ const TableHeaderCell = ({ children }: { children: React.ReactNode }) => (
   </TableCell>
 );
 
-export const ShipmentList: React.FC<ListProps> = ({ shipments }) => {
+export const ShipmentList: React.FC<ListProps> = ({ shipments, onClick }) => {
   return (
     <TableContainer component={Paper}>
       <Table
@@ -42,7 +43,7 @@ export const ShipmentList: React.FC<ListProps> = ({ shipments }) => {
             <TableHeaderCell>Status</TableHeaderCell>
             <TableHeaderCell>Localizaçao</TableHeaderCell>
             <TableHeaderCell>Destino</TableHeaderCell>
-            <TableHeaderCell>Ver Mais</TableHeaderCell>
+            {onClick && <TableHeaderCell>Ver Mais</TableHeaderCell>}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -51,11 +52,11 @@ export const ShipmentList: React.FC<ListProps> = ({ shipments }) => {
               key={shipment.id}
               style={{
                 backgroundColor:
-                  shipment.status === "Delivered"
-                    ? colors.green[50]
-                    : shipment.status === "In Transit"
-                    ? colors.grey[50]
-                    : colors.red[50],
+                  shipment.status === DeliveryStatus.DELIVERED
+                    ? colors.green[200]
+                    : shipment.status === DeliveryStatus.IN_TRANSIT
+                    ? colors.common.white
+                    : colors.yellow[100],
               }}
             >
               <TableCell>{shipment.trackingNumber}</TableCell>
@@ -63,11 +64,13 @@ export const ShipmentList: React.FC<ListProps> = ({ shipments }) => {
               <TableCell>{shipment.status}</TableCell>
               <TableCell>{shipment.currentLocation}</TableCell>
               <TableCell>{shipment.destination}</TableCell>
-              <TableCell>
-                <Button variant="outlined" color="primary">
-                  Ver Mais
-                </Button>
-              </TableCell>
+              {onClick && (
+                <TableCell>
+                  <Button variant="outlined" color="primary">
+                    Ver Mais
+                  </Button>
+                </TableCell>
+              )}
             </TableRow>
           ))}
         </TableBody>

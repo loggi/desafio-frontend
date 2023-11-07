@@ -2,6 +2,8 @@
 import * as React from "react";
 import { Box, Hidden, Step, StepLabel, Stepper, colors } from "@mui/material";
 import { ColorlibConnector, ColorlibStepIcon } from "./step-style";
+import { DeliveryStatus } from "@/types/Shipment";
+import { getCurrentStep } from "./steps-utils";
 
 const steps = [
   "Separando pacote",
@@ -10,13 +12,18 @@ const steps = [
   "Entregue",
 ];
 
-export function Steps() {
+type TSteps = {
+  activeSteps: DeliveryStatus;
+};
+
+export function Steps({ activeSteps }: TSteps) {
+  const step = getCurrentStep(activeSteps);
   return (
     <Box sx={{ width: "100%" }}>
       <Hidden smDown>
         <Stepper
           alternativeLabel
-          activeStep={1}
+          activeStep={step}
           connector={<ColorlibConnector />}
         >
           {steps.map((label) => (
@@ -29,7 +36,7 @@ export function Steps() {
         </Stepper>
       </Hidden>
       <Hidden smUp>
-        <Stepper activeStep={1} orientation="vertical">
+        <Stepper activeStep={step} orientation="vertical">
           {steps.map((label) => (
             <Step key={label}>
               <StepLabel

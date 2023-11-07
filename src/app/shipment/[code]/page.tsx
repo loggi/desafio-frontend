@@ -1,8 +1,15 @@
 import React from "react";
-import { Steps } from "@/components";
+import { Steps, ShipmentList } from "@/components";
 import { Box, Grid, Typography } from "@mui/material";
+import { getShipmentByGet } from "@/service";
 
-export default function ShipmentDetails() {
+export default async function ShipmentDetails({
+  params,
+}: {
+  params: { code: string };
+}) {
+  const { data } = await getShipmentByGet(params.code);
+
   return (
     <Grid container justifyContent="center">
       <Box justifyContent="center" alignContent="center" marginBottom={5}>
@@ -14,8 +21,11 @@ export default function ShipmentDetails() {
           pacote!
         </Typography>
       </Box>
-      <Grid item md={12} marginBottom={10}>
-        <Steps />
+      <Grid item md={12} marginBottom={5}>
+        <Steps activeSteps={data[0].status} />
+      </Grid>
+      <Grid item md={12} xs={12} sm={12}>
+        <ShipmentList shipments={data} />
       </Grid>
     </Grid>
   );

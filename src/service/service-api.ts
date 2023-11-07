@@ -1,9 +1,10 @@
 const get = async (endpoint: string, config?: Object) => {
-  return await fetch(endpoint, {
+  const response = await fetch(endpoint, {
     headers: {
       "Content-Type": "application/json",
     },
   });
+  return await response.json();
 };
 
 const post = async (endpoint: string, data?: Object) => {

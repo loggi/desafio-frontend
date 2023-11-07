@@ -24,4 +24,10 @@ export const packageSchema = z.object({
   items: z.array(itemSchema),
 });
 
+export enum DeliveryStatus {
+  IN_TRANSIT = "Em Transito",
+  DELIVERED = "Entregue",
+  OUT_FOR_DELIVERY = "Saiu para Entrega",
+}
+
 export type Shipment = z.infer<typeof packageSchema>;
