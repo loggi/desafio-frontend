@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 /**
  * should be used only once in the root app/layout or if you need to override

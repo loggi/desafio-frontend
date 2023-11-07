@@ -22,7 +22,6 @@ const HomeContainer = () => {
 
   const handleOnClickItem = (shipment: Shipment) => {
     const URL = `/${SHIPMENT_PAGE}/${shipment.trackingNumber}`;
-    console.log("URL: ", URL);
     router.push(URL);
   };
   return (
