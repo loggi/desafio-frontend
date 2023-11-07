@@ -1,7 +1,7 @@
 import React from "react";
 
 import HeaderBar from "@/components/Header";
-import { MainContainer } from "@/components";
+import { MainContainer, Footer } from "@/components";
 
 export const metadata = {
   title: "Loggi",
@@ -19,6 +19,7 @@ export default function RootLayout({
         <HeaderBar>
           <MainContainer>{children}</MainContainer>
         </HeaderBar>
+        <Footer />
       </body>
     </html>
   );

@@ -27,7 +27,7 @@ const HomeContainer = () => {
   return (
     <Grid
       container
-      spacing={10}
+      spacing={5}
       justifyContent="space-between"
       alignItems="center"
     >
@@ -42,14 +42,14 @@ const HomeContainer = () => {
         </Typography>
         <SelectFilter onSubmit={handleOnSubmitForm} />
       </Grid>
-      <Grid item xs={12} sm={12} md={4}>
-        <Hidden smDown>
+      <Hidden smDown>
+        <Grid item xs={12} sm={12} md={4}>
           <MediaCard
             img={SearchPackage}
             text="Buscando mais facilidade? Faça login e tenha tudo em um só lugar!"
           />
-        </Hidden>
-      </Grid>
+        </Grid>
+      </Hidden>
       <Grid item xs={12} sm={12} md={12}>
         {shipment.length > 0 && (
           <ShipmentList shipments={shipment} onClick={handleOnClickItem} />
