@@ -5,8 +5,14 @@ import { ShipmentList } from "./list-shipments";
 import { fakePackageData } from "@/mock";
 
 describe("Shipment List", () => {
-  test("should render list correctly", () => {
+  test("should render list correctly without Ver Mais Section", () => {
     render(<ShipmentList shipments={fakePackageData} />);
+    expect(
+      screen.queryByRole("columnheader", { name: /Ver Mais/i })
+    ).not.toBeInTheDocument();
+  });
+  test("should render list correctly with Ver Mais Section", () => {
+    render(<ShipmentList shipments={fakePackageData} onClick={() => {}} />);
 
     expect(
       screen.getByRole("columnheader", { name: /Código Rastreio/i })
