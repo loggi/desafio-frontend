@@ -7,8 +7,12 @@ export class PlayConfigPage {
     this.page = page;
   }
 
+  async closePage() {
+    await this.page.close();
+  }
+
   async goto() {
-    await this.page.goto("http://127.0.0.1:3000");
+    await this.page.goto("http://localhost:3000/");
   }
 
   async commonHomeAssertions() {

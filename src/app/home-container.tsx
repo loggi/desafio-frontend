@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { SearchPackage } from "@/assets";
-import { Hidden } from "@mui/material";
+import { Alert, AlertTitle, Hidden } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { SelectFilter, MediaCard, ShipmentList } from "@/components";
 import { getShipmentByPost } from "@/service";
@@ -13,9 +13,14 @@ import { SHIPMENT_PAGE } from "@/config/route-utils";
 const HomeContainer = () => {
   const router = useRouter();
   const [shipment, setShipment] = useState([]);
+  const [isAlertOpen, setOpenAlert] = useState(false);
+
   const handleOnSubmitForm = async (filterType: string, value: string) => {
     try {
       const { data } = await getShipmentByPost(filterType, value);
+      if (!data.length) {
+        setOpenAlert(true);
+      }
       setShipment(data);
     } catch (err) {}
   };
@@ -53,6 +58,19 @@ const HomeContainer = () => {
       <Grid item xs={12} sm={12} md={12}>
         {shipment.length > 0 && (
           <ShipmentList shipments={shipment} onClick={handleOnClickItem} />
+        )}
+
+        {isAlertOpen && (
+          <Alert
+            severity="error"
+            onClose={() => {
+              setOpenAlert(false);
+            }}
+          >
+            <AlertTitle>Ooooops!</AlertTitle>
+            Nenhum pacote encontrado, verifique o{" "}
+            <strong>filtro e o valor informado</strong> e tente novamente!
+          </Alert>
         )}
       </Grid>
     </Grid>

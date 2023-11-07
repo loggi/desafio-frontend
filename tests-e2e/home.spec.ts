@@ -1,19 +1,37 @@
 import { test, expect } from "@playwright/test";
 import { PlayConfigPage } from "./play-config-page";
 
-test.beforeAll(async () => {});
 test.describe("Home Page", () => {
-  test("should open home page properly ", async ({ page }) => {
-    const ConfigPage = new PlayConfigPage(page);
+  let ConfigPage: PlayConfigPage;
+  test.beforeEach(async ({ page }) => {
+    ConfigPage = new PlayConfigPage(page);
     await ConfigPage.goto();
+  });
+  test("should open home page properly ", async ({ page }) => {
     await ConfigPage.commonHomeAssertions();
   });
 
-  test("should open home and make a simple search by CPF", async ({ page }) => {
-    //open site
-    const ConfigPage = new PlayConfigPage(page);
-    await ConfigPage.goto();
+  test("should show error by type wrong code ", async ({ page }) => {
+    await expect(
+      page.getByRole("button", { name: /pesquisar/i })
+    ).toBeDisabled(); // check if the button is disabled
 
+    await page
+      .getByRole("textbox", {
+        name: /digite o código do pedido/i,
+      })
+      .fill("123456789101"); // fill input with wrong code
+
+    await expect(
+      page.getByRole("button", { name: /pesquisar/i })
+    ).toBeEnabled(); // check if the button is not disabled
+
+    await page.getByRole("button", { name: /pesquisar/i }).click(); // making a search
+
+    await expect(page.getByText(/ooooops!/i)).toBeVisible();
+  });
+
+  test("should show response by search using CPF", async ({ page }) => {
     //content
     await expect(page.getByText(/rastreie seu pedido/i)).toBeVisible();
 
@@ -73,6 +91,6 @@ test.describe("Home Page", () => {
     const lastRowBtn = await page.getByTestId("btn-vermais-TRK567890123");
     await lastRowBtn.click(); //clicking in the last button
 
-    await page.waitForURL("http://127.0.0.1:3000/shipment/TRK567890123"); //asserting the url changes
+    await page.waitForURL("http://localhost:3000/shipment/TRK567890123"); //asserting the url changes
   });
 });
