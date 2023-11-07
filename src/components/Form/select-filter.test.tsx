@@ -42,13 +42,13 @@ describe("SelectFilter", () => {
       name: /Digite seu CPF/i,
     });
     expect(inputCPF).toBeInTheDocument();
-    fireEvent.change(inputCPF, { target: { value: "123456" } });
+    fireEvent.change(inputCPF, { target: { value: "00011122233" } });
 
     const btnEnviar = screen.getByText("Pesquisar");
     expect(btnEnviar).toBeInTheDocument();
     fireEvent.click(btnEnviar);
 
-    expect(onSubmitMock).toHaveBeenCalledWith("cpf", "123456");
+    expect(onSubmitMock).toHaveBeenCalledWith("cpf", "00011122233");
   });
 
   test("should type Code and handle form submission", async () => {
