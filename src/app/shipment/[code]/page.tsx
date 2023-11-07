@@ -2,6 +2,7 @@ import React from "react";
 import { Steps, ShipmentList, PackageDetailsList } from "@/components";
 import { Box, Grid, Typography } from "@mui/material";
 import { getShipmentByGet } from "@/service";
+import { notFound } from "next/navigation";
 
 export default async function ShipmentDetails({
   params,
@@ -9,6 +10,8 @@ export default async function ShipmentDetails({
   params: { code: string };
 }) {
   const { data } = await getShipmentByGet(params.code);
+
+  if (!data.length) notFound();
 
   return (
     <Grid container justifyContent="center">
@@ -24,6 +27,7 @@ export default async function ShipmentDetails({
       <Grid item md={12} marginBottom={5}>
         <Steps activeSteps={data[0].status} />
       </Grid>
+
       <Grid item md={12} xs={12} sm={12}>
         <ShipmentList shipments={data} />
       </Grid>
