@@ -1,0 +1,16 @@
+name: Publish TechDocs static files on S3
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+
+jobs:
+  publish-techdocs-site:
+        uses: loggi/github-workflows/.github/workflows/techdocs.yaml@main
+        secrets: inherit
+        with:
+          entity_name: desafio-frontend
