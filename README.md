@@ -29,6 +29,12 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+OR 
+
+Open [https://loggi-challenge.vercel.app/](https://loggi-challenge.vercel.app/)
+
+## Testing Plan
+
 Follow this testing plan to test the application: [Test Plan](https://www.notion.so/Loggi-Challenge-436129ef534d4c4b9ff0b8c69b92b0a2?pvs=4#0dc4a885c7a34f10baa581e6951f1d6a)
 
 ## Tech Spec Doc
