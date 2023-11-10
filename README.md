@@ -1,4 +1,4 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+## Desafio de front-end
 
 Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
 
