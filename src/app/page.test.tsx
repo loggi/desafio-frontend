@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 import { render, screen } from "@testing-library/react"
-import ClientComponent from "./page"
+import Home from "./page"
 
-it("App Router: Works with Client Components", () => {
-  render(<ClientComponent />)
+it("Page Home: render a title", () => {
+  render(<Home />)
   expect(screen.getByRole("heading")).toHaveTextContent("Jaiminho")
 })
