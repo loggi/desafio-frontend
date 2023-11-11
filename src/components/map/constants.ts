@@ -8,11 +8,11 @@ export const INITIAL_VALUES = {
 };
 
 export const SENDER_ICON = new Icon({
-  iconUrl: "http://localhost:3000/sender-icon.png",
+  iconUrl: "/sender-icon.png",
   iconSize: [65, 65],
 });
 
 export const RECEIVER_ICON = new Icon({
-  iconUrl: "http://localhost:3000/receiver-icon.png",
+  iconUrl: "/receiver-icon.png",
   iconSize: [65, 65],
 });
