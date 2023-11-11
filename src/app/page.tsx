@@ -31,9 +31,7 @@ export default function HomePage() {
   };
 
   const getTracking = useCallback(async () => {
-    const response = await fetch(
-      `http://localhost:3000/api/tracking?trackingCode=${trackingCode}`
-    );
+    const response = await fetch(`api/tracking?trackingCode=${trackingCode}`);
     const { data, hasError } = await response.json();
 
     setError(hasError);
