@@ -1,15 +1,16 @@
-import * as React from 'react';
+import * as React from 'react'
 // import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+import Box from '@mui/material/Box'
 // import Toolbar from '@mui/material/Toolbar';
 // import Typography from '@mui/material/Typography';
 // import DashboardIcon from '@mui/icons-material/Dashboard';
-import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
+import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry'
 
 export const metadata = {
   title: 'Acompanhe suas Entregas em Tempo Real | Loggi',
-  description: 'Com a Loggi você consegue acompanhar sua entrega e saber exatamente quando seu pedido vai chegar. Acesse nosso rastreador e veja como é fácil!',
-};
+  description:
+    'Com a Loggi você consegue acompanhar sua entrega e saber exatamente quando seu pedido vai chegar. Acesse nosso rastreador e veja como é fácil!'
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
               flexGrow: 1,
               bgcolor: 'background.default',
               // mt: ['48px', '56px', '64px'],
-              p: 3,
+              p: 3
             }}
           >
             {children}
@@ -38,5 +39,5 @@ export default function RootLayout({ children }) {
         </ThemeRegistry>
       </body>
     </html>
-  );
+  )
 }
