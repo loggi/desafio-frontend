@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/api/hello.js"
+    "jest.setup.js"
   ],
   "exclude": ["node_modules"]
 }
