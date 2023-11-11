@@ -14,7 +14,7 @@ import {
 import { TrackingInfoProps, deliveryDetailProps } from "./types";
 
 export function TrackingInfo({ trackingInfo }: TrackingInfoProps) {
-  const { freight_id, status, receiver, sender } = trackingInfo;
+  const { status, receiver, sender } = trackingInfo;
 
   function renderStatuItem() {
     return status?.map((item, index) => {
@@ -60,7 +60,6 @@ export function TrackingInfo({ trackingInfo }: TrackingInfoProps) {
 
   return (
     <Box sx={{ overflow: "auto", width: "100%", padding: "20px" }}>
-      <h1>#{freight_id}</h1>
       <Box>
         {renderDeliveryDetails({ title: "Saindo de", address: sender.address })}
         {renderDeliveryDetails({
