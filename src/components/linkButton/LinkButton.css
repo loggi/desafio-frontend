@@ -1,0 +1,24 @@
+.link-button {
+    padding: 16px;
+    line-height: 1.6;
+    border: 1px solid var(--color-brand-primary);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--color-brand-primary);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.link-button:hover {
+    border-color: var(--color-common-light);
+    background-color: rgba(255, 255, 255, .2);
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.link-button--inverse {
+    border: 1px solid var(--color-common-light);
+    color: var(--color-common-light);
+}
