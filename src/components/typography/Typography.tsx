@@ -7,7 +7,7 @@ interface TitleProps {
 
 export const Typography = ({
   children,
-  variant: TextElement = "h1",
+  variant: TextElement = "p",
   ...rest
 }: TitleProps) => {
   return (

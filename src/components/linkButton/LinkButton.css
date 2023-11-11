@@ -13,9 +13,9 @@
 }
 
 .link-button:hover {
-    border-color: var(--color-common-light);
-    background-color: rgba(255, 255, 255, .2);
-    background-color: rgba(255, 255, 255, .2);
+    border-color: var(--color-barnd-secondary);
+    background-color: var(--color-barnd-secondary);
+    color: var(--color-common-light);
 }
 
 .link-button--inverse {
