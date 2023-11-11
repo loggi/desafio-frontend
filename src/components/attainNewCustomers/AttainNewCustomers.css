@@ -1,0 +1,14 @@
+.attain-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    padding: 16px 0;
+
+}
+
+.attain-new__wrapper {
+    width: 86%;
+    margin: 0 auto;
+    color: var(--color-common-dark);
+}

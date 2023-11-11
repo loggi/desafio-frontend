@@ -4,6 +4,7 @@ import "../styles/variables.css"
 import "../styles/globals.css"
 import { Header } from "@/components/header/Header"
 import { Footer } from "@/components/footer/Footer"
+import { AttainNewCustomers } from "@/components/attainNewCustomers/AttainNewCustomers"
 
 const montserrat = Montserrat({ subsets: ["latin"] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Header />
         {children}
+        <AttainNewCustomers />
         <Footer />
       </body>
     </html>
