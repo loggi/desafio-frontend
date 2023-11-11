@@ -1,0 +1,8 @@
+:root {
+    --color-brand-primary: #408fff;
+    --color-barnd-secondary: #00baff;
+    --color-grayscale-50: #fafafa;
+    --color-common-light: #ffffff;
+    --color-common-dark: #000000;
+    --color-opacity-ligth: rgba(255, 255, 255, .2)
+}
