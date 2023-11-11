@@ -4,5 +4,13 @@
     "eslint:recommended",
     "plugin:prettier/recommended",
     "plugin:storybook/recommended"
-  ]
+  ],
+  "rules": {
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowObject": true
+      }
+    ]
+  }
 }
