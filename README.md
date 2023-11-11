@@ -20,4 +20,4 @@ yarn dev
 Abrir http://localhost:3000 com seu navegador para ver o resultado.
 Para testar, pode usar os pedidos `8431675629` ou `123456`
 
-Open https://.vercel.app/
+Pode visitar aqui, https://rastreador-de-pacotes-indiorlei.vercel.app/
