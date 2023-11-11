@@ -1,0 +1,22 @@
+.typography {
+    line-height: 1.2;
+}
+
+.typography__h1 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: inherit;
+}
+
+.typography__h2 {
+    margin-bottom: 32px;
+    font-size: 32px;
+    color: inherit;
+}
+
+.typography__h3 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: inherit;
+}
+
