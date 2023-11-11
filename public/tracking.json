@@ -1,0 +1,128 @@
+[
+  {
+    "sender": {
+      "company_name": "UCI ParkShopping Canoas",
+      "address": {
+        "zipcode": "92020-475",
+        "city": "Canoas",
+        "state": "RS",
+        "street": "Av. Farroupilha, 4545 - Loja 3004 - Mal. Rondon",
+        "latitude": -29.914886,
+        "longitude": -51.165661
+      }
+    },
+    "receiver": {
+      "address": {
+        "zipcode": "90230-220",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "street": "Av. França, 1024",
+        "latitude": -30.0045328,
+        "longitude": -51.1972262
+      }
+    },
+    "delivery_deadline": "2022-12-19",
+    "freight_id": "FR221205VNHQA",
+    "order_number": "8431675629",
+    "status": [
+      {
+        "name": "Solicitado",
+        "date": "2022-12-05 03:35",
+        "condition": "done"
+      },
+      {
+        "name": "Aguardando coleta / postagem",
+        "date": "2022-12-05 03:35",
+        "condition": "done"
+      },
+      {
+        "name": "Coletado / Postado",
+        "date": "2022-12-05 05:13",
+        "condition": "done"
+      },
+      {
+        "name": "Em transferência",
+        "date": "2022-12-06 22:10",
+        "condition": "done"
+      },
+      {
+        "name": "Em trânsito",
+        "date": "2022-12-07 05:37",
+        "condition": "done"
+      },
+      {
+        "name": "Em rota para entrega",
+        "date": "2022-12-07 07:56",
+        "condition": "done"
+      },
+      {
+        "name": "Entregue",
+        "date": "2022-12-07 09:30",
+        "condition": "current"
+      }
+    ]
+  },
+  {
+    "sender": {
+      "company_name": "McDonald's",
+      "address": {
+        "zipcode": "21941-353",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "street": "Estrada do Galeão, 2825 - Portuguesa",
+        "latitude": -22.8069552,
+        "longitude": -43.2100537
+      }
+    },
+    "receiver": {
+      "address": {
+        "zipcode": "88062-400",
+        "city": "Florianópolis",
+        "state": "SC",
+        "street": "Av. das Rendeiras, 622 - Lagoa da Conceição",
+        "latitude": -27.6077089,
+        "longitude": -48.4584494
+      }
+    },
+    "delivery_deadline": "2022-12-19",
+    "freight_id": "FR221205VNHQA",
+    "order_number": "123456",
+    "status": [
+      {
+        "name": "Solicitado",
+        "date": "2022-12-05 03:35",
+        "condition": "done"
+      },
+      {
+        "name": "Aguardando coleta / postagem",
+        "date": "2022-12-05 03:35",
+        "condition": "done"
+      },
+      {
+        "name": "Coletado / Postado",
+        "date": "2022-12-05 05:13",
+        "condition": "done"
+      },
+      {
+        "name": "Em transferência",
+        "date": "2022-12-06 22:10",
+        "condition": "done"
+      },
+      {
+        "name": "Em trânsito",
+        "date": "2022-12-07 05:37",
+        "condition": "done"
+      },
+      {
+        "name": "Em rota para entrega",
+        "date": "2022-12-07 07:56",
+        "condition": "done"
+      },
+      {
+        "name": "Entregue",
+        "date": "2022-12-07 09:30",
+        "condition": "current"
+      }
+    ]
+  }
+]
