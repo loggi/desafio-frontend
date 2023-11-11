@@ -1,0 +1,29 @@
+.input {
+    display: inline;
+}
+
+.input__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-common-light);
+}
+
+.input__text {
+    width: 384px;
+    padding: 24px;
+    line-height: 2;
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--color-common-light);
+    color: var(--color-common-dark);
+}
+
+.input__text:not(:placeholder-shown) {
+    font-size: 16px;
+    letter-spacing: .6rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
