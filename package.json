@@ -10,7 +10,8 @@
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "test": "jest",
     "test:watchAll": "yarn test --watchAll",
-    "test:watch": "yarn test --watch -o"
+    "test:watch": "yarn test --watch -o",
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
