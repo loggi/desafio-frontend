@@ -15,6 +15,9 @@
     "prettier:check": "prettier --check --ignore-unknown ."
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.17",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18"
@@ -36,7 +39,7 @@
     "lint-staged": "^15.1.0",
     "postcss": "^8",
     "prettier": "^3.0.3",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
   },
   "lint-staged": {
