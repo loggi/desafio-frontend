@@ -1,7 +1,0 @@
-# CODEOWNERS file
-# About: https://help.github.com/en/articles/about-code-owners
-# Precedence matters! Last rule wins.
-# For rules at the same level of precedence, keep alphabetical ordering.
-
-# ROOT REPOSITORY CONFIG
-* @loggi/group:default/frontend
