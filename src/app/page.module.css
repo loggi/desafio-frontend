@@ -1,10 +1,29 @@
-.main {
+.home {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  min-height: 52vh;
+  padding: 32px 0;
+  background-color: var(--color-brand-primary);
+  color: var(--color-common-light);
+
+}
+
+.home__container {
+  width: 86vw;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-common-light);
+}
+
+.home__form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Enable hover only on non-touch devices */
@@ -13,7 +32,17 @@
 @media (prefers-reduced-motion) {}
 
 /* Mobile */
-@media (max-width: 700px) {}
+@media (max-width: 700px) {
+  .home__form {
+    flex-direction: column;
+  }
+}
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {}
+@media (min-width: 701px) {
+
+  .home__form {
+    align-items: flex-end;
+  }
+}
