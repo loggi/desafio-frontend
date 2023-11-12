@@ -1,11 +1,15 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+
+import { render } from '@/utils/tests/helpers'
 
 import Button from '.'
 
 describe('<Button />', () => {
   it('should render the heading', () => {
-    render(<Button />)
+    const { container } = render(<Button>Button</Button>)
 
-    expect(screen.getByText(/Button/)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Button/i })).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
