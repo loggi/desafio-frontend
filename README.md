@@ -1,64 +1,53 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+# Jaiminho - Rastreamento de pacotes
+Jaiminho é uma aplicação Front-End, para restreio de encomendas através de um código de rastreamento previamente informado ao usuário. 
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+## Configuração, Instalação e Servindo o projeto localmente
 
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+### Pré requisitos
+Você precisa ter o [NodeJs](https://nodejs.org) instalado em sua máquina, na versão minima `v18.17.0`. Utilize seu gerenciador de pacotes preferido. 
+Eu utilizei o **npm**, e os comandos serão baseados no mesmo.
 
-## O desafio
+### Instalando o projeto
 
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
+#### Clone o projeto
+No terminal rode os comandos
 
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
+```bash 
+git clone https://github.com/ubirajarapelli/desafio-frontend.git
+```
+E acesse o diretório do projeto
 
+```bash
+cd desafio-frontend
+```
 
-## Instruções técnicas
+#### Instale as dependencias
+No terminal rode o comando
 
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
+```bash
+npm install
+```
 
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
+#### Servindo o projeto
+No terminal rode o comando
 
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
-* [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* GitHub - para versionamento de código
+```bash
+npm run dev
+```
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs) que usa as ferramentas acima.
+O projeto será servido no endereço `http://localhost:3000/`, agora abra ele no seu browser preferido.
 
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+#### Executando os testes unitários
+No terminal rode o comando
 
+```bash
+npm run test
+```
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
- 
-Separamos alguns níveis de avaliação.
+## Decisões de implementação
+A aplicação foi escrita utilzando o **Next.Js** juntamente com **Typescript**.
 
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
+Os testes unitários foram escritos utilzando **Testing Libray** juntamente com **Jest**, fazendo a abordagen de testes de comportamento dos componentes e não os [testes de detalhes da implementação](https://kentcdodds.com/blog/testing-implementation-details).
 
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório a partir do fork
+Optei na estilização escrever **CSS** juntamente com a metodogia **BEM** e não utilizar o **Material UI**, pois acredito que para a interface idealizada por mim consegui simplificar o markup e tamém manter a semantica mantendo a separação das camadas, onde com a utilização do Material UI eu levaria mais tempo para chegar no resultado.
 
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
-
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
