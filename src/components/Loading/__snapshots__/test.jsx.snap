@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> should render the Loading 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.emotion-0 img {
+  width: 64px;
+  height: 64px;
+  z-index: 999;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  />
+  <img
+    alt="Carregando"
+    data-nimg="1"
+    decoding="async"
+    height="32"
+    loading="lazy"
+    src="/assets/icons/spinner.svg"
+    style="color: transparent;"
+    width="32"
+  />
+</div>
+`;
