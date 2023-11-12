@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu } from "../menu/Menu"
 import loggiLogo from "../../assets/loggi-logo-white.svg"
-import "./header.css"
+import "./Header.css"
 
 export const Header = () => {
   const [open, setOpen] = useState(false)
