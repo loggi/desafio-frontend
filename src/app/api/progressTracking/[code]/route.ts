@@ -3,7 +3,12 @@ import { trackList } from "../../../../data/trackList"
 
 export const GET = async (req: NextRequest, context: any) => {
   const { code } = context.params
-  const trackDetails = trackList.find((list) => list.id === code) || null
+  const noContentMessage = {
+    message: "Nenhum pedido encontrado para esse código.",
+  }
+
+  const trackDetails =
+    trackList.find((list) => list.id === code) || noContentMessage
 
   return NextResponse.json(trackDetails)
 }
