@@ -8,7 +8,11 @@ const config: Config = {
   ],
   important: '#__next',
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        loggi: '#0082FF'
+      }
+    }
   },
   plugins: []
 }
