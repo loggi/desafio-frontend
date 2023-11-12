@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 // import Toolbar from '@mui/material/Toolbar';
 // import Typography from '@mui/material/Typography';
 // import DashboardIcon from '@mui/icons-material/Dashboard';
-import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry'
+import ThemeRegistry from '@/styles/ThemeRegistry'
 
 export const metadata = {
   title: 'Acompanhe suas Entregas em Tempo Real | Loggi',
@@ -25,17 +25,7 @@ export default function RootLayout({ children }) {
               </Typography>
             </Toolbar>
           </AppBar> */}
-          <Box
-            component="main"
-            sx={{
-              flexGrow: 1,
-              bgcolor: 'background.default',
-              // mt: ['48px', '56px', '64px'],
-              p: 3
-            }}
-          >
-            {children}
-          </Box>
+          <Box component="main">{children}</Box>
         </ThemeRegistry>
       </body>
     </html>
