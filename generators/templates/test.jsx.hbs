@@ -5,7 +5,7 @@ import {{pascalCase name}} from '.'
 describe('<{{pascalCase name}} />', () => {
   it('should render the heading', () => {
     render(<{{pascalCase name}} />)
-    
+
     expect(screen.getByText(/{{pascalCase name}}/)).toBeInTheDocument()
   })
 })
