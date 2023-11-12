@@ -1,8 +1,0 @@
-site_name: desafio-frontend
-site_description: Basic github repository.
-
-nav:
-  - Introduction: index.md
-
-plugins:
-  - techdocs-core

@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   semi: false,
   tabWidth: 2,
   printWidth: 120,
@@ -6,7 +6,5 @@ const config = {
   jsxSingleQuote: true,
   trailingComma: 'none',
   arrowParens: 'always',
-  endOfLine: 'auto',
+  endOfLine: 'auto'
 }
- 
-module.exports = config
