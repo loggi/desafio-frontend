@@ -1,11 +1,13 @@
 'use client'
 
-import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
-import { CssBaseline } from '@mui/material'
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
 
-const theme = createTheme({})
+import { theme } from '@/lib/theme'
 
-export type MuiProviderProps = { children?: React.ReactNode }
+export type MuiProviderProps = {
+  children?: React.ReactNode
+}
 
 export function MuiProvider({ children }: MuiProviderProps) {
   return (

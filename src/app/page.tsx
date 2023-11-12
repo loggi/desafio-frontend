@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <AppBar>
       <Toolbar>
-        <Typography variant='h6' component='div'>
+        <Typography variant='h6' component='div' className='font-bold text-white'>
           Hello world
         </Typography>
       </Toolbar>

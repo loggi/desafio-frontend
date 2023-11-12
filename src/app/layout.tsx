@@ -14,9 +14,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={roboto.className}>
-        <MuiProvider>{children}</MuiProvider>
-      </body>
+      <MuiProvider>
+        <body id='__next' className={roboto.className}>
+          {children}
+        </body>
+      </MuiProvider>
     </html>
   )
 }
