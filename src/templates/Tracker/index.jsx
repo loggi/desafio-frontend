@@ -1,46 +1,66 @@
 'use client'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Unstable_Grid2'
-import Alert from '@mui/material/Alert'
-import AlertTitle from '@mui/material/AlertTitle'
-import MediaCard from '@/components/MediaCard'
+import { useState } from 'react'
+import Link from 'next/link'
+
+import TextField from '@mui/material/TextField'
+
+import Loading from '@/components/Loading'
+import Text from '@/components/Text'
+import Button from '@/components/Button'
+
+import * as S from './styles'
 
 const Tracker = () => {
+  const [loading, setLoading] = useState(false)
+
+  const onSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      setLoading(true)
+
+      //Business logic by props...
+    } catch (error) {
+      throw new Error(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <div>
-        <Alert severity="info" sx={{ mt: 2, mb: 5 }}>
-          <AlertTitle>Hello 👋</AlertTitle>
-          This app uses the Next.js App Router and Material UI v5.
-        </Alert>
-        <Grid container rowSpacing={3} columnSpacing={3}>
-          <Grid xs={6}>
-            <MediaCard
-              heading="CMYK"
-              text="The CMYK color model (also known as process color, or four color) is a subtractive color model, based on the CMY color model, used in color printing, and is also used to describe the printing process itself."
+    <S.Wrapper>
+      <S.Container>
+        <S.TrackerArea>
+          <Text tag="h1">Acompanhe com a Loggi a entrega do seu pedido</Text>
+          <Text>Primeiro, digite o código de rastreamento.</Text>
+          <S.Form method="post" onSubmit={onSubmit}>
+            {loading && <Loading visible />}
+            <TextField
+              id="code-tracker"
+              label="Código de rastreamento"
+              variant="standard"
+              fullWidth
             />
-          </Grid>
-          <Grid xs={6}>
-            <MediaCard
-              heading="HSL and HSV"
-              text="HSL (for hue, saturation, lightness) and HSV (for hue, saturation, value; also known as HSB, for hue, saturation, brightness) are alternative representations of the RGB color model, designed in the 1970s by computer graphics researchers."
-            />
-          </Grid>
-          <Grid xs={6}>
-            <MediaCard
-              heading="RGB"
-              text="An RGB color space is any additive color space based on the RGB color model. RGB color spaces are commonly found describing the input signal to display devices such as television screens and computer monitors."
-            />
-          </Grid>
-          <Grid xs={6}>
-            <MediaCard
-              heading="CIELAB"
-              text="The CIELAB color space, also referred to as L*a*b*, was intended as a perceptually uniform space, where a given numerical change corresponds to a similar perceived change in color."
-            />
-          </Grid>
-        </Grid>
-      </div>
-    </Box>
+            <Button type="submit">Acompanhar pedido</Button>
+          </S.Form>
+        </S.TrackerArea>
+        <S.Content>
+          <S.Box>
+            <Text tag="h2">
+              A melhor solução para envio de encomendas no Brasil
+            </Text>
+            <Text>
+              Alcance mais clientes com entregas locais e nacionais. Com a
+              Loggi, você economiza tempo e dinheiro.
+            </Text>
+            <Link href="https://www.loggi.com/produtos-loggi/" target="_blank">
+              <Button>Enviar agora</Button>
+            </Link>
+          </S.Box>
+          <S.Image src="/assets/images/package.png" alt="Logo Envsense" />
+        </S.Content>
+      </S.Container>
+    </S.Wrapper>
   )
 }
 
