@@ -10,10 +10,11 @@ const customJestConfig = {
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.js(x)?',
-    '!src/**/*stories.js(x)?',
     '!src/**/mock.js',
     '!src/app/**/*.js(x)?',
-    '!src/styles/**/*.js(x)?'
+    '!src/templates/**/*.js(x)?',
+    '!src/styles/**/*.js(x)?',
+    '!src/utils/**/*.js(x)?'
   ],
   snapshotSerializers: [
     '@emotion/jest/serializer' /* if needed other snapshotSerializers should go here */
