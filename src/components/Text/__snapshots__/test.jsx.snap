@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render the Text 1`] = `
+.emotion-0 {
+  margin-bottom: 24px;
+}
+
+<p
+  class="emotion-0"
+>
+  Text
+</p>
+`;
