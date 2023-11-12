@@ -1,0 +1,49 @@
+.track__list {
+    position: relative;
+    margin: 32px 0 52px 1.5rem ;
+}
+
+.track__list::before{
+    content: "";
+    position: absolute;
+    left: -1.2rem;
+    bottom: 2.5em;
+    border: 1px solid #006aff;
+    height: calc(100% - 58px);
+}
+
+.track__title {
+    display: list-item
+}
+
+.track__title::marker  {
+    font-size: 1.6rem;
+    color: #006aff;
+}
+
+.track__datetime {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.track__description {
+    margin-bottom: 16px;
+}
+
+.track__status {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.track__locale {
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    .track__list::before{
+        bottom: 3.6em;
+        height: calc(100% - 74px);
+    }
+}
