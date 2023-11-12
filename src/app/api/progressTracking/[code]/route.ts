@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { trackList } from "../../../../data/trackList"
+import trackList from "../../../../data/trackList.json"
 
 export const GET = async (req: NextRequest, context: any) => {
   const { code } = context.params
