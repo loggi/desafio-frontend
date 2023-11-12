@@ -37,6 +37,13 @@ npm run dev
 
 O projeto será servido no endereço `http://localhost:3000/`, agora abra ele no seu browser preferido.
 
+##### Códigos de rastreio
+Utilize os códigos de rastreio abaixo para utilizar a aplicação, exite três opções com status das entregas.
+
++ Entregue: TBR046920318
++ Em transito: TBR813029461
++ Em separaçao TBR318040692
+
 #### Executando os testes unitários
 No terminal rode o comando
 
