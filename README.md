@@ -47,7 +47,7 @@ npm run test
 ## Decisões de implementação
 A aplicação foi escrita utilzando o **Next.Js** juntamente com **Typescript**.
 
-Os testes unitários foram escritos utilzando **Testing Libray** juntamente com **Jest**, fazendo a abordagen de testes de comportamento dos componentes e não os [testes de detalhes da implementação](https://kentcdodds.com/blog/testing-implementation-details).
+Os testes unitários foram escritos utilzando **Testing Libray** juntamente com **Jest**, fazendo a abordagen de testes de comportamento dos componentes e não os [testes de detalhes da implementação](https://kentcdodds.com/blog/testing-implementation-details) e seguindo o padrão Triple A(Arrange, Act, Assert).
 
 Optei na estilização escrever **CSS** juntamente com a metodogia **BEM** e não utilizar o **Material UI**, pois acredito que para a interface idealizada por mim consegui simplificar o markup e tamém manter a semantica mantendo a separação das camadas, onde com a utilização do Material UI eu levaria mais tempo para chegar no resultado.
 
