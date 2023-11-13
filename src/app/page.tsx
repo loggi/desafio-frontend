@@ -1,9 +1,7 @@
 "use client"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Button } from "@/components/button/Button"
-import { Input } from "@/components/input/Input"
-import { Typography } from "@/components/typography/Typography"
+import { Button, Input, Typography } from "@/components"
 import styles from "./page.module.css"
 
 export default function Home() {

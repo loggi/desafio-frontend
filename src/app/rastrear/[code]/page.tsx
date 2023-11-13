@@ -1,6 +1,4 @@
-import { Typography } from "@/components/typography/Typography"
-import { LinkButton } from "@/components/linkButton/LinkButton"
-import { TrackList } from "@/components/trackList/TrackList"
+import { LinkButton, TrackList, Typography } from "@/components"
 import styles from "./Traking.module.css"
 
 interface TrackingProps {
