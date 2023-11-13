@@ -10,7 +10,9 @@ interface TrackingProps {
 export default async function Tracking({ params: { code } }: TrackingProps) {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/progressTracking/${code}`,
-    { cache: "no-cache" }
+    {
+      cache: "no-cache",
+    }
   )
 
   const trackDetails = await response.json()
