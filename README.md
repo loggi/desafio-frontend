@@ -108,12 +108,12 @@ Na página Rastrear (Tracking) faz a busca na API pelo código digitado, e apres
 ##### Mobile
 Home Page | Rastrear
 --------- | --------
-<img src="./docs/localhost_3000_home.png" alt="" width="300" /> | <img src="./docs/localhost_3000_track.png" alt="" width="300" />
+<img src="./docs/desafio-frontend-psi-ten.vercel.app_.png" alt="" width="400" /> | <img src="./docs/desafio-frontend-psi-ten.vercel.app_track.png" alt="" width="400" />
 
 
 ##### Desktop
 **Home**
-![Home](./docs/localhost_3000_home_d.png)
+![Home](./docs/desafio-frontend-psi-ten.vercel.app_1440.png)
 
 **Rastrear**
-![Rastrear](./docs/localhost_3000_track_d.png)
+![Rastrear](./docs/desafio-frontend-psi-ten.vercel.app_1440_track.png)
