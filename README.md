@@ -1,64 +1,74 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+# Loggi no Talent Fest Brasil 9ª Geração Laboratória
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+Olá! Meu nome é André e esta é a minha visão de, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
 
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+## Objetivo
 
-## O desafio
+Analisando o site da Loggi, percebi que possivelmente a única página que está fora do Design System atual é a tela rastreador. Então, optei por tentar trazer o máximo de referências de outras páginas. Principalmente das seções da [página de produtos](https://www.loggi.com/produtos-loggi/).
 
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
+O projeto está disponível [aqui](https://desafio-frontend-eosin.vercel.app/).
 
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
+## Setup do Projeto
 
+1. Instale o [Node.js](https://nodejs.org/en/).
+2. Faça um clone do projeto.
+3. Na pasta do projeto, digite o comando `yarn install`, ou, `npm install` se preferir. E, espere todas as dependências serem baixadas.
+4. Com a finalização total da etapa anterior, digite o comando `yarn postinstall` para a instalação e configuração das dependências responsáveis pela análise e manutenção do padrão de código a cada tentativa de commit.
 
-## Instruções técnicas
+## Comandos
 
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
+Além dos comandos comentados acima, temos:
 
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
+* `yarn dev`: para iniciar o ambiente desenvolvimento.
+> Note: Após a compilação, o endereço de acesso via browser será informado no Terminal junto com os status de compilação a cada arquivo alterado.
+* `yarn build`: para realizar o build do projeto.
+* `yarn start`: com o build já feito, este comando inicializa o projeto.
+* `yarn lint`: responsável por encontrar e corrigir problemas de código.
+> Note: Usando o comando com `--fix`, automaticamente os problemas mais simples são corrigidos. Este processo ocorre a cada tentativa de commit.
+* `yarn generate`: para auxiliar na criação de novos componentes, templates e páginas dentro do padrão preestabelecido.
+* `yarn test`: para rodar os testes unitários e obter status de cobertura através do terminal.
+* `yarn test:watchAll`: comando responsável por rodar e assistir todos os testes unitários.
+* `yarn test:watch`: comando responsável por rodar e assistir arquivos alterados que interfiram na cobertura e criação de testes unitários.
 
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
-* [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* GitHub - para versionamento de código
+## Convenção de commits
 
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs) que usa as ferramentas acima.
+Este projeto usa padrões de commits para ajudar a normalizar as mensagens de commit. Sua mensagem de commit precisa estar no formato:
+```
+<tipo>(escopo opcional): <descrição>
+```
 
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+O `tipo` deve ser um dos **[build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]**.
+Você pode obter ajuda [aqui](https://github.com/conventional-changelog/commitlint/#what-is-commitlint).
 
+## Padrões gerais do Projeto
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
- 
-Separamos alguns níveis de avaliação.
+Abaixo está um exemplo dos principais diretórios com uma breve explicação de cada contexto:
 
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
+* `app`: Diretório padrão Next.js. Para mais informações, clique [aqui](https://nextjs.org/docs/app).
 
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório a partir do fork
+```sh
+┣ 📂 src \
+┃ ┣ ┣ 📂 app \
+┃ ┃ ┃ ┣ 📂 home \
+┃ ┃ ┃ ┃ ┣ 📜 page.js
+```
 
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
+* `components`: diretório responsável pelos componentes básicos dos sistemas de design. Os componentes deste diretório podem ser utilizados em qualquer contexto, pois não contém regras de negócio. Todos os seus componentes precisam ter testes unitários.
 
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
+```sh
+┣ 📂 src \
+┃ ┣ 📂 components \
+┃ ┃ ┣ 📂 Button \
+┃ ┃ ┃ ┣ 📜 index.jsx
+┃ ┃ ┃ ┣ 📜 styles.js
+┃ ┃ ┃ ┣ 📜 test.jsx
+```
+
+* `templates`: o diretório de templates contém o agrupamento de componentes do diretório components para organizar o comportamento esperado da UI da página, podendo ter testes unitários caso a equipe sinta necessidade.
+
+```sh
+┣ 📂 src \
+┃ ┣ 📂 templates \
+┃ ┃ ┣ 📂 Home \
+┃ ┃ ┃ ┣ 📜 index.jsx
+```
