@@ -24,16 +24,9 @@ export const orders: TrackingOrder[] = [
         city: 'Cidade',
         state: 'Estado',
         zipCode: '12345',
-        coordinates: {
-          latitude: -23.5505,
-          longitude: -46.6333
-        }
+        coordinates: { latitude: -22.85329403321068, longitude: -43.322415107931604 }
       },
-      route: [
-        { latitude: -23.5505, longitude: -46.6333 },
-        { latitude: -22.9068, longitude: -43.1729 },
-        { latitude: -27.5954, longitude: -48.548 }
-      ],
+      route: [{ latitude: -22.87001481456923, longitude: -43.34106554546864 }],
       statuses: [
         {
           title: 'Pedido Feito',
@@ -71,16 +64,9 @@ export const orders: TrackingOrder[] = [
         city: 'Cidadela',
         state: 'Estadela',
         zipCode: '54321',
-        coordinates: {
-          latitude: -22.9068,
-          longitude: -43.1729
-        }
+        coordinates: { latitude: -22.85329403321068, longitude: -43.322415107931604 }
       },
-      route: [
-        { latitude: -22.9068, longitude: -43.1729 },
-        { latitude: -23.5505, longitude: -46.6333 },
-        { latitude: -30.0277, longitude: -51.2287 }
-      ],
+      route: [{ latitude: -22.87001481456923, longitude: -43.34106554546864 }],
       statuses: [
         {
           title: 'Pedido Aceito',
