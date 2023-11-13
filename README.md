@@ -2,7 +2,7 @@
 Jaiminho é uma aplicação Front-End, para restreio de encomendas através de um código de rastreamento previamente informado ao usuário. 
 
 Para ver a aplicação on-line acesse:
-[Link para o Jaiminho :truck:](`https://desafio-frontend-psi-ten.vercel.app/`)
+[Link para o Jaiminho :truck:](https://desafio-frontend-psi-ten.vercel.app/)
 
 ## Configuração, Instalação e Servindo o projeto localmente
 
