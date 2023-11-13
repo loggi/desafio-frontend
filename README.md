@@ -1,6 +1,9 @@
 # Jaiminho - Rastreamento de pacotes
 Jaiminho é uma aplicação Front-End, para restreio de encomendas através de um código de rastreamento previamente informado ao usuário. 
 
+Para ver a aplicação on-line acesse:
+`https://desafio-frontend-psi-ten.vercel.app/`
+
 ## Configuração, Instalação e Servindo o projeto localmente
 
 ### Pré requisitos
@@ -26,6 +29,13 @@ No terminal rode o comando
 
 ```bash
 npm install
+```
+
+#### Adicione a variavel de ambiente
+Na raiz do projeto adicione o arquivo `.env.local`, com a chave:
+
+```bash
+NEXT_PUBLIC_VERCEL_URL="http://localhost:3000"
 ```
 
 #### Servindo o projeto
