@@ -17,7 +17,9 @@
     "lint:fix": "next lint --fix",
     "lint-staged": "lint-staged",
     "prettier": "prettier --write --ignore-unknown .",
-    "prettier:check": "prettier --check --ignore-unknown ."
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "docker:dev": "docker build -t loggi:development -f Dockerfile.development . && docker run -p 3000:3000 -v $(pwd):/app loggi:development",
+    "docker:prod": "docker build -t loggi:production . && docker run -p 3000:3000 loggi:production"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

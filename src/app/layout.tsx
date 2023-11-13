@@ -7,8 +7,8 @@ import { MuiProvider } from '@/components/MuiProvider'
 const roboto = Roboto({ weight: ['100', '300', '400', '500', '700', '900'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Loggi Tracking Dashboard',
-  description: 'Track your order in real-time'
+  title: 'Rastreie a sua entrega - Loggi',
+  description: 'Acompanhe as suas entregas em tempo real'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
