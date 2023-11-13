@@ -58,3 +58,52 @@ Os testes unitários foram escritos utilzando **Testing Libray** juntamente com 
 
 Optei na estilização escrever **CSS** juntamente com a metodogia **BEM** e não utilizar o **Material UI**, pois acredito que para a interface idealizada por mim consegui simplificar o markup e tamém manter a semantica mantendo a separação das camadas, onde com a utilização do Material UI eu levaria mais tempo para chegar no resultado.
 
+### Organização de pastas e arquivos
+Com a utilização do NextJs, segui a estrutura de pastas sugerida pela documentação onde detro da pasta **src/** temos:
+
+**app/**: Ficam as páginas, na raiz o arquivo *layout* e *pages* (Home) e seu respectivo teste e estilização, seguindo a convenção do Next. 
+
+**app/api/progressTracking/[code]**: Fica a next API Route, no arquivo *route* onde o metodo GET é utilizado, buscando em um mock no formato `json` com a lista de status do rastreamento do pedido. 
+
+**app/rastrear/[code]**: Fica a pagina que apresenta o resultado da busca pelo código de rastreamento, com seu respectivo teste e estilização.
+
+**assets**: Ficam os arquivos de imagens, os dois `svg` utilizados no projeto.
+
+**components**: Ficam os componentes que podem ser reutilizados
++ AttainNewCustomers: Call To Action para a utilização do serviço.
++ Button: Botão com variações *small* e *large*.
++ Footer: Apenas para reutilização visual com links.
++ Header: Contém lógica para abrir/fechar o menu mobile e apresentar/esconder o botão conforme a responsividade.
++ Input: Contém o `label` + `input` juntos para manter a semântica quando renderizado.
++ LinkButton: Estendido do `next/Link` e com a estilização em formato de botão
++ Menu: Menu único e estilizado conforme a responsividade.
++ TrackList: Lista cada etapa da entrega do pacote com data/hora, status e localidade.
++ Typograpty: Utilizado para textos, com a variante de titulos H1, H2, H3 e por padrão ele renderiza um P
+
+**data**: Onde está armazenado o mock para a API no formato `json` e um `ts` utilizados nos testes.
+
+**styles**: Ficam os arquivos de estilização `global` e `variables` que são utilizados em todas as páginas do projeto através do layout. 
+
+### Decisão visual e experiência de navegação
+Busquei seguir um layout simples com Header e Menu seguindo do conteúdo principal com o formulário para entrar com o código de rastreamento e/ou apresentação do status do rastreamento seguido de um call to action para a utilização do serviço de entrega e Footer.
+
+Segui a tipografia e paleta de cores com variações de azul, branco, preto e tons de cinza utilizados pela Loggi, com feedbacks visuais nos links do header em formatos de botões e transição para entrada do menu mobile.
+
+Na página Home, o formulário inicia com o botão desabilitado e somente após a digitação do código de rastreamento validado por uma expressão regular que o botão é habilitado para a verificação, e após o click acontece a navegação para a página de navagação.
+
+Na página Rastrear (Tracking) faz a busca na API pelo código digitado, e apresenta o status da entrega do pacote com data/hora, status e localidade. Caso o código seja inválido é apresentada a mensagem **Nenhum pedido encontrado para esse código.**. A contém um Link para retornar a tela inicial e iniciar uma nova consulta.
+
+#### Screemshots
+
+##### Mobile
+Home Page | Rastrear
+--------- | --------
+<img src="./docs/localhost_3000_home.png" alt="" width="300" /> | <img src="./docs/localhost_3000_track.png" alt="" width="300" />
+
+
+##### Desktop
+**Home**
+![Home](./docs/localhost_3000_home_d.png)
+
+**Rastrear**
+![Rastrear](./docs/localhost_3000_track_d.png)
