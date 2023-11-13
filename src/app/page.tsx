@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { Box, Button, Grid, Paper, TextField, Typography } from '@mui/material'
+import { Box, Grid, Paper, Typography } from '@mui/material'
 
 import heroImage from '@/assets/images/hero.png'
 import loggiLogo from '@/assets/images/loggi-logo.svg'
+import { TrackingForm } from '@/components/TrackingForm'
 
 export default function Home() {
   return (
@@ -23,27 +24,14 @@ export default function Home() {
           >
             Primeiro, digite o código de rastreamento.
           </Typography>
-          <Box component='form' noValidate className='mt-4 w-full'>
-            <TextField
-              margin='normal'
-              fullWidth
-              id='trackingNumber'
-              label='Código de Rastreamento'
-              name='trackingNumber'
-              placeholder='38941210001'
-              autoFocus
-            />
-            <Button type='submit' className='bg-loggi normal-case text-white w-full p-4 text-base'>
-              Acompanhar Pedido
-            </Button>
-          </Box>
+          <TrackingForm />
         </Box>
       </Grid>
       <Grid
         item
         className='hidden md:inline-flex flex-1 bg-gradient-to-tl from-[#70baff] to-loggi items-end justify-end'
       >
-        <Image src={heroImage} alt='Loggi hero' fill={false} />
+        <Image src={heroImage} alt='Loggi hero' fill={false} priority />
       </Grid>
     </Grid>
   )
