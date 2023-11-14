@@ -75,9 +75,11 @@ export function TrackingForm({ onSubmit }: TrackingFormProps) {
       />
       <Button
         type='submit'
-        className='bg-loggi normal-case text-white w-full p-4 text-base'
+        variant='contained'
+        className='bg-loggi normal-case text-white w-full p-4 text-base disabled:bg-blue-400'
         data-testid='submitTrackingButton'
         disabled={isSubmitting}
+        disableElevation
       >
         {isSubmitting ? 'Rastreando...' : 'Acompanhar Pedido'}
       </Button>
