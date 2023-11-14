@@ -4,7 +4,7 @@
 
 ## Rodando o Projeto
 
-O projeto foi hospedado na Vercel e pode ser acessado aqui.
+O projeto foi hospedado na Vercel e pode ser acessado [aqui](https://desafio-frontend-loggi-three.vercel.app/).
 
 ### NPM
 
