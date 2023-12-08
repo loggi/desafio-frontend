@@ -1,0 +1,45 @@
+.navigation
+    &__grid
+        display: flex
+        justify-content: space-between
+
+    &__menu
+        align-items: center
+        display: flex
+
+        nav
+            margin-left: 3rem
+        
+            ul
+                display: inline-flex
+                padding: 0
+                list-style: none
+                
+                li
+                    margin: 0 1.5rem
+
+                a
+                    font-weight: bold
+                    font-size: 14px
+                    text-decoration: none
+                    color: var(--text, rgb(82, 89, 107))
+                    transition: all .15s linear
+
+                    &:hover,
+                    &:focus
+                        color: var(--blue, #006aff)
+    
+    &__create-account
+        align-items: center
+        background: var(--button-gradient, #006aff)
+        border: none
+        border-radius: .5rem
+        color: var(--white, #ffffff)
+        cursor: pointer
+        display: flex
+        font-weight: bold
+        gap: .3rem
+        padding: 1rem 1.2rem
+
+        &--icon
+            width: 1.2rem
