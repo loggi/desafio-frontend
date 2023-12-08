@@ -1,0 +1,26 @@
+{
+  "name": "Loggi-challenge",
+  "version": "1.0.0",
+  "description": "The Loggi challenge for front-end job",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "Thiago Melo",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.41",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "sass": "^1.49.9",
+    "typescript": "4.6.2"
+  }
+}
