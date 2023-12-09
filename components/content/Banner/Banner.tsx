@@ -1,6 +1,15 @@
+'use client'
+
 import style from './Banner.module.sass';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { useRouter } from 'next/navigation'
+
 export const Banner = () => {
+
+    const router = useRouter();
+
     return (
         <section className = {style.banner}>
             <div className="grid">
@@ -14,7 +23,10 @@ export const Banner = () => {
                         placeholder='Digite o código de rastreamento aqui...'
                         type="text" 
                     />
-                    <button className={style.button} >Acompanhar pedido</button>
+                    <button className={style.button} onClick={() => router.push('/rastreador')} >
+                        <FontAwesomeIcon icon={faLocationDot} className={style['button--icon']}/>
+                        Acompanhar pedido
+                    </button>
                 </div>
             </div>
         </section>
