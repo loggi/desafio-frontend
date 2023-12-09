@@ -7,10 +7,12 @@ import Typography from '@mui/material/Typography';
 
 import { DataStatus } from '../../../../interfaces';
 
+import style from '../Rastreador.module.sass'
+
 export const VerticalLinearStepper = ({status}: { status: DataStatus }) => {
 
   return (
-    <Box sx={{ maxWidth: '30%' }}>
+    <Box className={style.box}>
       <Typography gutterBottom variant="h5">
           Package status
       </Typography>

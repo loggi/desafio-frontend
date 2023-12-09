@@ -4,7 +4,12 @@
 
 .status
     display: flex
+    flex-flow: column-reverse wrap
+    gap: 2rem
 
 .box 
-    max-width: 50%
     width: 100%
+
+@media( min-width: 41.25rem )
+    .status
+        flex-flow: row nowrap

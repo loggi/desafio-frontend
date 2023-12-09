@@ -31,8 +31,9 @@ export const Banner = () => {
         <section className = {style.banner}>
             <div className="grid">
                 <Card 
-                    variant="outlined" 
-                    sx={{ maxWidth: '30%', mb: 2 }}
+                    variant="outlined"
+                    className={ style.banner__box }
+                    sx={{ mb: 2 }}
                 >
                     <CardContent>
                         <Typography variant="h5" color="text.secondary" sx={{ mb: 2 }}>

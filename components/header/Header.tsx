@@ -24,7 +24,7 @@ export const Header = () => {
                     </a>
 
                     <nav role='navigation'>
-                        <Box sx={{ width: 500 }}>
+                        <Box sx={{ maxWidth: 500 }}>
                             <BottomNavigation showLabels>
                                 <BottomNavigationAction label="Para você" />
                                 <BottomNavigationAction label="Para empresas" />

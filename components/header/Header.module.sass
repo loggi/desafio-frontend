@@ -1,9 +1,28 @@
 .navigation
+    box-sizing: border-box
+
     &__grid,
     &__menu
         display: flex
-        justify-content: space-between
         align-items: center
+        flex-flow: column wrap
+        text-align: center
 
-        nav
-            margin-left: 3rem
+    &__logo
+        display: block
+        margin-bottom: .5rem
+    
+    
+    @media(min-width:  52.5rem)
+        &__grid,
+        &__menu
+            justify-content: space-between
+            align-items: center
+            flex-flow: row wrap
+
+            nav
+                margin-left: 3rem
+                width: 31.25rem
+
+        &__logo
+            display: flex

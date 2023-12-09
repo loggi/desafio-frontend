@@ -32,7 +32,7 @@ export const Rastreador = ({ code }: { code: string }) => {
         return (
             <Card
                 variant="outlined" 
-                sx={{ maxWidth: '90%', mb: 2 }}>
+                sx={{ mb: 2 }}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {title}
@@ -57,6 +57,10 @@ export const Rastreador = ({ code }: { code: string }) => {
     return (
         <section className={style.rastreador}>
             <div className='grid'>
+                <Typography variant="h5"  sx={{  mb: 2 }}>
+                    CODE: { code }
+                </Typography>
+                
                 <div className={style.status}>
                     { 
                         trackerData 
@@ -64,10 +68,6 @@ export const Rastreador = ({ code }: { code: string }) => {
                                 ? (
                                     <>
                                         <div className={style.box}>
-                                            <Typography variant="h5"  sx={{  mb: 2 }}>
-                                                CODE: { code }
-                                            </Typography>
-
                                             {
                                                 trackerData?.map((e: { id: Key, receiver: DataInfo; sender: DataInfo; }) => (
                                                         <>

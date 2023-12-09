@@ -1,3 +1,7 @@
 .cards
     display: flex
-    gap: 1rem
+    flex-flow: column wrap
+
+    @media( min-width: 41.25rem  )
+        flex-flow: row nowrap
+        gap: 1rem

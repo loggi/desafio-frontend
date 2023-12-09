@@ -1,7 +1,18 @@
 .banner
     align-items: center
-    background: url(https://s3-sa-east-1.amazonaws.com/loggi-production-static/tracker-web-ui/images/package-ff9eb72c01531c46f6a2c2a5fbcb975c.png) no-repeat bottom right / contain, var(--blue-gradient, #006aff)
+    background: var(--blue-gradient, #006aff)
     display: flex
     height: auto
-    min-height: 28rem
     width: 100%
+
+    &__box
+        margin: 0 auto
+        max-width: 25rem
+        width: 100%
+
+    @media(min-width: 52.5rem)
+        background: url(https://s3-sa-east-1.amazonaws.com/loggi-production-static/tracker-web-ui/images/package-ff9eb72c01531c46f6a2c2a5fbcb975c.png) no-repeat bottom right / contain, var(--blue-gradient, #006aff)
+        min-height: 28rem
+        
+        &__box
+            margin: 0
