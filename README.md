@@ -12,12 +12,12 @@ Our new package tracker Interface has been changed to offer the users a better i
 
 ## Guide of content
 
-- [Demo screens](#markdown-header-screen)
-- [Development environment](#markdown-header-development-environment)
-- [Start development](#markdown-header-start-development)
-- [Test environment](#markdown-header-test-environment)
-- [Build environment](#markdown-header-build-environment)
-- [Deploy environment](#markdown-header-deploy-environment)
+- [Demo screens](#screens)
+- [Development environment](#development-environment)
+- [Start development](#start-development)
+- [Test environment](#test-environment)
+- [Build environment](#build-environment)
+- [Deploy environment](#deploy-environment)
 
 
 ## Screens
@@ -52,11 +52,18 @@ Update/install all necessary packages for stability of project and environment. 
 ```bash
 npm install && npm run dev
 ```
-#### About interactive layout data
+### About interactive layout data
 All data comes from one a **[mockapi](https://mockapi.io/)**
 
 ```javascript
 GET http://63f239144f17278c9a22d1cd.mockapi.io/api/v1/loggi/
+```
+### Quality Params
+
+For the quality process of the application, we're using `lint` to verify the sequence pattern code. To verify the code, run:
+
+```bash
+npm run lint
 ```
 
 Have a good job :seedling:

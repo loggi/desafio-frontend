@@ -27,7 +27,7 @@ export const Rastreador = ({ code }: { code: string }) => {
             const requestData = await data(ref)
             setTrackerData(requestData);
         }) (code)
-    }, [])
+    }, [code])
 
     const CardInformation = ({dataInfo, title}: {dataInfo: DataInfo, title: string}) => {
         return (

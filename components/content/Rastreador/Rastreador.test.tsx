@@ -1,10 +1,12 @@
 import '@testing-library/jest-dom';
 
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { Rastreador } from "./Rastreador";
 
+jest.mock('../../../app/api/controller');
 const mockCode = "123456"
-beforeEach(() => render(<Rastreador code={mockCode} />));
+
+beforeEach(async () => await act( async () => render(<Rastreador code={mockCode} />)));
 
 describe("Should render Tracker/Rastreador Component", () => {
     
@@ -17,6 +19,5 @@ describe("Should render Tracker/Rastreador Component", () => {
         const sequenceCardsInformation = screen.getByTestId('cards-information')
         expect(sequenceCardsInformation);
     });
-
 
 });
