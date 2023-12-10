@@ -1,64 +1,61 @@
-## Loggi no Talent Fest Brasil 9ª Geração Laboratória
+![Logo](/public/loggi.png)
+## Hi, you’re welcome to the new Loggi's package tracker Interface
 
-Olá! Estamos felizes em te apresentar o desafio de front-end da Loggi. A partir de agora, você está recebendo o desafio de construir, com a sua visão, **"como deveria ser a interface do [rastreador de pacotes da Loggi](https://www.loggi.com/rastreador/)?"**.
+Our new package tracker Interface has been changed to offer the users a better interaction experience. More objective concepts and information about the package situation. Where it's, when it probably arrives. All in real time and easily accessible. :sunglasses:
 
-Este desafio pode ser usado para avaliar tecnicamente todas as pessoas interessadas em nossas vagas de desenvolvimento de Frontend. O que muda, basicamente, são os critérios de avaliação.
+**[Checkout the new interface preview here &rarr;](https://loggi-challenge.netlify.app/)**
 
-## O desafio
+To interact with the new interface, test any of the following trackers codes :point_down:
 
-Quando fazemos uma compra online, ou enviamos uma encomenda para um amigo ou cliente, gostamos de acompanhar e saber o que está acontecendo com nosso pacote. Esta experiência é muito importante tanto para quem envia quanto para quem está aguardando recebimento.  
-
-Neste desafio, te convidamos a pensar como "dono da Loggi". É você quem vai definir (e implementar) como será a experiência de uso deste "rastreador". Você pode usar como inspiração o [rastreador atual do site da Loggi](https://www.loggi.com/rastreador/) ou de outros sites que você use e goste de acompanhar suas encomendas.
-
-
-## Instruções técnicas
-
-Você deverá criar um fork deste repositório e desenvolver no seu espaço no GitHub. Ao final do desenvolvimento, você deverá abrir um [Pull Request](https://github.com/joseluizcoe/desafio-loggi-front-end/pulls) para o repositório do desafio (este repositório) ou enviar o link do seu repositório para um de nossos recrutadores.
-
-Importante: Use o README.md do seu repositório para nos mostrar as instruções de como rodar seu projeto.
-
-Para este desafio, temos algumas ferramentas que gostaríamos que fossem utilizadas:
-* [Next.js](https://nextjs.org/) - Para desenvolvimento do front-end e backend (use a rota /api)
-* [Material UI](https://mui.com/) - Para componentes visuais de front-end
-* GitHub - para versionamento de código
-
-Para não perder tempo configurando projeto, você pode usar [este template pronto](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs) que usa as ferramentas acima.
-
-Sugerimos que para a parte de backend (retorno de dados) você use (ou implemente) algum mock para que consiga focar apenas no front-end.
+> `232425ABC` | `243444CDE` | `100200FGH`
 
 
-## O mínimo que esperamos
-- Que você seja a pessoa que fez o projeto - _ficaríamos bem desapontados se outra pessoa fizesse o desafio por você._
-- Que os commits sejam pequenos, com poucas alterações, mostrando seu raciocínio de construção nos comentários
- 
-Separamos alguns níveis de avaliação.
+## Screen
+Home
+![Screen](/public/screen-home.jpeg)
 
-### Nivel Básico:
-- Documentação - precisamos conseguir rodar o projeto apenas lendo a documentação, sem perguntar nada para ninguém.
-- Documentação - além de entender o projeto, é importante estarem documentadas as decisões (principalmente de experiência do usuário) 
-- Organização do código
-- Componentes React (HTML) escrito da maneira mais semântica possível
-- Mobile first e layout responsivo
-- Parte visual da experiência proposta
+Tracker
+![Screen](/public/screen-tracker.jpeg)
 
-### Nível Médio:
-- Testes unitários
-- BEM (css)
-- Aplicação de animações (sem degradar a performance)
-- Ver o projeto rodando online em algum lugar (Bucket estático S3, Heroku, Netlify, Vercel)
-- Pull request criado neste repositório a partir do fork
+## Development environment
 
-### Nível Avançado:
-- Docker - projeto rodando em um container para desenvolvimento local
-- Testes e2e
-- Estrutura de dados
-- Desenho da arquitetura da solução
+#### To work in new interface development, be aware of the following specs.
 
-## O que será avaliado em todos os níveis
-- Criatividade (da solução proposta)
-- Experiência de uso do serviço
-- Histórico de commits
-- Documentação de como rodar o projeto
-- Organização do seu código
-- Adaptação mobile (layout responsivo)
-- Componentização e extensibilidade dos componentes Javascript
+Was used:
+- NextJS 14 &uarr;
+- ReactJS 18 &uarr;
+- NodeJS 18 &uarr;
+- Typescript
+- Sass
+- Axios
+- Material UI DS
+
+## Start development 
+To help us with the development of the new experience, download this repo:
+```bash
+git clone git@github.com:loggi/loggi-challenge.git
+```
+Update/install all necessary packages for stability of project and environment. Run:
+
+```bash
+npm install && npm run dev
+```
+
+## Development environment
+
+To build the project and see the compiled result, run:
+
+```bash
+npm run build && npm start
+```
+
+Here, you'll see the result of optimized structure for production but still in `localhost` 
+
+## Production environment
+
+To see an the new interface in mode production, [click here](https://loggi-challenge.netlify.app/) :zap:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a5e69338-5315-4bfc-9ec4-00b32130b6ef/deploy-status)](https://app.netlify.com/sites/loggi-challenge/deploys)
+
+---
+Enjoy the trip :fire:
