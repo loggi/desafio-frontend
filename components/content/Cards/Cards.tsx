@@ -9,7 +9,7 @@ import style from './Cards.module.sass'
 
 export const CardPromo = () => {
     return (
-        <div className={`grid ${style.cards}`}>
+        <div className={`grid ${style.cards}`} data-testid="card-media">
             <Card>
                 <CardMedia
                     sx={{ height: 140 }}

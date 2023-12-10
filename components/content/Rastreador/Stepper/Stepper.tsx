@@ -17,7 +17,7 @@ export const VerticalLinearStepper = ({status}: { status: DataStatus }) => {
           Package status
       </Typography>
 
-      <Stepper orientation="vertical">
+      <Stepper orientation="vertical" data-testid="stepper">
         {status.map((step: {label: string, description: string}, index: number) => (
           <Step key={step.label}>
             <StepLabel

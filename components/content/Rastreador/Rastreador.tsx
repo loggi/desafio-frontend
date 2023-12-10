@@ -62,7 +62,7 @@ export const Rastreador = ({ code }: { code: string }) => {
                     CODE: { code }
                 </Typography>
                 
-                <div className={style.status}>
+                <div className={style.status} data-testid="cards-information">
                     { 
                         trackerData 
                             ?   trackerData.length 
