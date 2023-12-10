@@ -1,16 +1,26 @@
-![Logo](/public/loggi.png)
+<img src="public/loggi.png" alt="Loggi" width="350"/>
+
 ## Hi, you’re welcome to the new Loggi's package tracker Interface
 
 Our new package tracker Interface has been changed to offer the users a better interaction experience. More objective concepts and information about the package situation. Where it's, when it probably arrives. All in real time and easily accessible. :sunglasses:
 
 **[Checkout the new interface preview here &rarr;](https://loggi-challenge.netlify.app/)**
 
-To interact with the new interface, test any of the following trackers codes :point_down:
+**IMPORTANT**: To interact with the new interface, test any of the following trackers codes :point_down:
 
 > `232425ABC` | `243444CDE` | `100200FGH`
 
+## Guide of content
 
-## Screen
+- [Demo screens](#markdown-header-screen)
+- [Development environment](#markdown-header-development-environment)
+- [Start development](#markdown-header-start-development)
+- [Test environment](#markdown-header-test-environment)
+- [Build environment](#markdown-header-build-environment)
+- [Deploy environment](#markdown-header-deploy-environment)
+
+
+## Screens
 Home
 ![Screen](/public/screen-home.jpeg)
 
@@ -29,6 +39,8 @@ Was used:
 - Sass
 - Axios
 - Material UI DS
+- Jest
+- Cypress
 
 ## Start development 
 To help us with the development of the new experience, download this repo:
@@ -40,8 +52,39 @@ Update/install all necessary packages for stability of project and environment. 
 ```bash
 npm install && npm run dev
 ```
+#### About interactive layout data
+All data comes from one a **[mockapi](https://mockapi.io/)**
 
-## Development environment
+```javascript
+GET http://63f239144f17278c9a22d1cd.mockapi.io/api/v1/loggi/
+```
+
+Have a good job :seedling:
+
+## Test environment
+
+We're using the Framework `Jest` with `@testing/library` as a spec for component unit test.
+
+To run all unit test: 
+
+```bash 
+npm test
+```
+
+For test End to End, we're using `Cypress` as a support spec.
+
+For a visual process test, follow the command:
+
+```bash
+npm run cy:open
+```
+For a CLI e2e test, follow:
+
+```bash
+npm run cy:run
+```
+
+## Build environment
 
 To build the project and see the compiled result, run:
 
@@ -51,7 +94,7 @@ npm run build && npm start
 
 Here, you'll see the result of optimized structure for production but still in `localhost` 
 
-## Production environment
+## Deploy environment
 
 To see an the new interface in mode production, [click here](https://loggi-challenge.netlify.app/) :zap:
 
