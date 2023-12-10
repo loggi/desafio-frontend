@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Alert from '@mui/material/Alert';
 
 import { VerticalLinearStepper } from './Stepper';
 
@@ -69,8 +70,9 @@ export const Rastreador = ({ code }: { code: string }) => {
                                     <>
                                         <div className={style.box}>
                                             {
-                                                trackerData?.map((e: { id: Key, receiver: DataInfo; sender: DataInfo; }) => (
+                                                trackerData?.map((e: { id: Key, product: string, receiver: DataInfo; sender: DataInfo; }) => (
                                                         <div key={e.id}>
+                                                            <Alert sx={{ mb: 2 }} icon={false}  severity="info"><strong>Produto:</strong> {e.product}</Alert>
                                                             <CardInformation dataInfo={ e.receiver } title="Destiny Information" />
                                                             <CardInformation dataInfo={ e.sender } title="Sender Information" />
                                                         </div>
