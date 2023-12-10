@@ -48,6 +48,7 @@ export const Banner = () => {
                             sx={{ width: '100%', mb: 1 }}
                         />
                         <Button 
+                            id="goTracker"
                             variant="contained" 
                             startIcon={<RoomOutlined />} 
                             size="large"
