@@ -70,15 +70,15 @@ export const Rastreador = ({ code }: { code: string }) => {
                                         <div className={style.box}>
                                             {
                                                 trackerData?.map((e: { id: Key, receiver: DataInfo; sender: DataInfo; }) => (
-                                                        <>
-                                                            <CardInformation key={ e.id } dataInfo={ e.receiver } title="Destiny Information" />
-                                                            <CardInformation key={ e.id } dataInfo={ e.sender } title="Sender Information" />
-                                                        </>
+                                                        <div key={e.id}>
+                                                            <CardInformation dataInfo={ e.receiver } title="Destiny Information" />
+                                                            <CardInformation dataInfo={ e.sender } title="Sender Information" />
+                                                        </div>
                                                     )
                                                 )
                                             }
                                         </div>
-                                        { trackerData?.map((e: { status: DataStatus }) => <VerticalLinearStepper status={ e.status }/>) }
+                                        { trackerData?.map((e: { status: DataStatus, id: number }) => <VerticalLinearStepper key={e.id} status={ e.status }/>) }
                                     </>
                                 )
                                 : <NotFound />
